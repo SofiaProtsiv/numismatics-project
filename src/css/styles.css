@@ -1,0 +1,57 @@
+/* Fonts */
+@import url('../assets/fonts/fonts.css');
+
+/* Base */
+@import url('./base/reset.css');
+@import url('./base/normalize.css');
+
+/* Utils */
+@import url('./utils/variables.css');
+@import url('./utils/common.css');
+
+/* Components */
+@import url("./components/header.css");
+@import url("./components/hero.css");
+@import url("./components/about-me.css");
+@import url("./components/areas-of-expertise.css");
+@import url("./components/services.css");
+@import url("./components/faq.css");
+@import url("./components/reviews.css");
+@import url("./components/contact.css");
+@import url("./components/footer.css");
+@import url("./components/form.css");
+@import url("./components/modal.css");
+@import url("./components/team-modal.css");
+
+.example-breakpoints {
+  /* до 360px */
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+
+  /* починаючи з 360px */
+  @media (360px <=width) {
+    background-color: red;
+  }
+
+  /* лише проміжок між 360px і 769рх */
+  @media (width >=360px) and (width < 768px) {
+    background-color: yellow;
+  }
+
+  /* починаючи з 768px */
+  @media (768px <=width) {
+    background-color: blue;
+  }
+
+  /* лише проміжок між 769рх і 1440рх */
+  @media (width >=768px) and (width < 1440px) {
+    background-color: rebeccapurple;
+  }
+
+  /* починаючи з 1440рх */
+  @media (width >=1440px) {
+    background-color: pink;
+  }
+}

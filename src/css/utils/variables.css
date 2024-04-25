@@ -1,0 +1,58 @@
+:root {
+  /* Colors */
+  --body-bg: rgba(255, 255, 255, 1);
+  --container-bg-light: rgba(255, 255, 255, 1);
+  --container-bg-dark: rgba(19, 35, 53, 1);
+
+  --primary-text-color-dark: rgba(18, 20, 23, 1);
+  --secondary-text-color-dark: rgba(72, 79, 92, 1);
+
+  --primary-text-color-light: rgba(255, 255, 255, 1);
+  --secondary-text-color-light: rgba(254, 254, 254, 1);
+
+  --button-dark: rgba(19, 35, 53, 1);
+  --button-dark-hover: rgba(28, 50, 75, 1);
+  --accent-bg: radial-gradient(circle, rgba(255, 239, 166, 1) 0%, rgba(255, 218, 125, 1) 30%, rgba(242, 201, 116, 1) 60%, rgba(206, 157, 78, 1) 100%);
+
+  --header-bg: rgba(255, 255, 255, 0.18);
+
+  --inactive-lang-text: rgba(18, 20, 23, 0.4);
+  --lang-switch-conatiner-lisght: rgba(255, 255, 255, 0.18);
+  --lang-switch-border-light: rgba(255, 255, 255, 0.25);
+  --lang-switch-container-dark: rgba(19, 35, 53, 1);
+
+  --skeleton-bg: rgba(18, 20, 23, 0.4);
+  --section-name-color: rgba(108, 119, 138, 1);
+  --decoration-arrow-fill: rgba(178, 178, 178, 1);
+  --white-color: rgba(255, 255, 255, 1);
+  --error-color: rgba(255, 0, 0, 1);
+
+  --border-color: rgba(18, 20, 23, 0.3);
+  --input-border: rgba(18, 20, 23, 0.1);
+  --input-outline: rgba(19, 35, 53, 1);
+  --input-placeholder-color: rgba(72, 79, 92, 1);
+
+  --footer-bg: rgba(19, 35, 53, 1);
+  --footer-title-color: rgba(255, 255, 255, 0.6);
+
+  --scrollbar-thumb-bg: rgba(18, 20, 23, 0.1);
+  --scrollbar-track-bg: rgba(255, 255, 255, 1);
+
+  /* Breakpoints */
+  --mobile: 375px;
+  --mobile-max: 767.98px;
+  --tablet: 768px;
+  --table-max: 1439.98px;
+  --desktop: 1440px;
+
+  /* Transition properties */
+  --transition-time: 250ms;
+  --transition-effect: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Backdrop */
+  --background-color: rgba(0, 0, 0, 0.6);
+
+  /* Fonts */
+  --primary-font-family: "Manrope", sans-serif;
+  --accent-font-family: "Mulish", sans-serif;
+}
