@@ -51,10 +51,10 @@ body::-webkit-scrollbar-track {
 }
 
 .section {
-  padding: 60px 0;
+  padding: 30px 0;
 
   @media (768px<=width) {
-    padding: 80px 0;
+    padding: 40px 0;
   }
 }
 
