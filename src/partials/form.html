@@ -1,12 +1,33 @@
 <form class="modal-form js-modal-form">
-  <input class="modal-input" type="text" name="name" placeholder="Ваше ім’я" />
-  <input
-    class="modal-input"
-    type="text"
-    name="phone"
-    placeholder="Номер телефону"
-  />
-  <input class="modal-input" type="text" name="service" placeholder="Послуга" />
+  <div class="modal-input-wrapper">
+    <input
+      class="modal-input"
+      type="text"
+      name="name"
+      placeholder="Ваше ім’я"
+    />
+    <p class="modal-input-error">Обов'язкове пооле</p>
+  </div>
+  <div class="modal-input-wrapper">
+    <input
+      class="modal-input"
+      type="text"
+      name="phone"
+      placeholder="Номер телефону"
+    />
+    <p class="modal-input-error">Обов'язкове пооле</p>
+  </div>
+  <div class="modal-input-wrapper">
+    <div class="modal-select">
+      <button class="modal-select-button" type="button">Послуги</button>
+      <ul class="modal-select-list">
+        <li class="modal-select-item">Консультації з нумізматики</li>
+        <li class="modal-select-item">Консультації з питань колекціонування</li>
+        <li class="modal-select-item">Консультації з формування колекцій</li>
+      </ul>
+    </div>
+    <p class="modal-input-error">Обов'язкове пооле</p>
+  </div>
   <textarea
     class="modal-textarea"
     name="comment"
