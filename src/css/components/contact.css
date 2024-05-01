@@ -4,16 +4,16 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    border-radius: 15px;
 }
 
 .contact-title {
-    color: var(--white-color);
+    color: var(--primary-text-color-light);
     padding-top: 288px;
     padding-bottom: 64px;
     max-width: 279px;
     width: 100%;
     margin: 0 auto;
-    text-align: left;
     font-size: 28px;
     font-weight: 700;
     line-height: 1.14;
