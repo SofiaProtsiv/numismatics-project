@@ -4,6 +4,10 @@
     <symbol id="icon-name" viewBox="0 0 32 32">
       <!-- path -->
     </symbol>
+    <symbol id="arrow-down-right" viewBox="0 0 24 24">
+      <path d="M6 6L16.2 16.2" stroke="#B2B2B2" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+      <path d="M17 7V17H7" stroke="#B2B2B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
     <!-- example end -->
   </defs>
 </svg>
