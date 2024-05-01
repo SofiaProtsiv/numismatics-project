@@ -1,0 +1,130 @@
+.hero-wrapper {
+  background-color: #2a2a2a;
+  background-image: -webkit-image-set(
+    url('../../public/images/hero/hero.jpg') 1x,
+    url('../../public/images/hero/hero@2x.jpg') 2x
+  );
+  background-image: image-set(
+    url('../../public/images/hero/hero.jpg') 1x,
+    url('../../public/images/hero/hero@2x.jpg') 2x
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  width: 100%;
+  height: 700px;
+
+  @media (768px<=width) {
+    height: 951px;
+  }
+}
+
+.hero-content {
+  padding: 400px 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @media (768px<=width) {
+    padding: 495px 32px 0;
+  }
+  @media (1440px<=width) {
+    padding: 424px 69px 0;
+  }
+}
+
+.hero-helper-text {
+  font-size: 15px;
+  line-height: 1.2;
+  color: var(--primary-text-color-light);
+  max-width: 290px;
+
+  @media (768px<=width) {
+    max-width: 388px;
+    font-size: 18px;
+    line-height: 1.44444;
+  }
+}
+.hero-main-text {
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 1.33333;
+  text-transform: uppercase;
+  color: var(--primary-text-color-light);
+
+  @media (768px<=width) {
+    font-size: 66px;
+    line-height: 1.06061;
+  }
+
+  @media (1440px<=width) {
+    font-size: 120px;
+    line-height: 0.91667;
+  }
+}
+
+.hero-submain-text {
+  font-size: 16px;
+  line-height: 1.25;
+
+  @media (768px<=width) {
+    font-size: 36px;
+    line-height: 1.11111;
+  }
+
+  @media (1440px<=width) {
+    font-size: 50px;
+    line-height: 1.2;
+  }
+}
+
+.hero-btn {
+  border-radius: 30px;
+  border: none;
+  width: 262px;
+  height: 48px;
+  background-color: var(--button-dark);
+  color: var(--primary-text-color-light);
+  position: relative;
+  line-height: 1.28571;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color var(--transition-time) var(--transition-effect);
+
+  @media (768px<=width) {
+    width: 226px;
+    height: 56px;
+  }
+}
+
+.hero-btn::after {
+  content: '';
+  position: absolute;
+  left: 262px;
+  top: 0px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--white-color);
+  background-image: url('../../public/images/hero/arrow-down-right.svg');
+  background-size: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform var(--transition-time) var(--transition-effect);
+}
+@media (768px<=width) {
+  .hero-btn::after {
+    width: 56px;
+    height: 56px;
+    left: 227px;
+  }
+}
+
+.hero-btn:hover {
+  background-color: var(--button-dark-hover);
+}
+
+.hero-btn:hover::after {
+  transform: rotate(45deg);
+}
