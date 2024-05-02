@@ -1,13 +1,14 @@
 .hero-wrapper {
   background-color: #2a2a2a;
   background-image: -webkit-image-set(
-    url('../../public/images/hero/hero.jpg') 1x,
-    url('../../public/images/hero/hero@2x.jpg') 2x
-  );
-  background-image: image-set(
-    url('../../public/images/hero/hero.jpg') 1x,
-    url('../../public/images/hero/hero@2x.jpg') 2x
-  );
+      url('../../public/images/hero/hero.webp') 1x,
+      url('../../public/images/hero/hero@2x.webp') 2x
+    ),
+    image-set(
+      url('../../public/images/hero/hero.jpg') type('image/jpg') 1x,
+      url('../../public/images/hero/hero@2x.jpg') type('image/jpg') 2x
+    );
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -82,7 +83,7 @@
 .hero-btn {
   border-radius: 30px;
   border: none;
-  width: 262px;
+  width: 240px;
   height: 48px;
   background-color: var(--button-dark);
   color: var(--primary-text-color-light);
@@ -91,6 +92,10 @@
   font-weight: 600;
   font-size: 14px;
   transition: background-color var(--transition-time) var(--transition-effect);
+
+  @media (375px<=width) {
+    width: 262px;
+  }
 
   @media (768px<=width) {
     width: 226px;
@@ -101,7 +106,8 @@
 .hero-btn::after {
   content: '';
   position: absolute;
-  left: 262px;
+  left: 240px;
+
   top: 0px;
   width: 48px;
   height: 48px;
@@ -112,6 +118,11 @@
   background-position: center;
   background-repeat: no-repeat;
   transition: transform var(--transition-time) var(--transition-effect);
+}
+@media (375px<=width) {
+  .hero-btn::after {
+    left: 262px;
+  }
 }
 @media (768px<=width) {
   .hero-btn::after {
