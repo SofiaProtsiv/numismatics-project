@@ -1,0 +1,260 @@
+.reviews-section {
+  background-color: var(--container-bg-dark);
+  position: relative;
+  background-image: url('/images/reviews/mobile/diamond/mob-bot-diamond-small.webp'),
+    url('/images/reviews/mobile/diamond/mob-bot-diamond-big.webp'),
+    url('/images/reviews/mobile/diamond/mob-top-diamond-small.webp'),
+    url('/images/reviews/mobile/diamond/mob-top-diamond-big.webp');
+  background-repeat: no-repeat;
+  background-position: left 77px bottom 0, left 0 bottom 0, right 78px top 0,
+    right 0 top 0;
+
+  @media (width >=360px) and (width < 768px) {
+    padding: 32px 0;
+  }
+
+  @media (768px <=width) {
+    background-image: url('/images/reviews/tablet/diamond/tab-bot-diamond-small.webp'),
+      url('/images/reviews/tablet/diamond/tab-bot-diamond-big.webp'),
+      url('/images/reviews/tablet/diamond/tab-top-diamond-small.webp'),
+      url('/images/reviews/tablet/diamond/tab-top-diamond-big.webp');
+    background-repeat: no-repeat;
+    background-position: left 160px bottom 0, left 0 bottom 0, right 151px top 0,
+      right 0 top 0;
+    overflow: hidden;
+  }
+
+  @media (width >=1440px) {
+    background-image: url('/images/reviews/desktop/des-bot-diamond-small.webp'),
+      url('/images/reviews/desktop/des-bot-diamond-big.webp'),
+      url('/images/reviews/desktop/des-top-diamond-small.webp'),
+      url('/images/reviews/desktop/des-top-diamond-big.webp');
+    background-repeat: no-repeat;
+    background-position: left 145px bottom 0, left 0 bottom 0, right 207px top 0,
+      right 0 top 0;
+  }
+}
+
+.reviews-subtitle {
+  font-family: var(--primary-font-family);
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--section-name-color);
+
+  @media (768px <=width) {
+    font-size: 14px;
+    line-height: 1.29;
+  }
+}
+
+.reviews-titles-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+
+  @media (768px <=width) {
+    margin-top: 20px;
+    margin-bottom: 64px;
+  }
+
+  @media (width >=1440px) {
+    flex-direction: row;
+    gap: 167px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
+}
+
+.reviews-main-title-container {
+  display: flex;
+  gap: 10px;
+
+  @media (768px <=width) {
+    gap: 26px;
+  }
+}
+
+.reviews-title {
+  font-family: var(--primary-font-family);
+  font-size: 28px;
+  text-transform: uppercase;
+  line-height: 1.14;
+  color: var(--white-color);
+
+  @media (768px <=width) {
+    font-size: 50px;
+    line-height: 1.1;
+  }
+
+  @media (width >=1440px) {
+    font-size: 90px;
+    line-height: 1;
+  }
+}
+
+.reviews-list .reviews-item-list {
+  border-radius: 15px;
+  height: 210px;
+  padding: 40px 5px;
+  background-color: var(--white-color);
+
+  @media (375px <=width) {
+    width: 343px;
+    height: 243px;
+  }
+
+  @media (768px <=width) {
+    padding: 47px 40px;
+    width: 600px;
+    height: 350px;
+  }
+}
+
+.reviews-slider-container {
+  margin-top: 32px;
+  margin-bottom: 79px;
+
+  @media (768px <=width) {
+    margin-bottom: 159px;
+  }
+
+  @media (width >=1440px) {
+    position: relative;
+    margin-top: 80px;
+    margin-bottom: 86px;
+  }
+}
+
+.reviews-pagination {
+  --swiper-pagination-color: var(--white-color);
+  --swiper-pagination-bullet-inactive-color: var(--white-color);
+  --swiper-pagination-bullet-width: 10px;
+  --swiper-pagination-bullet-height: 10px;
+  --swiper-pagination-bullet-inactive-opacity: 0.1;
+  --swiper-pagination-bullet-horizontal-gap: 12px;
+  --swiper-pagination-bullet-opacity: 1;
+}
+
+.reviews-container .reviews-swiper {
+  text-align: center;
+
+  @media (768px <=width) {
+    overflow: visible;
+  }
+}
+
+.swiper-slide {
+  @media (768px <=width) {
+    width: 0%;
+  }
+}
+
+.reviews-item-img {
+  @media (768px <=width) {
+    width: 520px;
+  }
+}
+
+.reviews-title-icon {
+  @media (768px <=width) {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+.reviews-swiper .swiper-button-next,
+.reviews-swiper .swiper-button-prev {
+  @media (width <1440px) {
+    display: none;
+  }
+}
+
+.reviews-slider-container .reviews-btn-prew,
+.reviews-slider-container .reviews-btn-next {
+  @media (width >=1440px) {
+    background-color: transparent;
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    border: 1px solid var(--lang-switch-border-light);
+    position: absolute;
+    top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: border var(--transition-time) var(--transition-effect);
+  }
+}
+
+.reviews-slider-container .reviews-btn-prew {
+  @media (width >=1440px) {
+    margin-left: 478px;
+  }
+}
+
+.reviews-slider-container .reviews-btn-next {
+  @media (width >=1440px) {
+    transform: scaleX(-1);
+    margin-right: 478px;
+  }
+}
+
+.reviews-slider-container .reviews-btn-prew:hover,
+.reviews-slider-container .reviews-btn-next:hover {
+  @media (width >=1440px) {
+    border: 1px solid var(--white-color);
+  }
+}
+
+.reviews-slider-container .swiper-button-prev:after,
+.reviews-slider-container .swiper-button-next:after {
+  content: '';
+}
+
+.reviews-slider-container .swiper-btn-icon {
+  @media (width >=1440px) {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 320px),
+screen and (min-resolution: 2dppx) and (min-width: 320px),
+screen and (min-device-pixel-ratio: 2) and (min-width: 320px) {
+  .reviews-section {
+    background-image: url('/images/reviews/mobile/diamond/mob-bot-diamond-small@2x.webp'),
+      url('/images/reviews/mobile/diamond/mob-bot-diamond-big@2x.webp'),
+      url('/images/reviews/mobile/diamond/mob-top-diamond-small@2x.webp'),
+      url('/images/reviews/mobile/diamond/mob-top-diamond-big@2x.webp');
+    background-size: 71px 37px, 57px 79px, 69px 39px, 56px 82px;
+  }
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 768px),
+screen and (min-resolution: 2dppx) and (min-width: 768px),
+screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
+  .reviews-section {
+    background-image: url('/images/reviews/tablet/diamond/tab-bot-diamond-small@2x.webp'),
+      url('/images/reviews/tablet/diamond/tab-bot-diamond-big@2x.webp'),
+      url('/images/reviews/tablet/diamond/tab-top-diamond-small@2x.webp'),
+      url('/images/reviews/tablet/diamond/tab-top-diamond-big@2x.webp');
+    background-size: 150px 80px, 116px 169px, 150px 81px, 107px 174px;
+  }
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 1440px),
+screen and (min-resolution: 2dppx) and (min-width: 1440px),
+screen and (min-device-pixel-ratio: 2) and (min-width: 1440px) {
+  .reviews-section {
+    background-image: url('/images/reviews/desktop/des-bot-diamond-small@2x.webp'),
+      url('/images/reviews/desktop/des-bot-diamond-big@2x.webp'),
+      url('/images/reviews/desktop/des-top-diamond-small@2x.webp'),
+      url('/images/reviews/desktop/des-top-diamond-big@2x.webp');
+
+    background-size: 153px 84px, 100px 172px, 141px 76px, 165px 164px;
+  }
+}
