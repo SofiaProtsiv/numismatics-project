@@ -54,10 +54,12 @@
   flex-direction: column;
   gap: 16px;
   margin-bottom: 32px;
+
   @media (768px <=width) {
     margin-top: 20px;
     margin-bottom: 64px;
   }
+
   @media (width >=1440px) {
     flex-direction: row;
     gap: 167px;
@@ -81,10 +83,12 @@
   text-transform: uppercase;
   line-height: 1.14;
   color: var(--white-color);
+
   @media (768px <=width) {
     font-size: 50px;
     line-height: 1.1;
   }
+
   @media (width >=1440px) {
     font-size: 90px;
     line-height: 1;
@@ -147,6 +151,7 @@
     width: 0%;
   }
 }
+
 .reviews-item-img {
   @media (768px <=width) {
     width: 520px;
@@ -160,34 +165,14 @@
   }
 }
 
-.reviews-swiper .swiper-button-next {
-  @media (width <1440px) {
-    display: none;
-  }
-}
+.reviews-swiper .swiper-button-next,
 .reviews-swiper .swiper-button-prev {
   @media (width <1440px) {
     display: none;
   }
 }
 
-.reviews-slider-container .reviews-btn-prew {
-  @media (width >=1440px) {
-    background-color: transparent;
-    width: 56px;
-    height: 56px;
-    border-radius: 100%;
-    border: 1px solid var(--lang-switch-border-light);
-    position: absolute;
-    margin-left: 478px;
-    top: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-}
-
+.reviews-slider-container .reviews-btn-prew,
 .reviews-slider-container .reviews-btn-next {
   @media (width >=1440px) {
     background-color: transparent;
@@ -195,30 +180,37 @@
     height: 56px;
     border-radius: 100%;
     border: 1px solid var(--lang-switch-border-light);
-    transform: scaleX(-1);
     position: absolute;
-    margin-right: 478px;
     top: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    transition: border var(--transition-time) var(--transition-effect);
   }
 }
 
-.reviews-slider-container .reviews-btn-prew:hover {
+.reviews-slider-container .reviews-btn-prew {
   @media (width >=1440px) {
-    border: 1px solid var(--white-color);
+    margin-left: 478px;
   }
 }
+
+.reviews-slider-container .reviews-btn-next {
+  @media (width >=1440px) {
+    transform: scaleX(-1);
+    margin-right: 478px;
+  }
+}
+
+.reviews-slider-container .reviews-btn-prew:hover,
 .reviews-slider-container .reviews-btn-next:hover {
   @media (width >=1440px) {
     border: 1px solid var(--white-color);
   }
 }
 
-.reviews-slider-container .swiper-button-prev:after {
-  content: '';
-}
+.reviews-slider-container .swiper-button-prev:after,
 .reviews-slider-container .swiper-button-next:after {
   content: '';
 }
@@ -231,8 +223,8 @@
 }
 
 @media screen and (min-resolution: 192dpi) and (min-width: 320px),
-  screen and (min-resolution: 2dppx) and (min-width: 320px),
-  screen and (min-device-pixel-ratio: 2) and (min-width: 320px) {
+screen and (min-resolution: 2dppx) and (min-width: 320px),
+screen and (min-device-pixel-ratio: 2) and (min-width: 320px) {
   .reviews-section {
     background-image: url('/images/reviews/mobile/diamond/mob-bot-diamond-small@2x.webp'),
       url('/images/reviews/mobile/diamond/mob-bot-diamond-big@2x.webp'),
@@ -243,8 +235,8 @@
 }
 
 @media screen and (min-resolution: 192dpi) and (min-width: 768px),
-  screen and (min-resolution: 2dppx) and (min-width: 768px),
-  screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
+screen and (min-resolution: 2dppx) and (min-width: 768px),
+screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
   .reviews-section {
     background-image: url('/images/reviews/tablet/diamond/tab-bot-diamond-small@2x.webp'),
       url('/images/reviews/tablet/diamond/tab-bot-diamond-big@2x.webp'),
@@ -255,8 +247,8 @@
 }
 
 @media screen and (min-resolution: 192dpi) and (min-width: 1440px),
-  screen and (min-resolution: 2dppx) and (min-width: 1440px),
-  screen and (min-device-pixel-ratio: 2) and (min-width: 1440px) {
+screen and (min-resolution: 2dppx) and (min-width: 1440px),
+screen and (min-device-pixel-ratio: 2) and (min-width: 1440px) {
   .reviews-section {
     background-image: url('/images/reviews/desktop/des-bot-diamond-small@2x.webp'),
       url('/images/reviews/desktop/des-bot-diamond-big@2x.webp'),
