@@ -1,0 +1,97 @@
+.areas-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Равномерное распределение по горизонтали */
+}
+
+.areas-box > div {
+  flex: 1; /* Каждый див занимает равное пространство */
+  max-width: calc(50% - 10px); /* Ограничивает каждый див до половины ширины контейнера с учетом отступов */
+  box-sizing: border-box; /* Включает в расчет ширину padding и border */
+  /*margin-bottom: 10px; !* Опционально: Добавляет отступ снизу между элементами *!*/
+}
+
+@media (max-width: 1439px) {
+  .areas-box > div:nth-child(3) {
+    flex: none; /* Фиксирует третий див на одном месте */
+    width: 100%; /* Занимает всю ширину родителя */
+    max-width: calc(100% - 20px); /* Ограничивает ширину с учетом отступов */
+    /*margin: 0 auto; !* Выравнивает по центру *!*/
+  }
+}
+
+@media (max-width: 767px) {
+  .areas-box {
+    flex-direction: column; /* Отображает дивы в колонку */
+  }
+
+  .areas-box > div {
+    flex: none; /* Фиксирует дивы в колонке */
+    width: 100%; /* Занимает всю ширину родителя */
+    max-width: calc(100% - 20px); /* Ограничивает ширину с учетом отступов */
+    /*margin: 0 auto 10px; !* Выравнивает по центру и добавляет отступ снизу *!*/
+  }
+}
+
+.content {
+  text-align: center;
+}
+
+.content-category {
+  color: var(--section-name-color);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+}
+
+.content-title {
+  margin-top: 16px;
+}
+
+.content-title-text {
+  color: rgba(18, 20, 23, 1);
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.content-text {
+  margin-top: 16px;
+  color: var(--secondary-text-color-dark);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.numismatic {
+  text-align: center;
+  margin-top: 62px;
+}
+
+.bonistic,
+.faleristic {
+  text-align: center;
+  margin-top: 76px;
+}
+
+.numismatic-image,
+.bonistic-image,
+.faleristic-image {
+  margin: 0 auto;
+}
+
+.numismatic-title,
+.bonistic-title,
+.faleristic-title {
+  margin-top: 16px;
+  color: rgba(18, 20, 23, 1);
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.numismatic-content,
+.bonistic-content,
+.faleristic-content {
+  color: var(--secondary-text-color-dark);
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 15px;
+}
