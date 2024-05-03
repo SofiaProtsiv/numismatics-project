@@ -1,6 +1,215 @@
+.consultation-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  z-index: 100;
+  background-color: var(--background-color);
+
+  transition: opacity var(--transition-time),
+    visibility 0s var(--transition-effect);
+
+  display: flex;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.consultation-modal.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.consultation-modal-wrapper {
+  max-height: 100%;
+  width: 100%;
+
+  overflow: scroll;
+  padding: 0 10px;
+}
+.visible .consultation-modal-wrapper {
+  pointer-events: none;
+}
+.visible .consultation-modal-container {
+  pointer-events: all;
+}
+.consultation-modal-container {
+  position: relative;
+  width: 100%;
+  max-width: 343px;
+
+  margin: 10px auto;
+  padding: 32px;
+
+  border-radius: 15px;
+
+  background-color: var(--white-color);
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.22), 0 19px 60px rgba(0, 0, 0, 0.3);
+
+  @media (768px <=width) {
+    max-width: 630px;
+    padding: 60px;
+  }
+  @media (width >=1440px) {
+    max-width: 1245px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
+.consultation-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 18px;
+  height: 18px;
+  padding: 4.5px;
+  background-color: transparent;
+  border: none;
+  @media (768px <=width) {
+    width: 28px;
+    height: 28px;
+    padding: 7px;
+  }
+}
+
+.consultation-modal-close span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.consultation-modal-close span::before,
+.consultation-modal-close span::after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 12.73px;
+  border-radius: 1.25px;
+  background-color: var(--primary-text-color-dark);
+}
+
+@media (min-width: 768px) {
+  .consultation-modal-close span::before,
+  .consultation-modal-close span::after {
+    width: 2.5px;
+    height: 19.8px;
+  }
+}
+
+.consultation-modal-close span::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.consultation-modal-close span::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.consultation-modal-profile {
+  display: none;
+  @media (width >=1440px) {
+    display: block;
+    max-width: 450px;
+  }
+}
+.consultation-modal-avatar {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  overflow: hidden;
+
+  margin-bottom: 33px;
+}
+.avatar-wrapper {
+  width: 450px;
+  height: 450px;
+  position: relative;
+
+  margin-top: 43px;
+
+  background-color: var(--container-bg-dark);
+  border-radius: 50%;
+}
+
+.avatar-wrapper img {
+  position: absolute;
+  bottom: -15px;
+  left: 9px;
+  transform: rotate(2deg);
+  width: 449px;
+  height: 514px;
+}
+
+.consultation-modal-name {
+  color: var(--primary-text-color-dark);
+  font-size: 24px;
+  line-height: 1.33;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.consultation-profile-text {
+  max-width: 311px;
+  margin: 0 auto;
+  text-align: center;
+}
+.consultation-modal-content {
+  width: 100%;
+  @media (width >=1440px) {
+    max-width: 445px;
+  }
+}
+.consultation-modal-title {
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  margin-bottom: 14px;
+
+  color: var(--primary-text-color-dark);
+
+  @media (768px <=width) {
+    font-size: 24px;
+    line-height: 1.33;
+    margin-bottom: 16px;
+  }
+}
+
+.consultation-modal-text {
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: 0;
+  margin-bottom: 24px;
+
+  @media (768px <=width) {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+}
+
+.consultation-modal-footer {
+  margin-top: 16px;
+  display: flex;
+
+  font-size: 10px;
+  letter-spacing: 0em;
+  font-weight: 400;
+  color: var(--section-name-color);
+
+  @media (768px <=width) {
+    font-size: 14px;
+  }
+}
+
+/* FORM */
+
 .modal-form {
-  max-width: 375px;
-  margin: 100px auto;
+  width: 100%;
 }
 
 .modal-input-wrapper {
