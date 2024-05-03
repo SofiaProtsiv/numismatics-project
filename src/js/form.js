@@ -56,7 +56,7 @@ function handleSubmit(e) {
 
   fetchConsultation({
     name,
-    phone: '+380' + phone,
+    phone: '+38' + phone,
     service: servicesValue,
     question: comment,
   });
