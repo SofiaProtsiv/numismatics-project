@@ -3,33 +3,55 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 16px;
   margin-bottom: 52px;
+
+  @media (768px <=width) {
+    margin-bottom: 96px;
+  }
 }
 
 .faq-info-intro {
+  margin-bottom: 16px;
   font-size: 12px;
   font-weight: 700;
-  line-height: 133%;
+  line-height: 1.33;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: var(--section-name-color);
+
+  @media (768px <=width) {
+    font-size: 14px;
+    line-height: 1.29;
+  }
 }
 
 .faq-info-title {
   font-size: 28px;
   font-weight: 700;
-  line-height: 114%;
+  line-height: 1.14;
   text-transform: uppercase;
   text-align: center;
   color: var(--primary-text-color-dark);
+  margin-bottom: 16px;
+
+  @media (768px <=width) {
+    margin-bottom: 32px;
+    font-size: 50px;
+    line-height: 1.1;
+  }
 }
 
 .faq-info-text {
   font-size: 14px;
-  line-height: 129%;
+  line-height: 1.29;
   text-align: center;
   color: var(--secondary-text-color-dark);
+
+  @media (768px <=width) {
+    padding: 0 20px;
+    font-size: 18px;
+    line-height: 1.44;
+  }
 }
 
 .faq-img-container {
@@ -40,6 +62,12 @@
   border-radius: 50%;
   background-color: var(--input-outline);
   position: relative;
+
+  @media (768px <=width) {
+    width: 354px;
+    height: 354px;
+    margin-bottom: 32px;
+  }
 }
 
 .faq-img {
@@ -47,28 +75,47 @@
   bottom: 0px;
 }
 
+.faq-img-size {
+  @media (768px <=width) {
+    width: 352px;
+    height: 385px;
+  }
+}
+
 .faq-img-info {
+  max-width: 246px;
   text-align: center;
-  margin-bottom: 64px;
+  margin: 0 auto 64px;
+
+  @media (768px <=width) {
+    max-width: 311px;
+  }
 }
 
 .faq-img-info-title {
   margin-bottom: 10px;
-}
-
-.faq-img-info-title {
   font-weight: 700;
-  font-size: 24px;
-  line-height: 133%;
+  font-size: 18px;
+  line-height: 1.11;
   color: var(--primary-text-color-dark);
+
+  @media (768px <=width) {
+    font-size: 24px;
+    line-height: 1.33;
+  }
 }
 
 .faq-img-info-text {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
+  font-size: 14px;
+  line-height: 1.29;
   text-align: center;
   color: var(--secondary-text-color-dark);
+
+  @media (768px <=width) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 
 .faq-list {
@@ -76,6 +123,20 @@
   flex-direction: column;
   gap: 16px;
   padding-bottom: 30px;
+
+  @media (768px <=width) {
+    padding-left: 16px;
+    gap: 20px;
+    padding-bottom: 40px;
+  }
+}
+
+.faq-list-item {
+  max-width: 333px;
+
+  @media (768px <=width) {
+    max-width: 690px;
+  }
 }
 
 .faq-list-item-container {
@@ -84,6 +145,10 @@
   justify-content: space-between;
   border-bottom: 1px solid var(--input-border);
   padding: 16px;
+
+  @media (768px <=width) {
+    padding: 28px;
+  }
 }
 
 .faq-list-item-container.active {
@@ -92,41 +157,78 @@
   border-radius: 15px;
   border-bottom: none;
   margin-bottom: 16px;
+
+  @media (768px <=width) {
+    margin-bottom: 30px;
+  }
 }
 
 .faq-list-item-container.active h3 {
   color: var(--primary-text-color-light);
 }
 
-.faq-list-item-container.active svg {
+.faq-list-item-container.active .faq-list-item-svg {
   background-color: var(--container-bg-light);
-  transform: rotate(-45deg);
+  transform: rotate(0);
 }
 
 .faq-list-item-title {
   color: var(--primary-text-color-dark);
   font-weight: 700;
   font-size: 18px;
-  line-height: 111%;
+  line-height: 1.11;
+
+  @media (768px <=width) {
+    font-size: 24px;
+    line-height: 1.33;
+  }
 }
 
 .faq-list-item-answer {
   padding-left: 16px;
-  padding-right: 24px;
+  padding-right: 16px;
   font-size: 14px;
-  line-height: 129%;
+  line-height: 1.29;
   color: var(--secondary-text-color-dark);
+
+  @media (768px <=width) {
+    padding-left: 28px;
+    padding-right: 46px;
+    font-size: 18px;
+    line-height: 1.44;
+  }
 }
 
-.svg {
+.faq-list-item-svg {
   display: flex;
   align-items: center;
   width: 40px;
   height: 40px;
-  padding-top: 11px;
-  padding-left: 11px;
+
   flex-shrink: 0;
+  background-image: url('../../public/images/hero/arrow-down-right.svg');
+  background-size: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
 
   border: 1px solid var(--border-color);
   border-radius: 50%;
+  transform: rotate(45deg);
+
+  @media (768px <=width) {
+    background-size: 24px;
+
+    width: 54px;
+    height: 54px;
+  }
+}
+
+.faq-list-item-svg-size {
+  width: 1.5em;
+  height: 1.5em;
+
+  @media (min-width: 768px) {
+    width: 30px;
+    height: 18px;
+  }
 }
