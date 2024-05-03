@@ -1,51 +1,115 @@
-<form class="modal-form js-modal-form">
-  <div class="modal-input-wrapper">
-    <input
-      class="modal-input"
-      type="text"
-      name="name"
-      placeholder="Ваше ім’я"
-    />
-    <p class="modal-input-error">Обов'язкове поле</p>
-  </div>
-  <div class="modal-input-wrapper show-prefix">
-    <label class="modal-lable-name js-modal-label-name" for="form-name"
-      >+38</label
-    >
-    <input
-      class="modal-input modal-input-name"
-      type="text"
-      name="phone"
-      id="form-name"
-      placeholder="Номер телефону"
-    />
-    <p class="modal-input-error">Обов'язкове поле</p>
-  </div>
-  <div class="modal-input-wrapper">
-    <div class="modal-select js-modal-select">
+<div class="consultation-modal js-consultation-modal visible">
+  <div class="consultation-modal-wrapper">
+    <div class="consultation-modal-container">
       <button
-        class="modal-select-button modal-input js-select-button"
-        data-selected="false"
-        type="button"
-        name="services"
+        class="consultation-modal-close js-consultation-modal-close"
+        aria-label="Close"
       >
-        <span id="modal-services">Послуги</span>
-        <svg class="modal-select-icon" width="20" height="20">
-          <use href="./public/images/icons-sprite.svg#icon-chevron-down"></use>
-        </svg>
+        <span></span>
       </button>
-      <p class="modal-input-error">Обов'язкове поле</p>
-      <ul class="modal-select-list js-modal-select-list">
-        <li class="modal-select-item">Консультації з нумізматики</li>
-        <li class="modal-select-item">Консультації з питань колекціонування</li>
-        <li class="modal-select-item">Консультації з формування колекцій</li>
-      </ul>
+      <div class="consultation-modal-profile">
+        <div class="consultation-modal-avatar">
+          <div class="avatar-wrapper">
+            <picture>
+              <source
+                srcset="
+                  ./public/images/form/avatar-1x.webp 1x,
+                  ./public/images/form/avatar-2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="./public/images/form/avatar-2x.png 2x"
+                type="image/png"
+              />
+              <img
+                alt="Image"
+                src="./public/images/form/avatar-1x.png"
+                width="449"
+                height="514"
+              />
+            </picture>
+          </div>
+        </div>
+        <h3 class="consultation-modal-name">Іван Прудько</h3>
+        <p class="consultation-modal-text consultation-profile-text">
+          Співзасновник та експерт компанії «Монітекс» - інтернет-магазину №1
+          для колекціонерів в Україні.
+        </p>
+      </div>
+      <div class="consultation-modal-content">
+        <h2 class="consultation-modal-title">
+          Отримати консультацію з питань нумізматики
+        </h2>
+        <p class="consultation-modal-text">
+          Компанія «Монітекс» була заснована в 2013 році і з того часу здобула
+          довіру багатьох постійних клієнтів.
+        </p>
+        <form class="modal-form js-modal-form">
+          <div class="modal-input-wrapper">
+            <input
+              class="modal-input"
+              type="text"
+              name="name"
+              placeholder="Ваше ім’я"
+            />
+            <p class="modal-input-error">Обов'язкове поле</p>
+          </div>
+          <div class="modal-input-wrapper show-prefix">
+            <label class="modal-lable-name js-modal-label-name" for="form-name"
+              >+38</label
+            >
+            <input
+              class="modal-input modal-input-name"
+              type="text"
+              name="phone"
+              id="form-name"
+              placeholder="Номер телефону"
+            />
+            <p class="modal-input-error">Обов'язкове поле</p>
+          </div>
+          <div class="modal-input-wrapper">
+            <div class="modal-select js-modal-select">
+              <button
+                class="modal-select-button modal-input js-select-button"
+                data-selected="false"
+                type="button"
+                name="services"
+              >
+                <span id="modal-services">Послуги</span>
+                <svg class="modal-select-icon" width="20" height="20">
+                  <use
+                    href="./public/images/icons-sprite.svg#icon-chevron-down"
+                  ></use>
+                </svg>
+              </button>
+              <p class="modal-input-error">Обов'язкове поле</p>
+              <ul class="modal-select-list js-modal-select-list">
+                <li class="modal-select-item">Консультації з нумізматики</li>
+                <li class="modal-select-item">
+                  Консультації з питань колекціонування
+                </li>
+                <li class="modal-select-item">
+                  Консультації з формування колекцій
+                </li>
+              </ul>
+            </div>
+          </div>
+          <textarea
+            class="modal-textarea modal-input"
+            name="comment"
+            placeholder="Коментар"
+          ></textarea>
+          <button class="modal-button" type="submit">
+            Отримати консультацію
+          </button>
+        </form>
+        <p class="consultation-modal-footer">
+          Натискаючи кнопку «Отримати консультацію», ви погоджуєтеся з нашою
+          Політикою конфіденційності та дозволяєте використовувати цю інформацію
+          в маркетингових цілях.
+        </p>
+      </div>
     </div>
   </div>
-  <textarea
-    class="modal-textarea modal-input"
-    name="comment"
-    placeholder="Коментар"
-  ></textarea>
-  <button class="modal-button" type="submit">Отримати консультацію</button>
-</form>
+</div>
