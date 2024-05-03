@@ -13,18 +13,15 @@
             <picture>
               <source
                 srcset="
-                  ./public/images/form/avatar-1x.webp 1x,
-                  ./public/images/form/avatar-2x.webp 2x
+                  /images/form/avatar-1x.webp 1x,
+                  /images/form/avatar-2x.webp 2x
                 "
                 type="image/webp"
               />
-              <source
-                srcset="./public/images/form/avatar-2x.png 2x"
-                type="image/png"
-              />
+              <source srcset="/images/form/avatar-2x.png 2x" type="image/png" />
               <img
                 alt="Image"
-                src="./public/images/form/avatar-1x.png"
+                src="/images/form/avatar-1x.png"
                 width="449"
                 height="514"
               />
@@ -80,9 +77,7 @@
               >
                 <span id="modal-services">Послуги</span>
                 <svg class="modal-select-icon" width="20" height="20">
-                  <use
-                    href="./public/images/icons-sprite.svg#icon-chevron-down"
-                  ></use>
+                  <use href="/images/icons-sprite.svg#icon-chevron-down"></use>
                 </svg>
               </button>
               <p class="modal-input-error">Обов'язкове поле</p>
