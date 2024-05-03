@@ -12,7 +12,13 @@
 
   --button-dark: rgba(19, 35, 53, 1);
   --button-dark-hover: rgba(28, 50, 75, 1);
-  --accent-bg: radial-gradient(circle, rgba(255, 239, 166, 1) 0%, rgba(255, 218, 125, 1) 30%, rgba(242, 201, 116, 1) 60%, rgba(206, 157, 78, 1) 100%);
+  --accent-bg: radial-gradient(
+    circle,
+    rgba(255, 239, 166, 1) 0%,
+    rgba(255, 218, 125, 1) 30%,
+    rgba(242, 201, 116, 1) 60%,
+    rgba(206, 157, 78, 1) 100%
+  );
 
   --header-bg: rgba(255, 255, 255, 0.18);
 
@@ -26,6 +32,7 @@
   --decoration-arrow-fill: rgba(178, 178, 178, 1);
   --white-color: rgba(255, 255, 255, 1);
   --error-color: rgba(255, 0, 0, 1);
+  --black-color: rgba(0, 0, 0, 1);
 
   --border-color: rgba(18, 20, 23, 0.3);
   --input-border: rgba(18, 20, 23, 0.1);
@@ -53,6 +60,6 @@
   --background-color: rgba(0, 0, 0, 0.6);
 
   /* Fonts */
-  --primary-font-family: "Manrope", sans-serif;
-  --accent-font-family: "Mulish", sans-serif;
+  --primary-font-family: 'Manrope', sans-serif;
+  --accent-font-family: 'Mulish', sans-serif;
 }

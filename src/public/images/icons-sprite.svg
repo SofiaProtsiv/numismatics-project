@@ -1,9 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
   <defs>
     <!-- example start -->
-    <symbol id="icon-name" viewBox="0 0 32 32">
-      <!-- path -->
-    </symbol>
+    <symbol id="icon-VectorTelegram" viewBox="0 0 37 32">
+<path d="M33.18 1.271l-31.52 12.155c-2.151 0.864-2.139 2.064-0.395 2.599l8.092 2.524 18.724-11.813c0.885-0.539 1.694-0.249 1.029 0.341l-15.17 13.693-0.558 8.341c0.818 0 1.179-0.375 1.637-0.818l3.931-3.822 8.176 6.039c1.508 0.83 2.59 0.403 2.965-1.396l5.367-25.294c0.549-2.203-0.841-3.2-2.279-2.549z"></path>
+</symbol>
+<symbol id="icon-Burger" viewBox="0 0 44 32">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="4.3636" d="M2.182 16h39.273M2.182 2.909h39.273M15.273 29.091h26.182"></path>
+</symbol>
+<symbol id="icon-Vector" viewBox="0 0 48 32">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="8" d="M6 7l18 18 18-18"></path>
+</symbol>
+<symbol id="icon-Icon" viewBox="0 0 32 32">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="5.3333" d="M28.444 3.556l-24.889 24.889M3.556 3.556l24.889 24.889"></path>
+</symbol>
     <!-- example end -->
   </defs>
 </svg>
