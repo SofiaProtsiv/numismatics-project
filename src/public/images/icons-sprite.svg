@@ -8,5 +8,9 @@
       <path d="M6.869 10.869a1.6 1.6 0 0 1 2.263 0l6.869 6.869 6.869-6.869a1.6 1.6 0 1 1 2.263 2.263l-8 8a1.6 1.6 0 0 1-2.263 0l-8-8a1.6 1.6 0 0 1 0-2.263z"/>
     </symbol>
     <!-- example end -->
+    <symbol id="icon-arrow-down-right" viewBox="0 0 32 32">
+      <path fill="none" stroke="#b2b2b2" stroke-linecap="square" stroke-linejoin="round" stroke-width="2.667" d="m8 8 13.6 13.6" style="stroke:var(--color1, #b2b2b2)"/>
+      <path fill="none" stroke="#b2b2b2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.667" d="M22.667 9.333v13.333H9.334" style="stroke:var(--color1, #b2b2b2)"/>
+    </symbol>
   </defs>
 </svg>
