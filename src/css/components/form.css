@@ -266,14 +266,19 @@
   color: var(--input-placeholder-color);
 }
 
-.modal-lable-name {
+.modal-label-name {
   position: absolute;
   top: 50%;
   left: 18px;
 
+  display: none;
+
   transform: translateY(-50%);
 }
-.modal-input-name:focus {
+.show-prefix .modal-label-name {
+  display: block;
+}
+.show-prefix .modal-input-name {
   padding-left: 50px;
 }
 
@@ -300,6 +305,17 @@
   justify-content: space-between;
   gap: 10px;
   background-color: transparent;
+}
+
+.modal-select-button span {
+  display: inline-block;
+  max-width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  @media (768px <=width) {
+    max-width: 450px;
+  }
 }
 
 .modal-select-button[data-selected='false'] span {
