@@ -1,4 +1,4 @@
-.reviews-section {
+.reviews-wrapper {
   background-color: var(--container-bg-dark);
   position: relative;
   background-image: url('/images/reviews/mobile/diamond/mob-bot-diamond-small.webp'),
@@ -22,6 +22,7 @@
     background-position: left 160px bottom 0, left 0 bottom 0, right 151px top 0,
       right 0 top 0;
     overflow: hidden;
+    padding: 100px 0;
   }
 
   @media (width >=1440px) {
@@ -32,6 +33,7 @@
     background-repeat: no-repeat;
     background-position: left 145px bottom 0, left 0 bottom 0, right 207px top 0,
       right 0 top 0;
+    padding: 120px 0;
   }
 }
 
@@ -56,14 +58,12 @@
   margin-bottom: 32px;
 
   @media (768px <=width) {
-    margin-top: 20px;
     margin-bottom: 64px;
   }
 
   @media (width >=1440px) {
     flex-direction: row;
     gap: 167px;
-    margin-top: 40px;
     margin-bottom: 80px;
   }
 }
@@ -115,16 +115,18 @@
 
 .reviews-slider-container {
   margin-top: 32px;
-  margin-bottom: 79px;
 
-  @media (768px <=width) {
-    margin-bottom: 159px;
+  @media (width >=360px) and (width < 768px) {
+    margin-bottom: 79px;
+  }
+
+  @media (width >=768px) and (width < 1440px) {
+    margin-bottom: 119px;
   }
 
   @media (width >=1440px) {
     position: relative;
     margin-top: 80px;
-    margin-bottom: 86px;
   }
 }
 
@@ -136,6 +138,12 @@
   --swiper-pagination-bullet-inactive-opacity: 0.1;
   --swiper-pagination-bullet-horizontal-gap: 12px;
   --swiper-pagination-bullet-opacity: 1;
+  @media (width >=1440px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+  }
 }
 
 .reviews-container .reviews-swiper {
@@ -181,7 +189,7 @@
     border-radius: 100%;
     border: 1px solid var(--lang-switch-border-light);
     position: absolute;
-    top: 5px;
+    top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -223,9 +231,9 @@
 }
 
 @media screen and (min-resolution: 192dpi) and (min-width: 320px),
-screen and (min-resolution: 2dppx) and (min-width: 320px),
-screen and (min-device-pixel-ratio: 2) and (min-width: 320px) {
-  .reviews-section {
+  screen and (min-resolution: 2dppx) and (min-width: 320px),
+  screen and (min-device-pixel-ratio: 2) and (min-width: 320px) {
+  .reviews-wrapper {
     background-image: url('/images/reviews/mobile/diamond/mob-bot-diamond-small@2x.webp'),
       url('/images/reviews/mobile/diamond/mob-bot-diamond-big@2x.webp'),
       url('/images/reviews/mobile/diamond/mob-top-diamond-small@2x.webp'),
@@ -235,9 +243,9 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 320px) {
 }
 
 @media screen and (min-resolution: 192dpi) and (min-width: 768px),
-screen and (min-resolution: 2dppx) and (min-width: 768px),
-screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
-  .reviews-section {
+  screen and (min-resolution: 2dppx) and (min-width: 768px),
+  screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
+  .reviews-wrapper {
     background-image: url('/images/reviews/tablet/diamond/tab-bot-diamond-small@2x.webp'),
       url('/images/reviews/tablet/diamond/tab-bot-diamond-big@2x.webp'),
       url('/images/reviews/tablet/diamond/tab-top-diamond-small@2x.webp'),
@@ -247,9 +255,9 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
 }
 
 @media screen and (min-resolution: 192dpi) and (min-width: 1440px),
-screen and (min-resolution: 2dppx) and (min-width: 1440px),
-screen and (min-device-pixel-ratio: 2) and (min-width: 1440px) {
-  .reviews-section {
+  screen and (min-resolution: 2dppx) and (min-width: 1440px),
+  screen and (min-device-pixel-ratio: 2) and (min-width: 1440px) {
+  .reviews-wrapper {
     background-image: url('/images/reviews/desktop/des-bot-diamond-small@2x.webp'),
       url('/images/reviews/desktop/des-bot-diamond-big@2x.webp'),
       url('/images/reviews/desktop/des-top-diamond-small@2x.webp'),
