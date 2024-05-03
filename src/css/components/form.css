@@ -57,6 +57,17 @@
   color: var(--input-placeholder-color);
 }
 
+.modal-lable-name {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+
+  transform: translateY(-50%);
+}
+.modal-input-name:focus {
+  padding-left: 50px;
+}
+
 .modal-input-error {
   position: absolute;
   left: 10px;

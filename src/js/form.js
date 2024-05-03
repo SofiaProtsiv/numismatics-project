@@ -2,6 +2,7 @@ const form = document.querySelector('.js-modal-form');
 const selectButton = document.querySelector('.js-select-button');
 const selectList = document.querySelector('.js-modal-select-list');
 const selectContainer = document.querySelector('.js-modal-select');
+const numberPrefix = document.querySelector('.js-modal-label-name');
 
 const nameInput = document.querySelector('input[name="name"]');
 const phoneInput = document.querySelector('input[name="phone"]');
@@ -9,6 +10,7 @@ const servicesInput = document.querySelector('button[name="services"]');
 
 const INVALID = 'invalid';
 const ACTIVE_SELECT = 'select-active';
+const SHOW_PREFIX = 'show-prefix';
 const buttonAttribute = {
   key: 'data-selected',
   selected: 'true',
@@ -22,6 +24,9 @@ selectList.addEventListener('click', handleListSelect);
 nameInput.addEventListener('focus', removeInvalid);
 phoneInput.addEventListener('focus', removeInvalid);
 servicesInput.addEventListener('focus', removeInvalid);
+
+phoneInput.addEventListener('input', validateNumber);
+// phoneInput.
 
 function handleSubmit(e) {
   e.preventDefault();
@@ -39,7 +44,7 @@ function handleSubmit(e) {
   const servicesValue =
     data.services.querySelector('#modal-services').textContent;
 
-  fetchConsultation({ name, phone, service: servicesValue, question: comment });
+  //   fetchConsultation({ name, phone, service: servicesValue, question: comment });
   e.target.reset();
 }
 
@@ -96,7 +101,7 @@ function handleListSelect(e) {
 }
 
 function fetchConsultation(data) {
-  fetch('https://numi"smatics-project-backend.onrender.com/api/application', {
+  fetch('https://numismatics-project-backend.onrender.com/api/application', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -116,4 +121,14 @@ function fetchConsultation(data) {
     .catch(error => {
       console.error('Error submitting application:', error);
     });
+}
+
+function validateNumber(event) {
+  const phoneInput = event.target.value.replace(/\D/g, '');
+  if (phoneInput.length > 10) {
+    event.target.value = phoneInput.slice(0, 10);
+    return;
+  }
+
+  event.target.value = phoneInput;
 }
