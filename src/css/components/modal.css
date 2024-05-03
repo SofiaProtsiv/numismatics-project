@@ -1,6 +1,18 @@
 .modal-container {
-  visibility: hidden;
-  
+  opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-time), visibility 0s var(--transition-effect);
+}
+
+.modal-container.visible {
+  /* overflow: hidden; */
+  opacity: 1;
+  visibility: visible;
+  transition: opacity var(--transition-time), visibility 0s var(--transition-effect);
+}
+
+.body-overflow{
+  overflow: hidden
 }
 
 .modal-bg {
@@ -11,8 +23,8 @@
   z-index: 90;
   background-color: var(--background-color);
   position: fixed;
-  transform: scaleY(1);
-  transition-duration: var(--transition-time);
+  /* transform: scaleY(1); */
+  /* transition-duration: var(--transition-time); */
 }
 
 .modal {
@@ -30,7 +42,7 @@
   background-color: var(--white-color);
   box-shadow: 5px 5px 12px rgba(0, 0, 0, .22), 0 19px 60px rgba(0, 0, 0, .3);
   transform: translate(-50%, -50%);
-  transition: transform var(--transition-time) var(--transition-effect);
+  /* transition: transform var(--transition-time) var(--transition-effect); */
   @media (768px <=width) {
       width: 615px;
       padding: 80px;
@@ -95,6 +107,7 @@
   align-items: center;
   gap: 8px;
   margin-top: 14px;
+  
 }
 
 .icon{
@@ -103,4 +116,11 @@
   height: 32px;
   border:  1px solid black;
   border-radius: 50%;
+  @media (768px <=width) {
+      width: 40px;
+      height: 40px;
+    }
+}
+.instagramSvg{
+  fill: black
 }
