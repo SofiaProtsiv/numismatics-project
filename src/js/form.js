@@ -8,9 +8,13 @@ const nameInput = document.querySelector('input[name="name"]');
 const phoneInput = document.querySelector('input[name="phone"]');
 const servicesInput = document.querySelector('button[name="services"]');
 
+const modal = document.querySelector('.js-consultation-modal');
+const closeModalBtn = document.querySelector('.js-consultation-modal-close');
+
 const INVALID = 'invalid';
 const ACTIVE_SELECT = 'select-active';
 const SHOW_PREFIX = 'show-prefix';
+const VISIBLE = 'visible';
 const buttonAttribute = {
   key: 'data-selected',
   selected: 'true',
@@ -26,7 +30,12 @@ phoneInput.addEventListener('focus', removeInvalid);
 servicesInput.addEventListener('focus', removeInvalid);
 
 phoneInput.addEventListener('input', validateNumber);
-// phoneInput.
+phoneInput.addEventListener('focus', e => {});
+phoneInput.addEventListener('blur', e => {});
+
+// Modal
+closeModalBtn.addEventListener('click', closeModal);
+modal.addEventListener('click', handleBackdropClose);
 
 function handleSubmit(e) {
   e.preventDefault();
@@ -132,3 +141,27 @@ function validateNumber(event) {
 
   event.target.value = phoneInput;
 }
+
+function handleEsc(e) {
+  if (e.key !== 'Escape') return;
+  closeModal();
+}
+
+function handleBackdropClose(e) {
+  if (e.target !== e.currentTarget) return;
+  closeModal();
+}
+
+export function closeModal() {
+  modal.classList.remove(VISIBLE);
+  document.body.style.overflow = '';
+  window.removeEventListener('keydown', handleEsc);
+}
+export function handleOpenModal() {
+  modal.classList.add(VISIBLE);
+  document.body.style.overflow = 'hidden';
+  window.addEventListener('keydown', handleEsc);
+}
+
+const op = document.querySelector('.hero-btn');
+op.addEventListener('click', handleOpenModal);
