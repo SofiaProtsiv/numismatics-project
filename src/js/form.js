@@ -2,11 +2,12 @@ const form = document.querySelector('.js-modal-form');
 const selectButton = document.querySelector('.js-select-button');
 const selectList = document.querySelector('.js-modal-select-list');
 const selectContainer = document.querySelector('.js-modal-select');
-const numberPrefix = document.querySelector('.js-modal-label-name');
 
 const nameInput = document.querySelector('input[name="name"]');
 const phoneInput = document.querySelector('input[name="phone"]');
 const servicesInput = document.querySelector('button[name="services"]');
+
+const phoneWrapper = phoneInput.closest('.modal-input-wrapper');
 
 const modal = document.querySelector('.js-consultation-modal');
 const closeModalBtn = document.querySelector('.js-consultation-modal-close');
@@ -30,8 +31,8 @@ phoneInput.addEventListener('focus', removeInvalid);
 servicesInput.addEventListener('focus', removeInvalid);
 
 phoneInput.addEventListener('input', validateNumber);
-phoneInput.addEventListener('focus', e => {});
-phoneInput.addEventListener('blur', e => {});
+phoneInput.addEventListener('focus', handlePhoneFocus);
+phoneInput.addEventListener('blur', handlePhoneBlur);
 
 // Modal
 closeModalBtn.addEventListener('click', closeModal);
@@ -53,8 +54,39 @@ function handleSubmit(e) {
   const servicesValue =
     data.services.querySelector('#modal-services').textContent;
 
-  //   fetchConsultation({ name, phone, service: servicesValue, question: comment });
+  fetchConsultation({
+    name,
+    phone: '+380' + phone,
+    service: servicesValue,
+    question: comment,
+  });
+
   e.target.reset();
+  data.services.querySelector('span').textContent = 'Послуги';
+  data.services.dataset.selected = 'false';
+  phoneWrapper.classList.remove(SHOW_PREFIX);
+}
+
+function fetchConsultation(data) {
+  fetch('https://numismatics-project-backend.onrender.com/api/application', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('Application submitted successfully:', data);
+    })
+    .catch(error => {
+      console.error('Error submitting application:', error);
+    });
 }
 
 function validateForm({ name, phone, services }) {
@@ -64,8 +96,7 @@ function validateForm({ name, phone, services }) {
     nameInput.classList.add(INVALID);
     isValid = false;
   }
-
-  if (!phone) {
+  if (phone.length < 10) {
     phoneInput.classList.add(INVALID);
     isValid = false;
   }
@@ -76,6 +107,14 @@ function validateForm({ name, phone, services }) {
   }
 
   return isValid;
+}
+function handlePhoneFocus(e) {
+  phoneWrapper.classList.add(SHOW_PREFIX);
+}
+function handlePhoneBlur(e) {
+  if (e.target.value.trim()) return;
+  e.target.value = '';
+  phoneWrapper.classList.remove(SHOW_PREFIX);
 }
 
 function removeInvalid(e) {
@@ -103,33 +142,10 @@ function handleListSelect(e) {
   if (e.target !== e.currentTarget) {
     selectButton.setAttribute(buttonAttribute.key, buttonAttribute.selected);
     selectButton.querySelector('#modal-services').textContent =
-      e.target.textContent;
+      e.target.textContent.trim();
     selectContainer.classList.remove(ACTIVE_SELECT);
     window.removeEventListener('click', closeDropdownOnClickOutside);
   }
-}
-
-function fetchConsultation(data) {
-  fetch('https://numismatics-project-backend.onrender.com/api/application', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  })
-    .then(response => {
-      console.log(response);
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
-    .then(data => {
-      console.log('Application submitted successfully:', data);
-    })
-    .catch(error => {
-      console.error('Error submitting application:', error);
-    });
 }
 
 function validateNumber(event) {
@@ -163,5 +179,6 @@ export function handleOpenModal() {
   window.addEventListener('keydown', handleEsc);
 }
 
-const op = document.querySelector('.hero-btn');
-op.addEventListener('click', handleOpenModal);
+//  Тимчасовий код
+const openButtonHero = document.querySelector('.hero-btn');
+openButtonHero.addEventListener('click', handleOpenModal);
