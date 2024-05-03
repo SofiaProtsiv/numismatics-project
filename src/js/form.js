@@ -182,3 +182,5 @@ export function handleOpenModal() {
 //  Тимчасовий код
 const openButtonHero = document.querySelector('.hero-btn');
 openButtonHero.addEventListener('click', handleOpenModal);
+const openButtonServices = document.querySelector('.services-button');
+openButtonServices.addEventListener('click', handleOpenModal);
