@@ -114,10 +114,15 @@
 .faq-img-info {
   max-width: 246px;
   text-align: center;
-  margin: 0 auto 64px;
+  margin: 0 auto;
+  padding-bottom: 64px;
 
   @media (768px <=width) {
     max-width: 311px;
+  }
+
+  @media (width >=1440px) {
+    padding-bottom: 0px;
   }
 }
 
@@ -152,24 +157,35 @@
   flex-direction: column;
   gap: 16px;
   padding-bottom: 30px;
+  max-width: 339px;
+  max-height: 370px;
+  overflow-x: hidden;
+  overflow-y: scroll;
 
   @media (768px <=width) {
-    padding-left: 16px;
+    max-height: 580px;
     gap: 20px;
+    padding-left: 16px;
     padding-bottom: 40px;
+    max-width: 696px;
   }
 
   @media (width >=1440px) {
+    max-height: 595px;
     padding: 0;
     gap: 20px;
   }
 }
 
 .faq-list-item {
-  max-width: 333px;
+  width: 333px;
 
   @media (768px <=width) {
-    max-width: 690px;
+    width: 690px;
+  }
+
+  @media (min-width: 1440px) {
+    min-width: 690px;
   }
 }
 
@@ -179,7 +195,8 @@
   justify-content: space-between;
   border-bottom: 1px solid var(--input-border);
   padding: 16px;
-  transition: background-color var(--transition-time) var(--transition-effect);
+  transition: background-color var(--transition-time) var(--transition-effect),
+    border-radius var(--transition-time) var(--transition-effect);
 
   @media (768px <=width) {
     padding: 28px;
@@ -194,6 +211,8 @@
   border-bottom: none;
   margin-bottom: 16px;
 
+  transition: border-radius var(--transition-time) var(--transition-effect);
+
   @media (768px <=width) {
     margin-bottom: 30px;
   }
@@ -201,6 +220,7 @@
 
 .faq-list-item-container.active .faq-list-item-title {
   color: var(--primary-text-color-light);
+  transition: color var(--transition-time) var(--transition-effect);
 }
 
 .faq-list-item-container.active .faq-list-item-svg {
@@ -213,7 +233,6 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 1.11;
-  transition: color var(--transition-time) var(--transition-effect);
 
   @media (768px <=width) {
     font-size: 24px;
@@ -281,4 +300,34 @@
     padding-right: 106px;
     padding-bottom: 100px;
   }
+}
+
+.is-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  opacity: 0;
+}
+
+.is-hidden.show {
+  position: static;
+  white-space: normal;
+  width: auto;
+  height: auto;
+  clip: auto;
+  clip-path: none;
+  opacity: 1;
+}
+
+.faq-list::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+
+.faq-list::-webkit-scrollbar-thumb {
+  background-color: var(--input-border);
+  border-radius: 15px;
 }
