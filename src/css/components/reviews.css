@@ -117,15 +117,19 @@
   margin-top: 32px;
 
   @media (width >=360px) and (width < 768px) {
-    margin-bottom: 79px;
+    margin-bottom: 69px;
   }
 
-  @media (width >=768px) and (width < 1440px) {
-    margin-bottom: 119px;
+  @media (width >=768px) and (width < 1024px) {
+    margin-bottom: 109px;
+  }
+
+  @media (width >=1024px) {
+    position: relative;
+    margin-top: 100px;
   }
 
   @media (width >=1440px) {
-    position: relative;
     margin-top: 80px;
   }
 }
@@ -138,6 +142,7 @@
   --swiper-pagination-bullet-inactive-opacity: 0.1;
   --swiper-pagination-bullet-horizontal-gap: 12px;
   --swiper-pagination-bullet-opacity: 1;
+
   @media (width >=1440px) {
     display: flex;
     align-items: center;
@@ -175,45 +180,56 @@
 
 .reviews-swiper .swiper-button-next,
 .reviews-swiper .swiper-button-prev {
-  @media (width <1440px) {
+  @media (width <1024px) {
     display: none;
   }
 }
 
 .reviews-slider-container .reviews-btn-prew,
 .reviews-slider-container .reviews-btn-next {
-  @media (width >=1440px) {
+  @media (width >=1024px) {
     background-color: transparent;
     width: 56px;
     height: 56px;
     border-radius: 100%;
     border: 1px solid var(--lang-switch-border-light);
     position: absolute;
-    top: 20px;
+    top: 3px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     transition: border var(--transition-time) var(--transition-effect);
   }
+  @media (width >=1440px) {
+    top: 20px;
+  }
 }
 
 .reviews-slider-container .reviews-btn-prew {
+  @media (width >=1024px) {
+    margin-left: 142px;
+  }
+
   @media (width >=1440px) {
     margin-left: 478px;
   }
 }
 
 .reviews-slider-container .reviews-btn-next {
-  @media (width >=1440px) {
+  @media (width >=1024px) {
     transform: scaleX(-1);
+    margin-right: 142px;
+  }
+
+  @media (width >=1440px) {
     margin-right: 478px;
   }
 }
 
 .reviews-slider-container .reviews-btn-prew:hover,
 .reviews-slider-container .reviews-btn-next:hover {
-  @media (width >=1440px) {
+  @media (width >=1024px) {
     border: 1px solid var(--white-color);
   }
 }
@@ -224,7 +240,7 @@
 }
 
 .reviews-slider-container .swiper-btn-icon {
-  @media (width >=1440px) {
+  @media (width >=1024px) {
     width: 32px;
     height: 32px;
   }
