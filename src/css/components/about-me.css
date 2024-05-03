@@ -1,4 +1,4 @@
-.container {
+.container-about-me {
   @media (width >= 768px) and (width < 1440px) {
     padding: 0 32px;
   }
@@ -22,20 +22,20 @@
   line-height: 18px;
   margin-top: 16px;
 
-  @media (min-width: 768px) and (max-width: 1439px) {
+  @media (width >= 768px) and (width < 1440px) {
     margin-top: 32px;
     font-size: 18px;
     line-height: 26px;
   }
 
-  @media (min-width: 1440px) {
+  @media (width >= 1440px) {
     margin-top: 40px;
     font-size: 18px;
     line-height: 26px;
   }
 }
 
-@media (min-width: 1440px) {
+@media (width >= 1440px) {
   .about-me-text.paragraph {
     margin-top: 14px;
   }
@@ -58,7 +58,7 @@
     padding-top: 60px;
   }
   letter-spacing: 0.02em;
-  color: rgba(108, 119, 138, 1);
+  color: var(--section-name-color);
 }
 
 .about-me-title {
@@ -75,7 +75,7 @@
     font-size: 90px;
     line-height: 90px;
   }
-  color: rgba(18, 20, 23, 1);
+  color: var(--primary-text-color-dark);
 }
 
 .arrow-down-right {
