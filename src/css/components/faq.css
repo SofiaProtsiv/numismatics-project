@@ -3,10 +3,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 52px;
+  padding-bottom: 52px;
 
   @media (768px <=width) {
-    margin-bottom: 96px;
+    padding-bottom: 96px;
+  }
+
+  @media (width >=1440px) {
+    padding-bottom: 80px;
   }
 }
 
@@ -22,6 +26,10 @@
   @media (768px <=width) {
     font-size: 14px;
     line-height: 1.29;
+  }
+
+  @media (width >=1440px) {
+    margin-bottom: 20px;
   }
 }
 
@@ -39,6 +47,12 @@
     font-size: 50px;
     line-height: 1.1;
   }
+
+  @media (width >=1440px) {
+    font-size: 90px;
+    line-height: 1;
+    margin-bottom: 40px;
+  }
 }
 
 .faq-info-text {
@@ -51,6 +65,11 @@
     padding: 0 20px;
     font-size: 18px;
     line-height: 1.44;
+  }
+
+  @media (width >=1440px) {
+    max-width: 685px;
+    padding: 0;
   }
 }
 
@@ -68,6 +87,11 @@
     height: 354px;
     margin-bottom: 32px;
   }
+
+  @media (width >=1440px) {
+    width: 450px;
+    height: 450px;
+  }
 }
 
 .faq-img {
@@ -79,6 +103,11 @@
   @media (768px <=width) {
     width: 352px;
     height: 385px;
+  }
+
+  @media (width >=1440px) {
+    width: 450px;
+    height: 493px;
   }
 }
 
@@ -129,6 +158,11 @@
     gap: 20px;
     padding-bottom: 40px;
   }
+
+  @media (width >=1440px) {
+    padding: 0;
+    gap: 20px;
+  }
 }
 
 .faq-list-item {
@@ -145,9 +179,11 @@
   justify-content: space-between;
   border-bottom: 1px solid var(--input-border);
   padding: 16px;
+  transition: background-color var(--transition-time) var(--transition-effect);
 
   @media (768px <=width) {
     padding: 28px;
+    height: 120px;
   }
 }
 
@@ -163,7 +199,7 @@
   }
 }
 
-.faq-list-item-container.active h3 {
+.faq-list-item-container.active .faq-list-item-title {
   color: var(--primary-text-color-light);
 }
 
@@ -177,6 +213,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 1.11;
+  transition: color var(--transition-time) var(--transition-effect);
 
   @media (768px <=width) {
     font-size: 24px;
@@ -194,6 +231,7 @@
   @media (768px <=width) {
     padding-left: 28px;
     padding-right: 46px;
+    padding-bottom: 20px;
     font-size: 18px;
     line-height: 1.44;
   }
@@ -214,6 +252,7 @@
   border: 1px solid var(--border-color);
   border-radius: 50%;
   transform: rotate(45deg);
+  transition: transform var(--transition-time) var(--transition-effect);
 
   @media (768px <=width) {
     background-size: 24px;
@@ -230,5 +269,16 @@
   @media (min-width: 768px) {
     width: 30px;
     height: 18px;
+  }
+}
+
+.faq-container-for-desktop {
+  @media (width >=1440px) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-left: 56px;
+    padding-right: 106px;
+    padding-bottom: 100px;
   }
 }
