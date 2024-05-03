@@ -1,0 +1,446 @@
+.services-wrapper {
+  background-color: var(--container-bg-dark);
+  color: var(--primary-text-color-light);
+  border-radius: 15px;
+  padding: 32px 16px 98px 16px;
+  background-image: -webkit-image-set(
+      url('../../public/images/services/polygons/polygon-top-left.webp') 1x
+        type('image/webp'),
+      url('../../public/images/services/polygons/polygon-top-left.png') 1x
+        type('image/png'),
+      url('../../public/images/services/polygons/polygon-top-left@2x.webp') 2x
+        type('image/webp'),
+      url('../../public/images/services/polygons/polygon-top-left@2x.png') 2x
+        type('image/png')
+    ),
+    -webkit-image-set(url('../../public/images/services/polygons/polygon-top-right.webp')
+          1x type('image/webp'), url('../../public/images/services/polygons/polygon-top-right.png')
+          1x type('image/png'), url('../../public/images/services/polygons/polygon-top-right@2x.webp')
+          2x type('image/webp'), url('../../public/images/services/polygons/polygon-top-right@2x.png')
+          2x type('image/png')),
+    -webkit-image-set(url('../../public/images/services/polygons/polygon-bottom-left.webp')
+          1x type('image/webp'), url('../../public/images/services/polygons/polygon-bottom-left.png')
+          1x type('image/png'), url('../../public/images/services/polygons/polygon-bottom-left@2x.webp')
+          2x type('image/webp'), url('../../public/images/services/polygons/polygon-bottom-left@2x.png')
+          2x type('image/png')),
+    -webkit-image-set(url('../../public/images/services/polygons/polygon-bottom-right.webp')
+          1x type('image/webp'), url('../../public/images/services/polygons/polygon-bottom-right.png')
+          1x type('image/png'), url('../../public/images/services/polygons/polygon-bottom-right@2x.webp')
+          2x type('image/webp'), url('../../public/images/services/polygons/polygon-bottom-right@2x.png')
+          2x type('image/png'));
+  background-image: image-set(
+      url('../../public/images/services/polygons/polygon-top-left.webp') 1x
+        type('image/webp'),
+      url('../../public/images/services/polygons/polygon-top-left.png') 1x
+        type('image/png'),
+      url('../../public/images/services/polygons/polygon-top-left@2x.webp') 2x
+        type('image/webp'),
+      url('../../public/images/services/polygons/polygon-top-left@2x.png') 2x
+        type('image/png')
+    ),
+    image-set(
+      url('../../public/images/services/polygons/polygon-top-right.webp') 1x
+        type('image/webp'),
+      url('../../public/images/services/polygons/polygon-top-right.png') 1x
+        type('image/png'),
+      url('../../public/images/services/polygons/polygon-top-right@2x.webp') 2x
+        type('image/webp'),
+      url('../../public/images/services/polygons/polygon-top-right@2x.png') 2x
+        type('image/png')
+    ),
+    image-set(
+      url('../../public/images/services/polygons/polygon-bottom-left.webp') 1x
+        type('image/webp'),
+      url('../../public/images/services/polygons/polygon-bottom-left.png') 1x
+        type('image/png'),
+      url('../../public/images/services/polygons/polygon-bottom-left@2x.webp')
+        2x type('image/webp'),
+      url('../../public/images/services/polygons/polygon-bottom-left@2x.png') 2x
+        type('image/png')
+    ),
+    image-set(
+      url('../../public/images/services/polygons/polygon-bottom-right.webp') 1x
+        type('image/webp'),
+      url('../../public/images/services/polygons/polygon-bottom-right.png') 1x
+        type('image/png'),
+      url('../../public/images/services/polygons/polygon-bottom-right@2x.webp')
+        2x type('image/webp'),
+      url('../../public/images/services/polygons/polygon-bottom-right@2x.png')
+        2x type('image/png')
+    );
+  background-repeat: no-repeat;
+  background-position: right 62px top 0, right 0 top 0, left 0 bottom 0,
+    left 61px bottom 0;
+  background-size: 71px 37px, 40px 75px, 40px 73px, 71px 37px;
+
+  @media (768px <=width) {
+    padding: 100px 32px 149px 32px;
+    background-position: right 135px top 0, right 0 top 0, left 0 bottom 0,
+      left 144px bottom 0;
+    background-size: 150px 81px, 91px 162px, 98px 163px, 150px 80px;
+  }
+
+  @media (width >=1440px) {
+    padding: 120px 56px;
+    background-position: right 170px top 0, right 0 top 0, left 0 bottom 0,
+      left 152px bottom 0;
+    background-size: 172px 93px, 120px 194px, 99px 180px, 172px 93px;
+  }
+}
+
+.services-section-name {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--section-name-color);
+
+  @media (768px <=width) {
+    font-size: 14px;
+    line-height: 1.29;
+  }
+}
+
+.services-info {
+  @media (width >=1440px) {
+    display: flex;
+    gap: 123px;
+  }
+}
+
+.services-title-box {
+  display: flex;
+  margin: 16px 0px;
+  gap: 10px;
+
+  @media (width >=768px) and (width < 1440px) {
+    margin-bottom: 32px;
+  }
+
+  @media (width >=1440px) {
+    margin: 0 0 40px 0;
+    gap: 18px;
+  }
+}
+
+.services-title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--white-color);
+  position: relative;
+  padding: 0;
+
+  @media (width >=768px) and (width < 1440px) {
+    line-height: 1.1;
+    font-size: 50px;
+  }
+
+  @media (width >=1440px) {
+    line-height: 1;
+    font-size: 90px;
+  }
+}
+
+.services-icon {
+  @media (768px <=width) {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+.services-text {
+  font-size: 14px;
+  line-height: 1.29;
+  color: var(--secondary-text-color-light);
+
+  @media (768px <=width) {
+    font-size: 18px;
+    line-height: 1.44;
+  }
+
+  @media (width >=1440px) {
+    width: 570px;
+  }
+}
+
+.services-card-list {
+  margin: 32px 0px;
+  display: flex;
+
+  @media (width >=1440px) {
+    margin: 40px 0px;
+  }
+}
+
+.services-card-item {
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.services-first-card {
+  background-image: -webkit-image-set(
+    url('../../public/images/services/all-services/first-service-mobile.webp')
+      1x type('image/webp'),
+    url('../../public/images/services/all-services/first-service-mobile.jpg') 1x
+      type('image/jpeg'),
+    url('../../public/images/services/all-services/first-service-mobile@2x.webp')
+      2x type('image/webp'),
+    url('../../public/images/services/all-services/first-service-mobile@2x.jpg')
+      2x type('image/jpeg')
+  );
+  background-image: image-set(
+    url('../../public/images/services/all-services/first-service-mobile.webp')
+      1x type('image/webp'),
+    url('../../public/images/services/all-services/first-service-mobile.jpg') 1x
+      type('image/jpeg'),
+    url('../../public/images/services/all-services/first-service-mobile@2x.webp')
+      2x type('image/webp'),
+    url('../../public/images/services/all-services/first-service-mobile@2x.jpg')
+      2x type('image/jpeg')
+  );
+
+  @media (768px <=width) {
+    background-image: -webkit-image-set(
+      url('../../public/images/services/all-services/first-service-tablet-desktop.webp')
+        1x type('image/webp'),
+      url('../../public/images/services/all-services/first-service-tablet-desktop.jpg')
+        1x type('image/jpeg'),
+      url('../../public/images/services/all-services/first-service-tablet-desktop@2x.webp')
+        2x type('image/webp'),
+      url('../../public/images/services/all-services/first-service-tablet-desktop@2x.jpg')
+        2x type('image/jpeg')
+    );
+    background-image: image-set(
+      url('../../public/images/services/all-services/first-service-tablet-desktop.webp')
+        1x type('image/webp'),
+      url('../../public/images/services/all-services/first-service-tablet-desktop.jpg')
+        1x type('image/jpeg'),
+      url('../../public/images/services/all-services/first-service-tablet-desktop@2x.webp')
+        2x type('image/webp'),
+      url('../../public/images/services/all-services/first-service-tablet-desktop@2x.jpg')
+        2x type('image/jpeg')
+    );
+    width: 500px !important;
+  }
+}
+
+.services-second-card {
+  background-image: -webkit-image-set(
+    url('../../public/images/services/all-services/second-service-mobile.webp')
+      1x type('image/webp'),
+    url('../../public/images/services/all-services/second-service-mobile.jpg')
+      1x type('image/jpeg'),
+    url('../../public/images/services/all-services/second-service-mobile@2x.webp')
+      2x type('image/webp'),
+    url('../../public/images/services/all-services/second-service-mobile@2x.jpg')
+      2x type('image/jpeg')
+  );
+  background-image: image-set(
+    url('../../public/images/services/all-services/second-service-mobile.webp')
+      1x type('image/webp'),
+    url('../../public/images/services/all-services/second-service-mobile.jpg')
+      1x type('image/jpeg'),
+    url('../../public/images/services/all-services/second-service-mobile@2x.webp')
+      2x type('image/webp'),
+    url('../../public/images/services/all-services/second-service-mobile@2x.jpg')
+      2x type('image/jpeg')
+  );
+
+  @media (768px <=width) {
+    background-image: -webkit-image-set(
+      url('../../public/images/services/all-services/second-service-tablet-desktop.webp')
+        1x type('image/webp'),
+      url('../../public/images/services/all-services/second-service-tablet-desktop.jpg')
+        1x type('image/jpeg'),
+      url('../../public/images/services/all-services/second-service-tablet-desktop@2x.webp')
+        2x type('image/webp'),
+      url('../../public/images/services/all-services/second-service-tablet-desktop@2x.jpg')
+        2x type('image/jpeg')
+    );
+    background-image: image-set(
+      url('../../public/images/services/all-services/second-service-tablet-desktop.webp')
+        1x type('image/webp'),
+      url('../../public/images/services/all-services/second-service-tablet-desktop.jpg')
+        1x type('image/jpeg'),
+      url('../../public/images/services/all-services/second-service-tablet-desktop@2x.webp')
+        2x type('image/webp'),
+      url('../../public/images/services/all-services/second-service-tablet-desktop@2x.jpg')
+        2x type('image/jpeg')
+    );
+    width: 500px !important;
+  }
+
+  @media (width >=1440px) {
+    width: 350px !important;
+  }
+}
+
+.services-third-card {
+  background-image: -webkit-image-set(
+    url('../../public/images/services/all-services/third-service-mobile.webp')
+      1x type('image/webp'),
+    url('../../public/images/services/all-services/third-service-mobile.jpg') 1x
+      type('image/jpeg'),
+    url('../../public/images/services/all-services/third-service-mobile@2x.webp')
+      2x type('image/webp'),
+    url('../../public/images/services/all-services/third-service-mobile@2x.jpg')
+      2x type('image/jpeg')
+  );
+  background-image: image-set(
+    url('../../public/images/services/all-services/third-service-mobile.webp')
+      1x type('image/webp'),
+    url('../../public/images/services/all-services/third-service-mobile.jpg') 1x
+      type('image/jpeg'),
+    url('../../public/images/services/all-services/third-service-mobile@2x.webp')
+      2x type('image/webp'),
+    url('../../public/images/services/all-services/third-service-mobile@2x.jpg')
+      2x type('image/jpeg')
+  );
+
+  @media (768px <=width) {
+    background-image: -webkit-image-set(
+      url('../../public/images/services/all-services/third-service-tablet-desktop.webp')
+        1x type('image/webp'),
+      url('../../public/images/services/all-services/third-service-tablet-desktop.jpg')
+        1x type('image/jpeg'),
+      url('../../public/images/services/all-services/third-service-tablet-desktop@2x.webp')
+        2x type('image/webp'),
+      url('../../public/images/services/all-services/third-service-tablet-desktop@2x.jpg')
+        2x type('image/jpeg')
+    );
+    background-image: image-set(
+      url('../../public/images/services/all-services/third-service-tablet-desktop.webp')
+        1x type('image/webp'),
+      url('../../public/images/services/all-services/third-service-tablet-desktop.jpg')
+        1x type('image/jpeg'),
+      url('../../public/images/services/all-services/third-service-tablet-desktop@2x.webp')
+        2x type('image/webp'),
+      url('../../public/images/services/all-services/third-service-tablet-desktop@2x.jpg')
+        2x type('image/jpeg')
+    );
+    width: 500px !important;
+  }
+
+  @media (width >=1440px) {
+    width: 350px !important;
+  }
+}
+
+.services-card-wrapper {
+  padding: 30px 16px;
+  height: 350px;
+  display: flex;
+  align-items: flex-end;
+
+  @media (768px <=width) {
+    height: 510px;
+    padding: 30px;
+  }
+}
+
+.services-card-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 108px;
+
+  @media (768px <=width) {
+    min-height: 128px;
+  }
+}
+
+.services-card-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.11;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+
+  @media (768px <=width) {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}
+
+.services-card-hashtag-list {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.services-card-hashtag-item {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 30px;
+  padding: 8px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.33;
+  backdrop-filter: blur(32.4px);
+  background: rgba(255, 255, 255, 0.08);
+
+  @media (768px <=width) {
+    font-size: 14px;
+    line-height: 1.29;
+  }
+}
+
+.services-card-second-hashtag {
+  display: block;
+}
+
+.services-pagination {
+  --swiper-pagination-color: var(--white-color);
+  --swiper-pagination-bullet-inactive-color: var(--white-color);
+  --swiper-pagination-bullet-width: 10px;
+  --swiper-pagination-bullet-height: 10px;
+  --swiper-pagination-bullet-inactive-opacity: 0.1;
+  --swiper-pagination-bullet-horizontal-gap: 5px;
+  --swiper-pagination-bullet-opacity: 1;
+  text-align: center;
+
+  @media (768px <=width) {
+    --swiper-pagination-bullet-horizontal-gap: 6px;
+  }
+}
+
+.services-button {
+  display: block;
+  margin: 64px auto 0 auto;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+  backdrop-filter: blur(32.4px);
+  background-image: var(--button-accent);
+  position: relative;
+  z-index: 1;
+
+  @media (width >=1440px) {
+    margin-top: 0;
+  }
+}
+
+.services-button::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: var(--button-accent-hover);
+  border-radius: 30px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity var(--transition-time) var(--transition-effect);
+}
+
+.services-button:hover::before,
+.services-button:focus::before {
+  opacity: 1;
+}
