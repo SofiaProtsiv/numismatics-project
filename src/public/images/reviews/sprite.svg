@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+  <defs>
+    <symbol id="icon-arrow-down-right" viewBox="0 0 32 32">
+      <path fill="none" stroke="#b2b2b2" stroke-linecap="square" stroke-linejoin="round" stroke-width="2.667" d="m8 8 13.6 13.6" style="stroke:var(--color1, #b2b2b2)"/>
+      <path fill="none" stroke="#b2b2b2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.667" d="M22.667 9.333v13.333H9.334" style="stroke:var(--color1, #b2b2b2)"/>
+    </symbol>
+    <symbol id="icon-arrow-next-slide" viewBox="0 0 32 32">
+      <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m20 24-8-8 8-8" style="stroke:var(--color1, #fff)"/>
+    </symbol>
+  </defs>
+</svg>
