@@ -4,6 +4,9 @@
     <symbol id="icon-name" viewBox="0 0 32 32">
       <!-- path -->
     </symbol>
+    <symbol id="icon-chevron-down" viewBox="0 0 32 32">
+      <path d="M6.869 10.869a1.6 1.6 0 0 1 2.263 0l6.869 6.869 6.869-6.869a1.6 1.6 0 1 1 2.263 2.263l-8 8a1.6 1.6 0 0 1-2.263 0l-8-8a1.6 1.6 0 0 1 0-2.263z"/>
+    </symbol>
     <!-- example end -->
   </defs>
 </svg>

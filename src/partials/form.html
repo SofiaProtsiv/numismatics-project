@@ -18,17 +18,25 @@
     <p class="modal-input-error">Обов'язкове поле</p>
   </div>
   <div class="modal-input-wrapper">
-    <div class="modal-select">
-      <button class="modal-select-button modal-input" type="button">
-        Послуги
+    <div class="modal-select js-modal-select">
+      <button
+        class="modal-select-button modal-input js-select-button"
+        data-selected="false"
+        type="button"
+        name="services"
+      >
+        <span id="modal-services">Послуги</span>
+        <svg class="modal-select-icon" width="20" height="20">
+          <use href="./public/images/icons-sprite.svg#icon-chevron-down"></use>
+        </svg>
       </button>
-      <ul class="modal-select-list">
+      <p class="modal-input-error">Обов'язкове поле</p>
+      <ul class="modal-select-list js-modal-select-list">
         <li class="modal-select-item">Консультації з нумізматики</li>
         <li class="modal-select-item">Консультації з питань колекціонування</li>
         <li class="modal-select-item">Консультації з формування колекцій</li>
       </ul>
     </div>
-    <p class="modal-input-error">Обов'язкове поле</p>
   </div>
   <textarea
     class="modal-textarea modal-input"
