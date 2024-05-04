@@ -66,6 +66,7 @@
 
     @media (768px<=width) {
         flex-direction: row;
+        justify-content: flex-start;
         margin-bottom: 16px;
     }
     
@@ -193,12 +194,11 @@
 
 .container-social-company {
     @media (1440px<=width) {
-      
-
+ 
         }
 }
 
-.container-social-expert {}
+/* .container-social-expert {} */
 
 .text-social-media {
     color: var(--footer-title-color);
