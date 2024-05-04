@@ -4,6 +4,9 @@
     <symbol id="icon-name" viewBox="0 0 32 32">
       <!-- path -->
     </symbol>
+    <symbol id="icon-chevron-down" viewBox="0 0 32 32">
+      <path d="M6.869 10.869a1.6 1.6 0 0 1 2.263 0l6.869 6.869 6.869-6.869a1.6 1.6 0 1 1 2.263 2.263l-8 8a1.6 1.6 0 0 1-2.263 0l-8-8a1.6 1.6 0 0 1 0-2.263z"/>
+    </symbol>
     <symbol id="arrow-down-right" viewBox="0 0 24 24">
       <path d="M6 6L16.2 16.2" stroke="#B2B2B2" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
       <path d="M17 7V17H7" stroke="#B2B2B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
