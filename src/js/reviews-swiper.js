@@ -11,7 +11,7 @@ const reviewSliderProps = {
     clickable: true,
   },
   breakpoints: {
-    1440: {
+    1024: {
       spaceBetween: 40,
       navigation: {
         nextEl: '.reviews-btn-next',
