@@ -1,11 +1,36 @@
 <div class="modal-container">
-  <div class="modal-bg"></div>
+  <!-- <div class="modal-bg"></div> -->
   <div class="modal">
     <h3 class="modal-title">Дякуємо! Дані успішно відправлені!</h3>
     <p class="modal-text">
       Протягом доби з Вами зв’яжеться наш менеджер для обговорення усіх деталей!
     </p>
-    <a class="modal-close" title="Закрити">&#10005;</a>
+    <a class="modal-close" title="Закрити"
+      ><svg class="icon-close">
+        <use
+          class="icon-close"
+          xlink:href="/images/icons-sprite.svg#icon-close"
+        ></use></svg
+    ></a>
+    <ul class="social-icons hidden-icons">
+      <li>
+        <a class="icon" href="" target="_blank">
+          <svg class="icon-svg">
+            <use
+              class="icon-use"
+              xlink:href="/images/icons-sprite.svg#icon-telegram"
+            ></use></svg
+        ></a>
+      </li>
+      <li>
+        <a class="icon" href="" target="_blank">
+          <svg class="icon-svg">
+            <use
+              xlink:href="/images/icons-sprite.svg#icon-instagram"
+            ></use></svg
+        ></a>
+      </li>
+    </ul>
   </div>
 </div>
 <button class="btn-open-modal" type="button">open modal</button>

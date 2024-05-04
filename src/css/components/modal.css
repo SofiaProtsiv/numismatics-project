@@ -1,30 +1,29 @@
+
 .modal-container {
+  position: fixed;
+  z-index: 90;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background-color: var(--background-color);
   opacity: 0;
-    visibility: hidden;
-    transition: opacity var(--transition-time), visibility 0s var(--transition-effect);
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--transition-time) var(--transition-effect),
+    visibility var(--transition-time) var(--transition-effect);
 }
 
 .modal-container.visible {
-  /* overflow: hidden; */
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
   transition: opacity var(--transition-time), visibility 0s var(--transition-effect);
 }
 
 .body-overflow{
   overflow: hidden
-}
-
-.modal-bg {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 90;
-  background-color: var(--background-color);
-  position: fixed;
-  /* transform: scaleY(1); */
-  /* transition-duration: var(--transition-time); */
 }
 
 .modal {
@@ -42,13 +41,12 @@
   background-color: var(--white-color);
   box-shadow: 5px 5px 12px rgba(0, 0, 0, .22), 0 19px 60px rgba(0, 0, 0, .3);
   transform: translate(-50%, -50%);
-  /* transition: transform var(--transition-time) var(--transition-effect); */
+
   @media (768px <=width) {
       width: 615px;
       padding: 80px;
     }
 } 
-
 
 .modal-error{
   
@@ -110,17 +108,49 @@
   
 }
 
+.hidden-icons{
+display: none;
+}
+
 .icon{
   display: block;
   width: 32px;
   height: 32px;
-  border:  1px solid black;
-  border-radius: 50%;
   @media (768px <=width) {
       width: 40px;
       height: 40px;
     }
 }
-.instagramSvg{
-  fill: black
+.icon-svg{
+  width: 32px;
+  height: 32px;
+  @media (768px <=width) {
+      width: 40px;
+      height: 40px;
+    }
+}
+.icon-use{
+  width: 32px;
+  height: 32px;
+  transform: scale(1.13);
+    
+}
+.icon-close{
+  width: 18px;
+  height: 18px;
+  transform-box: fill-box;
+    transform-origin: center center;
+  transform: scale(1.12);
+  @media (768px <=width) {
+      width: 28px;
+      height: 28px;
+    }
+  
+}
+.telegram{
+  /* width: 32px; */
+  /* height: 32px; */
+  /* transform-box: fill-box; */
+    /* transform-origin: center center; */
+    /* transform: scale(1.13); */
 }
