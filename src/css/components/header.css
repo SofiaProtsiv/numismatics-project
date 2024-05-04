@@ -54,23 +54,28 @@
   width: 36px;
   height: 36px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  transition: all var(--transition-time) var(--transition-effect);
+  transition: opacity var(--transition-time) var(--transition-effect);
 
   @media (width >=1440px) {
     opacity: 0;
     width: 1px;
     height: 1px;
     margin: -1px;
+    transition: all var(--transition-time) var(--transition-effect);
   }
 }
 
 .header-navigation-item-link-svg-burger {
   fill: var(--white-color);
   stroke: var(--white-color);
-  display: block;
-  width: 27px;
-  height: 18px;
+  width: 30px;
+  height: 30px;
+  z-index: 2;
+  overflow: hidden;
+  transition: all var(--transition-time) var(--transition-effect);
 }
 
 /*  Modal window */
@@ -88,6 +93,7 @@
   background-color: var(--white-color);
   margin-left: auto;
   margin-right: auto;
+  transition: all var(--transition-time) var(--transition-effect);
 
   @media (width >=1440px) {
     position: absolute;
@@ -100,9 +106,12 @@
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     margin: -1px;
+    transition: all var(--transition-time) var(--transition-effect);
   }
 }
-
+.header-modal-wrapper.visually-hidden {
+  transition: all var(--transition-time) var(--transition-effect);
+}
 .header-modal-wrapper-mobile-menu {
   display: flex;
   flex-direction: column;
@@ -112,6 +121,7 @@
 
   padding-top: 16px;
   padding-right: 16px;
+  transition: all var(--transition-time) var(--transition-effect);
 }
 .header-modal-wrapper-container {
   display: flex;
@@ -159,13 +169,23 @@
 .header-modal-wrapper-select-box-container-text {
   color: var(--white-color);
   font-weight: 700;
+  width: 22px;
+  height: 20px;
+  transition: all var(--transition-time) var(--transition-effect);
 }
-
+.header-modal-wrapper-select-box-container-text-modal {
+  color: var(--white-color);
+  font-weight: 700;
+  width: 22px;
+  height: 20px;
+  transition: all var(--transition-time) var(--transition-effect);
+}
 .header-modal-wrapper-select-box-container-tablet {
   opacity: 0;
   width: 1px;
   height: 1px;
   margin: -1px;
+  transition: opacity var(--transition-time) var(--transition-effect);
 
   @media screen and (min-width: 768px) {
     opacity: 1;
@@ -189,6 +209,7 @@
   align-items: center;
   justify-content: center;
   gap: 6px;
+  transition: all var(--transition-time) var(--transition-effect);
 }
 .header-modal-selectlang-checkbox {
   display: flex;
@@ -201,6 +222,7 @@
   top: 60px;
 
   background-color: var(--container-bg-dark);
+  transition: all var(--transition-time) var(--transition-effect);
 
   border-radius: 15px;
   border: none;
@@ -212,6 +234,7 @@
   color: var(--inactive-lang-text);
   border: none;
   background-color: transparent;
+  transition: all var(--transition-time) var(--transition-effect);
 }
 .header-modal-selectlang-checkbox-text-en {
   font-weight: 700;
@@ -221,17 +244,17 @@
 }
 .active-header-checkbox {
   color: var(--lang-switch-container-dark);
-  transition: color var(--transition-time) var(--transition-effect);
+  transition: all var(--transition-time) var(--transition-effect);
 }
 .header-modal-selectlang-checkbox-text-ua:hover,
 .header-modal-selectlang-checkbox-text-ua:focus {
   color: var(--lang-switch-container-dark);
-  transition: color var(--transition-time) var(--transition-effect);
+  transition: all var(--transition-time) var(--transition-effect);
 }
 .header-modal-selectlang-checkbox-text-en:hover,
 .header-modal-selectlang-checkbox-text-en:focus {
   color: var(--lang-switch-container-dark);
-  transition: color var(--transition-time) var(--transition-effect);
+  transition: all var(--transition-time) var(--transition-effect);
 }
 .header-modal-wrapper-select-box {
   appearance: none;
@@ -240,11 +263,13 @@
   color: var(--white-color);
   background-color: transparent;
   border: none;
+  transition: all var(--transition-time) var(--transition-effect);
 }
 
 .header-modal-wrapper-item-select-box-option-svg {
   stroke: var(--white-color);
   fill: transparent;
+  transition: all var(--transition-time) var(--transition-effect);
 }
 .header-modal-wrapper-select-box-checkbox {
   display: flex;
@@ -263,12 +288,14 @@
   border: none;
   width: 80px;
   height: 78px;
+  transition: all var(--transition-time) var(--transition-effect);
 }
 .header-modal-wrapper-select-box-checkbox-text-ua {
   font-weight: 700;
   border: none;
   background-color: transparent;
   color: var(--input-placeholder-color);
+  transition: all var(--transition-time) var(--transition-effect);
 }
 
 .active-header-checkbox-modal {
@@ -276,16 +303,17 @@
   font-weight: 700;
   transition: all var(--transition-time) var(--transition-effect);
 }
-/* .header-modal-wrapper-select-box-checkbox-text-ua:hover,
+.header-modal-wrapper-select-box-checkbox-text-ua:hover,
 .header-modal-wrapper-select-box-checkbox-text-ua:focus {
   color: var(--white-color);
   font-weight: 700;
   transition: all var(--transition-time) var(--transition-effect);
-} */
+}
 
 .header-modal-wrapper-item-svg-icon {
   background-color: var(--white-color);
   stroke: var(--black-color);
+  transition: all var(--transition-time) var(--transition-effect);
 
   @media (768px <=width) {
     width: 18px;
@@ -314,6 +342,7 @@
   justify-content: center;
   box-sizing: border-box;
   padding: 15px 30px 15px 30px;
+  transition: all var(--transition-time) var(--transition-effect);
 }
 .header-modal-container-item:hover,
 .header-modal-container-item:focus,
@@ -334,6 +363,7 @@
   width: 1px;
   height: 1px;
   margin: -1px;
+  transition: opacity var(--transition-time) var(--transition-effect);
 
   @media (width >=1440px) {
     opacity: 1;
@@ -346,16 +376,16 @@
     justify-content: center;
     color: #121417;
     background-color: #b2b2b2;
-    transition: opacity var(--transition-time) var(--transition-effect);
+    transition: all var(--transition-time) var(--transition-effect);
   }
 }
 
 .header-about-me-container-list {
   @media (width >=1440px) {
     display: flex;
-    gap: 32px;
     align-items: center;
     justify-content: space-around;
+    transition: all var(--transition-time) var(--transition-effect);
   }
 }
 
@@ -410,4 +440,7 @@
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
+}
+.open-burger-menu {
+  overflow: hidden;
 }
