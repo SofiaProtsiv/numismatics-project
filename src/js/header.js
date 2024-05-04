@@ -17,26 +17,12 @@ const mobileMenuCloseBtn = document.querySelector(
 );
 const bodyEl = document.querySelector('body');
 
-function openMobileMenu() {
-  if (mobileMenuEl.classList.contains('visually-hidden')) {
-    mobileMenuEl.classList.remove('visually-hidden');
-    bodyEl.classList.add('open-burger-menu');
-    burgerBtn.removeEventListener('click', openMobileMenu);
-    mobileMenuCloseBtn.addEventListener('click', closeMobileMenu);
-  }
+function toggleOpenModal() {
+  mobileMenuEl.classList.toggle('active');
+  bodyEl.classList.toggle('open-burger-menu');
 }
-
-function closeMobileMenu() {
-  if (!mobileMenuEl.classList.contains('visually-hidden')) {
-    bodyEl.classList.remove('open-burger-menu');
-    mobileMenuEl.classList.add('visually-hidden');
-    burgerBtn.addEventListener('click', openMobileMenu);
-    mobileMenuCloseBtn.removeEventListener('click', closeMobileMenu);
-  }
-}
-
-burgerBtn.addEventListener('click', openMobileMenu);
-mobileMenuCloseBtn.addEventListener('click', closeMobileMenu);
+burgerBtn.addEventListener('click', toggleOpenModal);
+mobileMenuCloseBtn.addEventListener('click', toggleOpenModal);
 
 /* Close modal window after click link*/
 const buttonLinkModal = document.querySelectorAll(
@@ -178,47 +164,13 @@ function checkActiveLangButtonModal() {
 checkActiveLangButtonModal();
 
 /* Select lang box */
-function toggleLangBox() {
-  if (langBoxEl.classList.contains('visually-hidden')) {
-    langBoxEl.classList.remove('visually-hidden');
-    window.addEventListener('click', hideLangBoxOutsideClick);
-  } else {
-    langBoxEl.classList.add('visually-hidden');
-    window.removeEventListener('click', hideLangBoxOutsideClick);
-  }
+
+function toggleSelectLang() {
+  langBoxEl.classList.toggle('active-checkbox');
 }
+selectLangBtnTablet.addEventListener('click', toggleSelectLang);
 
-function hideLangBoxOutsideClick(event) {
-  if (
-    !langBoxEl.contains(event.target) &&
-    event.target !== selectLangBtnTablet
-  ) {
-    langBoxEl.classList.add('visually-hidden');
-    window.removeEventListener('click', hideLangBoxOutsideClick);
-  }
+function toggleSelectLangModal() {
+  langBoxElModal.classList.toggle('active-modal');
 }
-
-selectLangBtnTablet.addEventListener('click', toggleLangBox);
-
-/* Select lang box modal */
-function toggleLangBoModal() {
-  if (langBoxElModal.classList.contains('visually-hidden')) {
-    langBoxElModal.classList.remove('visually-hidden');
-    window.addEventListener('click', hideLangBoxModalOutsideClick);
-  } else {
-    langBoxElModal.classList.add('visually-hidden');
-    window.removeEventListener('click', hideLangBoxModalOutsideClick);
-  }
-}
-
-function hideLangBoxModalOutsideClick(event) {
-  if (
-    !langBoxElModal.contains(event.target) &&
-    event.target !== selectLangBtnMobileMenu
-  ) {
-    langBoxElModal.classList.add('visually-hidden');
-    window.removeEventListener('click', hideLangBoxOutsideClick);
-  }
-}
-
-selectLangBtnMobileMenu.addEventListener('click', toggleLangBoModal);
+selectLangBtnMobileMenu.addEventListener('click', toggleSelectLangModal);
