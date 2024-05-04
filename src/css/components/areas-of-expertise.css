@@ -1,35 +1,34 @@
 .areas-box {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* Равномерное распределение по горизонтали */
+  justify-content: space-between;
 }
 
 .areas-box > div {
-  flex: 1; /* Каждый див занимает равное пространство */
-  max-width: calc(50% - 10px); /* Ограничивает каждый див до половины ширины контейнера с учетом отступов */
-  box-sizing: border-box; /* Включает в расчет ширину padding и border */
-  /*margin-bottom: 10px; !* Опционально: Добавляет отступ снизу между элементами *!*/
+  flex: 1;
+  max-width: 50%;
+  box-sizing: border-box;
+  align-items: center;
+
 }
 
-@media (max-width: 1439px) {
+@media (width < 1440px) {
   .areas-box > div:nth-child(3) {
-    flex: none; /* Фиксирует третий див на одном месте */
-    width: 100%; /* Занимает всю ширину родителя */
-    max-width: calc(100% - 20px); /* Ограничивает ширину с учетом отступов */
-    /*margin: 0 auto; !* Выравнивает по центру *!*/
+    flex: none;
+    width: 100%;
+    max-width: 100%;
   }
 }
 
-@media (max-width: 767px) {
+@media (width < 768px) {
   .areas-box {
-    flex-direction: column; /* Отображает дивы в колонку */
+    flex-direction: column;
   }
 
   .areas-box > div {
-    flex: none; /* Фиксирует дивы в колонке */
-    width: 100%; /* Занимает всю ширину родителя */
-    max-width: calc(100% - 20px); /* Ограничивает ширину с учетом отступов */
-    /*margin: 0 auto 10px; !* Выравнивает по центру и добавляет отступ снизу *!*/
+    flex: none;
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -42,6 +41,10 @@
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.02em;
+  @media (width >= 768px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 .content-title {
@@ -49,9 +52,18 @@
 }
 
 .content-title-text {
-  color: rgba(18, 20, 23, 1);
+  color: var(--primary-text-color-dark);
   font-size: 28px;
   line-height: 32px;
+  @media (width >= 768px) and (width < 1440px) {
+    font-size: 50px;
+    line-height: 55px;
+  }
+  @media (width >= 1440px) {
+    font-size: 75px;
+    line-height: 75px;
+    margin-top: 20px;
+  }
 }
 
 .content-text {
@@ -59,17 +71,62 @@
   color: var(--secondary-text-color-dark);
   font-size: 14px;
   line-height: 18px;
+  @media (width >= 768px) and (width < 1440px) {
+    margin-top: 32px;
+    font-size: 18px;
+    line-height: 26px;
+    padding: 0 16px;
+  }
+  @media (width >= 1440px) {
+    margin-top: 40px;
+    font-size: 18px;
+    line-height: 26px;
+    width: 685px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .numismatic {
   text-align: center;
   margin-top: 62px;
+  @media (width >= 768px) and (width < 1440px) {
+    margin-top: 94px;
+    margin-left: 46px;
+  }
+  @media (width >= 1440px) {
+    margin-top: 110px;
+  }
 }
 
-.bonistic,
+.bonistic {
+  text-align: center;
+  margin-top: 76px;
+  @media (width >= 768px) and (width < 1440px) {
+    margin-top: 94px;
+    margin-right: 46px;
+    margin-left: 80px;
+  }
+  @media (width >= 1440px) {
+    margin-top: 110px;
+  }
+}
+
 .faleristic {
   text-align: center;
   margin-top: 76px;
+  @media (width >= 768px) and (width < 1440px) {
+    margin-top: 80px;
+    .faleristic-content {
+      width: 282px;
+      margin-top: 15px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  @media (width >= 1440px) {
+    margin-top: 110px;
+  }
 }
 
 .numismatic-image,
@@ -82,9 +139,22 @@
 .bonistic-title,
 .faleristic-title {
   margin-top: 16px;
-  color: rgba(18, 20, 23, 1);
+  color: var(--primary-text-color-dark);
   font-size: 18px;
   line-height: 20px;
+  @media (width >= 768px) and (width < 1440px) {
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 30px;
+    .bonistic-title {
+      margin-top: 60px;
+    }
+  }
+  @media (width >= 1440px) {
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 30px;
+  }
 }
 
 .numismatic-content,
@@ -94,4 +164,29 @@
   font-size: 14px;
   line-height: 18px;
   margin-top: 15px;
+  @media (width >= 768px) and (width < 1440px) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 15px;
+  }
+  @media (width >= 1440px) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 15px;
+    width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (width >= 768px) {
+  .numismatic img {
+    content: url('../images/areas-of-expertise/numismat-134.svg')
+  }
+  .bonistic img {
+    content: url('../images/areas-of-expertise/bonistic-176.svg')
+  }
+  .faleristic img {
+    content: url('../images/areas-of-expertise/faleristic-113.svg')
+  }
 }
