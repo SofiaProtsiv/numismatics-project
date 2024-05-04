@@ -19,6 +19,26 @@
     rgba(242, 201, 116, 1) 60%,
     rgba(206, 157, 78, 1) 100%
   );
+  --button-accent: linear-gradient(
+    234deg,
+    #f2c974 0%,
+    #ce9d4e 20.83%,
+    #ffda7d 38.02%,
+    #ffefa6 51.04%,
+    #ffda7d 64.58%,
+    #ce9d4e 80.73%,
+    #f2c974 100%
+  );
+  --button-accent-hover: linear-gradient(
+    234deg,
+    #f2c974 0%,
+    #ce9d4e 6.32%,
+    #ffda7d 23.39%,
+    #ffefa6 51.04%,
+    #ffda7d 74.91%,
+    #ce9d4e 92.73%,
+    #f2c974 100%
+  );
 
   --header-bg: rgba(255, 255, 255, 0.18);
 
