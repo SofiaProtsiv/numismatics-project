@@ -16,6 +16,9 @@ const INVALID = 'invalid';
 const ACTIVE_SELECT = 'select-active';
 const SHOW_PREFIX = 'show-prefix';
 const VISIBLE = 'visible';
+
+const URL = 'https://numismatics-project-backend.onrender.com/api/application';
+
 const buttonAttribute = {
   key: 'data-selected',
   selected: 'true',
@@ -67,26 +70,20 @@ function handleSubmit(e) {
   phoneWrapper.classList.remove(SHOW_PREFIX);
 }
 
-function fetchConsultation(data) {
-  fetch('https://numismatics-project-backend.onrender.com/api/application', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
-    .then(data => {
-      console.log('Application submitted successfully:', data);
-    })
-    .catch(error => {
-      console.error('Error submitting application:', error);
-    });
+async function fetchConsultation(data) {
+  try {
+    const config = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    };
+    const responseData = await (await fetch(URL, config)).json();
+    console.log('Ok', responseData);
+  } catch (error) {
+    console.error('Error submitting application:', error);
+  }
 }
 
 function validateForm({ name, phone, services }) {

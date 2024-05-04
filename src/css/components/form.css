@@ -8,8 +8,7 @@
   z-index: 100;
   background-color: var(--background-color);
 
-  transition: opacity var(--transition-time),
-    visibility 0s var(--transition-effect);
+  transition: opacity var(--transition-time) var(--transition-effect);
 
   display: flex;
   align-items: center;
@@ -93,15 +92,20 @@
   height: 12.73px;
   border-radius: 1.25px;
   background-color: var(--primary-text-color-dark);
+
+  @media (768px <= width) {
+    width: 2.5px;
+    height: 19.8px;
+  }
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .consultation-modal-close span::before,
   .consultation-modal-close span::after {
     width: 2.5px;
     height: 19.8px;
   }
-}
+} */
 
 .consultation-modal-close span::before {
   transform: translate(-50%, -50%) rotate(45deg);
@@ -358,6 +362,10 @@
 
   opacity: 0;
   pointer-events: none;
+
+  @media (768px <=width) {
+    top: 60px;
+  }
 }
 
 .select-active .modal-select-list {
@@ -368,6 +376,7 @@
 .modal-select-item {
   cursor: pointer;
   font-size: 14px;
+  transition: color var(--transition-time) var(--transition-effect);
 
   @media (768px <=width) {
     font-size: 16px;
@@ -375,7 +384,7 @@
 }
 
 .modal-select-item:hover {
-  transform: scale(1.02);
+  color: var(--primary-text-color-dark);
 }
 
 .modal-select-item:not(:last-child) {
