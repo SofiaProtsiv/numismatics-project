@@ -13,7 +13,7 @@ logoBtn.removeEventListener('click', () => {
 const burgerBtn = document.querySelector('.header-navigation-item-burger');
 const mobileMenuEl = document.querySelector('.header-modal-wrapper');
 const mobileMenuCloseBtn = document.querySelector(
-  '.header-modal-wrapper-item-svg-icon'
+  '.header-modal-wrapper-item-svg-container'
 );
 const bodyEl = document.querySelector('body');
 
@@ -22,9 +22,7 @@ function openMobileMenu() {
     mobileMenuEl.classList.remove('visually-hidden');
     bodyEl.classList.add('open-burger-menu');
     burgerBtn.removeEventListener('click', openMobileMenu);
-  } else {
-    mobileMenuEl.classList.add('visually-hidden');
-    bodyEl.classList.remove('open-burger-menu');
+    mobileMenuCloseBtn.addEventListener('click', closeMobileMenu);
   }
 }
 
@@ -32,7 +30,8 @@ function closeMobileMenu() {
   if (!mobileMenuEl.classList.contains('visually-hidden')) {
     bodyEl.classList.remove('open-burger-menu');
     mobileMenuEl.classList.add('visually-hidden');
-    mobileMenuCloseBtn.addEventListener('click', openMobileMenu);
+    burgerBtn.addEventListener('click', openMobileMenu);
+    mobileMenuCloseBtn.removeEventListener('click', closeMobileMenu);
   }
 }
 
@@ -136,6 +135,7 @@ checkActiveLangButton();
 
 const STORAGE_KEY_MODAL = 'select-lang-modal';
 const allLangModal = ['ua', 'en'];
+resetActiveClassModal(langButtons, 'active-header-checkbox-modal');
 let currentLangModal = localStorage.getItem(STORAGE_KEY_MODAL) || 'ua';
 const langButtonsModal = document.querySelectorAll('[data-btn-modal]');
 
@@ -143,7 +143,7 @@ langButtonsModal.forEach(btn => {
   btn.addEventListener('click', e => {
     currentLangModal = e.target.dataset.btnModal;
     localStorage.setItem(STORAGE_KEY_MODAL, e.target.dataset.btnModal);
-    resetActiveClass(langButtonsModal, 'active-header-checkbox-modal');
+    resetActiveClassModal(langButtonsModal, 'active-header-checkbox-modal');
     btn.classList.add('active-header-checkbox-modal');
     visualLangElHeaderModal.innerHTML = `<p>${currentLangModal.toLocaleUpperCase()}</p>`;
   });
@@ -175,7 +175,7 @@ function checkActiveLangButtonModal() {
       break;
   }
 }
-checkActiveLangButton();
+checkActiveLangButtonModal();
 
 /* Select lang box */
 function toggleLangBox() {
