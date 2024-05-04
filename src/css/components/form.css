@@ -92,20 +92,15 @@
   height: 12.73px;
   border-radius: 1.25px;
   background-color: var(--primary-text-color-dark);
-
-  @media (768px <= width) {
-    width: 2.5px;
-    height: 19.8px;
-  }
 }
 
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
   .consultation-modal-close span::before,
   .consultation-modal-close span::after {
     width: 2.5px;
     height: 19.8px;
   }
-} */
+}
 
 .consultation-modal-close span::before {
   transform: translate(-50%, -50%) rotate(45deg);
@@ -254,6 +249,8 @@
 }
 
 .modal-input.invalid + .modal-input-error {
+  display: block;
+  padding-left: 8px;
   opacity: 1;
 }
 
@@ -287,10 +284,7 @@
 }
 
 .modal-input-error {
-  position: absolute;
-  left: 10px;
-  bottom: -12px;
-
+  display: none;
   font-size: 10px;
   color: var(--error-color);
 
