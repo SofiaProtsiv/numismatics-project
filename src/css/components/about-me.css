@@ -3,7 +3,7 @@
     padding: 0 32px;
   }
   @media (width >= 1440px) {
-    padding: 0 80px;
+    padding: 0 56px;
     display: flex;
     flex-direction: row;
   }
@@ -70,10 +70,12 @@
   @media (width >= 768px) and (width < 1440px) {
     font-size: 50px;
     line-height: 55px;
+    font-weight: 600;
   }
   @media (width >= 1440px) {
     font-size: 90px;
     line-height: 90px;
+    font-weight: 600;
   }
   color: var(--primary-text-color-dark);
 }
@@ -126,6 +128,24 @@
   @media (width >= 1440px) {
     margin-bottom: 137px;
     margin-left: 40px;
+    width: 472px;
+  }
+}
+
+@media (width >= 768px) and (width < 1440px) {
+  .photo.paragraph  img{
+    width: 704px;
+  }
+  .photo img {
+    width: 704px;
+  }
+}
+
+@media (width >= 1440px) {
+  .photo.paragraph  img{
+    width: 540px;
+  }
+  .photo img {
     width: 472px;
   }
 }
