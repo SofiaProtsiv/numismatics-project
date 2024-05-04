@@ -190,8 +190,10 @@
   justify-content: space-between;
   border-bottom: 1px solid var(--input-border);
   padding: 16px;
+  border-radius: 0px;
   cursor: pointer;
   transition: background-color var(--transition-time) var(--transition-effect),
+    color var(--transition-time) var(--transition-effect),
     border-radius var(--transition-time) var(--transition-effect),
     margin-bottom var(--transition-time) var(--transition-effect);
 
