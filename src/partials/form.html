@@ -28,17 +28,22 @@
             </picture>
           </div>
         </div>
-        <h3 class="consultation-modal-name">Іван Прудько</h3>
-        <p class="consultation-modal-text consultation-profile-text">
+        <h3 class="consultation-modal-name" data-lang="form.name">
+          Іван Прудько
+        </h3>
+        <p
+          class="consultation-modal-text consultation-profile-text"
+          data-lang="form.summery"
+        >
           Співзасновник та експерт компанії «Монітекс» - інтернет-магазину №1
           для колекціонерів в Україні.
         </p>
       </div>
       <div class="consultation-modal-content">
-        <h2 class="consultation-modal-title">
+        <h2 class="consultation-modal-title" data-lang="form.title">
           Отримати консультацію з питань нумізматики
         </h2>
-        <p class="consultation-modal-text">
+        <p class="consultation-modal-text" data-lang="form.description">
           Компанія «Монітекс» була заснована в 2013 році і з того часу здобула
           довіру багатьох постійних клієнтів.
         </p>
@@ -50,7 +55,9 @@
               name="name"
               placeholder="Ваше ім’я"
             />
-            <p class="modal-input-error">Обов'язкове поле</p>
+            <p class="modal-input-error" data-lang="form.errorName">
+              Обов'язкове поле
+            </p>
           </div>
           <div class="modal-input-wrapper">
             <label class="modal-label-name js-modal-label-name" for="form-name"
@@ -63,7 +70,7 @@
               id="form-name"
               placeholder="Номер телефону"
             />
-            <p class="modal-input-error">
+            <p class="modal-input-error" data-lang="form.errorPhone">
               Обов'язкове поле повинно містити 10 цифр
             </p>
           </div>
@@ -75,18 +82,27 @@
                 type="button"
                 name="services"
               >
-                <span id="modal-services">Послуги</span>
+                <span id="modal-services" data-lang="form.services"
+                  >Послуги</span
+                >
                 <svg class="modal-select-icon" width="20" height="20">
                   <use href="/images/icons-sprite.svg#icon-chevron-down"></use>
                 </svg>
               </button>
-              <p class="modal-input-error">Обов'язкове поле</p>
+              <p class="modal-input-error" data-lang="form.errorServices">
+                Обов'язкове поле
+              </p>
               <ul class="modal-select-list js-modal-select-list">
-                <li class="modal-select-item">Консультації з нумізматики</li>
-                <li class="modal-select-item">
+                <li class="modal-select-item" data-lang="form.numismatics">
+                  Консультації з нумізматики
+                </li>
+                <li class="modal-select-item" data-lang="form.collecting">
                   Консультації з питань колекціонування
                 </li>
-                <li class="modal-select-item">
+                <li
+                  class="modal-select-item"
+                  data-lang="form.formationСollections"
+                >
                   Консультації з формування колекцій
                 </li>
               </ul>
@@ -97,11 +113,11 @@
             name="comment"
             placeholder="Коментар"
           ></textarea>
-          <button class="modal-button" type="submit">
+          <button class="modal-button" type="submit" data-lang="form.button">
             Отримати консультацію
           </button>
         </form>
-        <p class="consultation-modal-footer">
+        <p class="consultation-modal-footer" data-lang="form.footer">
           Натискаючи кнопку «Отримати консультацію», ви погоджуєтеся з нашою
           Політикою конфіденційності та дозволяєте використовувати цю інформацію
           в маркетингових цілях.
