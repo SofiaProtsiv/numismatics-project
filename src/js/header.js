@@ -173,10 +173,10 @@ selectLangBtnMobileMenu.addEventListener('click', toggleSelectLangModal);
 
 
 function setCurrentLang() {
-  const currentLang = localStorage.getItem(STORAGE_KEY).toUpperCase() || 'UA'
+  const currentLang = localStorage.getItem(STORAGE_KEY) || 'ua'
 
-  visualLangElHeaderTablet.textContent = currentLang;
-  visualLangElHeaderModal.textContent = currentLang;
+  visualLangElHeaderTablet.textContent = currentLang.toUpperCase();
+  visualLangElHeaderModal.textContent = currentLang.toUpperCase();
 
   checkActiveLangButton();
   checkActiveLangButtonModal();
