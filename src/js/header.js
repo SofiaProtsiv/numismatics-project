@@ -7,6 +7,7 @@ logoBtn.addEventListener('click', () => {
 const reloadPage = () => {
   window.location.reload();
 };
+
 logoBtn.addEventListener('click', reloadPage);
 logoBtn.removeEventListener('click', reloadPage);
 
@@ -38,8 +39,8 @@ const classes = {
 function toggleOpenModal() {
   mobileMenuEl.classList.toggle(classes.active);
   bodyEl.classList.toggle(classes.isHidden);
-  langBoxEl.classList.remove(classes.activeCheckbox);
-  langBoxElModal.classList.remove(classes.activeModal);
+  langBoxEl?.classList.remove(classes.activeCheckbox);
+  langBoxElModal?.classList.remove(classes.activeModal);
 
   buttonLinkModal.forEach(button => {
     button.addEventListener('click', closeMobileMenuAfterClick);
@@ -49,8 +50,8 @@ function toggleOpenModal() {
 function closeMobileMenuAfterClick() {
   mobileMenuEl.classList.remove(classes.active);
   bodyEl.classList.remove(classes.isHidden);
-  langBoxEl.classList.remove(classes.activeCheckbox);
-  langBoxElModal.classList.remove(classes.activeModal);
+  langBoxEl?.classList.remove(classes.activeCheckbox);
+  langBoxElModal?.classList.remove(classes.activeModal);
 
   buttonLinkModal.forEach(button => {
     button.removeEventListener('click', closeMobileMenuAfterClick);
@@ -60,9 +61,11 @@ function closeMobileMenuAfterClick() {
 document
   .querySelector(selectorsForModal.burgerBtn)
   .addEventListener('click', toggleOpenModal);
+
 document
   .querySelector(selectorsForModal.mobileMenuCloseBtn)
   .addEventListener('click', toggleOpenModal);
+
 document.querySelectorAll(selectorsForModal.buttonLinkModal).forEach(button => {
   button.addEventListener('click', closeMobileMenuAfterClick);
 });
@@ -103,7 +106,8 @@ function resetActiveButtons(selector) {
 }
 
 function setCurrentLang() {
-  const currentLangValue = localStorage.getItem(STORAGE_KEY).toUpperCase();
+  const currentLangValue = localStorage.getItem(STORAGE_KEY) || 'ua'
+
   document.querySelectorAll('[data-btn]').forEach(btn => {
     resetActiveButtons('[data-btn]');
     setActiveButton('data-btn', currentLangValue);
