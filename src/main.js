@@ -6,3 +6,4 @@ import "./js/reviews-swiper";
 import "./js/form";
 import "./js/modal";
 import "./js/team-modal";
+import "./js/footer";
