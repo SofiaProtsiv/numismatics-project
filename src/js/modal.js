@@ -5,10 +5,7 @@ const modalTitleRef = document.querySelector('.modal-title');
 const modalTextRef = document.querySelector('.modal-text');
 const socialIconsRef = document.querySelector('.social-icons');
 
-const modalOpenRef = document.querySelector('.btn-open-modal');
-modalOpenRef.addEventListener('click', mdShow);
-
-function mdShow() {
+export function mdShow() {
   modalContainerRef.classList.add('visible');
   document.body.classList.add('body-overflow');
   modalCloseRef.addEventListener('click', mdClose);
@@ -29,12 +26,10 @@ function mdClose() {
   window.removeEventListener('keydown', eventsOnModal);
 }
 
-function onErrorModalContant() {
+export function onErrorModalContact() {
   modalRef.classList.add('modal-error');
   modalTitleRef.textContent = 'На жаль, наразі наш сервер не відповідає!';
   modalTextRef.textContent =
     'Будь ласка, скористайтеся соціальними мережами експерта  для отримання зворотнього зв’язку:';
   socialIconsRef.classList.remove('hidden-icons');
 }
-
-onErrorModalContant();

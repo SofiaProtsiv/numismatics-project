@@ -1,3 +1,5 @@
+import { onErrorModalContact, mdShow } from './modal';
+
 const form = document.querySelector('.js-modal-form');
 const selectButton = document.querySelector('.js-select-button');
 const selectList = document.querySelector('.js-modal-select-list');
@@ -79,10 +81,14 @@ async function fetchConsultation(data) {
       },
       body: JSON.stringify(data),
     };
-    const responseData = await (await fetch(URL, config)).json();
-    console.log('Ok', responseData);
-  } catch (error) {
-    console.error('Error submitting application:', error);
+    const response = await fetch(URL, config);
+    if (!response.ok) throw new Error();
+    closeModal();
+    mdShow();
+  } catch {
+    closeModal();
+    onErrorModalContact();
+    mdShow();
   }
 }
 

@@ -6,6 +6,7 @@
   height: 100vh;
 
   z-index: 100;
+  backdrop-filter: blur(8px);
   background-color: var(--background-color);
 
   transition: opacity var(--transition-time) var(--transition-effect);
