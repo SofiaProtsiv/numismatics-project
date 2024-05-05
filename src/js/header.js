@@ -4,182 +4,151 @@ logoBtn.addEventListener('click', () => {
   window.location.reload();
 });
 
-logoBtn.removeEventListener('click', () => {
+const reloadPage = () => {
   window.location.reload();
-});
+};
+logoBtn.addEventListener('click', reloadPage);
+logoBtn.removeEventListener('click', reloadPage);
 
-/* Відкриття і закриття мобільного меню */
-const burgerBtn = document.querySelector('.header-navigation-item-burger');
-const mobileMenuEl = document.querySelector('.header-modal-wrapper');
-const mobileMenuCloseBtn = document.querySelector(
-  '.header-modal-wrapper-item-svg-container'
+const selectorsForModal = {
+  burgerBtn: '.header-navigation-item-burger',
+  mobileMenuEl: '.header-modal-wrapper',
+  mobileMenuCloseBtn: '.header-modal-wrapper-item-svg-container',
+  bodyEl: 'body',
+  buttonLinkModal: '.header-modal-container-item',
+  langBoxEl: '.lang-box',
+  langBoxElModal: '.lang-box-modal',
+};
+const mobileMenuEl = document.querySelector(selectorsForModal.mobileMenuEl);
+const bodyEl = document.querySelector(selectorsForModal.bodyEl);
+const langBoxEl = document.querySelector('.lang-box');
+const langBoxElModal = document.querySelector('.lang-box-modal');
+const buttonLinkModal = document.querySelectorAll(
+  selectorsForModal.buttonLinkModal
 );
-const bodyEl = document.querySelector('body');
 
+const classes = {
+  active: 'active',
+  isHidden: 'is-hidden',
+  activeCheckbox: 'active-checkbox',
+  activeModal: 'active-modal',
+};
+
+/* Відкриття та закриття модального вікна */
 function toggleOpenModal() {
-  mobileMenuEl.classList.toggle('active');
-  bodyEl.classList.toggle('is-hidden');
-  langBoxEl.classList.remove('active-checkbox');
-  langBoxElModal.classList.remove('active-modal');
+  mobileMenuEl.classList.toggle(classes.active);
+  bodyEl.classList.toggle(classes.isHidden);
+  langBoxEl.classList.remove(classes.activeCheckbox);
+  langBoxElModal.classList.remove(classes.activeModal);
 
   buttonLinkModal.forEach(button => {
     button.addEventListener('click', closeMobileMenuAfterClick);
   });
 }
 
-burgerBtn.addEventListener('click', toggleOpenModal);
-mobileMenuCloseBtn.addEventListener('click', toggleOpenModal);
-
-/* Close modal window after click link*/
-const buttonLinkModal = document.querySelectorAll(
-  '.header-modal-container-item'
-);
-
 function closeMobileMenuAfterClick() {
-  mobileMenuEl.classList.remove('active');
-  bodyEl.classList.remove('is-hidden');
-  langBoxEl.classList.remove('active-checkbox');
-  langBoxElModal.classList.remove('active-modal');
+  mobileMenuEl.classList.remove(classes.active);
+  bodyEl.classList.remove(classes.isHidden);
+  langBoxEl.classList.remove(classes.activeCheckbox);
+  langBoxElModal.classList.remove(classes.activeModal);
 
   buttonLinkModal.forEach(button => {
     button.removeEventListener('click', closeMobileMenuAfterClick);
-  })
+  });
 }
 
-buttonLinkModal.forEach(button => {
+document
+  .querySelector(selectorsForModal.burgerBtn)
+  .addEventListener('click', toggleOpenModal);
+document
+  .querySelector(selectorsForModal.mobileMenuCloseBtn)
+  .addEventListener('click', toggleOpenModal);
+document.querySelectorAll(selectorsForModal.buttonLinkModal).forEach(button => {
   button.addEventListener('click', closeMobileMenuAfterClick);
 });
 
 /* Select language */
-const selectLangBtnMobileMenu = document.querySelector(
-  '.header-modal-wrapper-select-box-container'
-);
-const selectLangBtnTablet = document.querySelector(
-  '.header-modal-wrapper-select-box-container-tablet'
-);
-const langBoxEl = document.querySelector(
-  '.header-modal-wrapper-select-box-checkbox'
-);
-const langContainerTablet = document.querySelector(
-  '.header-modal-selectlang-container'
-);
 
-const langBoxElModal = document.querySelector(
-  '.header-modal-selectlang-checkbox'
-);
-const visualLangElHeaderTablet = document.querySelector(
-  '.header-modal-wrapper-select-box-container-text'
-);
-const visualLangElHeaderModal = document.querySelector(
-  '.header-modal-wrapper-select-box-container-text-modal'
-);
-
-/* Heder Tablet */
-const STORAGE_KEY = 'select-lang';
-let currentLang = localStorage.getItem(STORAGE_KEY) || 'ua';
-const langButtons = document.querySelectorAll('[data-btn]');
-
-const someObj = {
-  attr: {
-    ua: '',
-    en: '',
-  },
+const selectors = {
+  selectLangBtnMobileMenu: '.header-modal-wrapper-select-box-container',
+  selectLangBtnTablet: '.header-modal-wrapper-select-box-container-tablet',
+  langBoxEl: '.header-modal-wrapper-select-box-checkbox',
+  langContainerTablet: '.header-modal-selectlang-container',
+  langBoxElModal: '.header-modal-selectlang-checkbox',
+  visualLangElHeaderTablet: '.header-modal-wrapper-select-box-container-text',
+  visualLangElHeaderModal:
+    '.header-modal-wrapper-select-box-container-text-modal',
+  langButtons: '[data-btn]',
+  langButtonsModal: '[data-btn-modal]',
 };
 
-langButtons.forEach(btn => {
+const STORAGE_KEY = 'select-lang';
+let currentLang = localStorage.getItem(STORAGE_KEY) || 'ua';
+
+function toggleClass(element, className) {
+  element.classList.toggle(className);
+}
+
+function setActiveButton(selector, lang) {
+  const button = document.querySelector(`[${selector}="${lang}"]`);
+  if (button) {
+    button.classList.add('active-header-checkbox');
+  }
+}
+
+function resetActiveButtons(selector) {
+  document.querySelectorAll(selector).forEach(elem => {
+    elem.classList.remove('active-header-checkbox');
+  });
+}
+
+function setCurrentLang() {
+  const currentLangValue = localStorage.getItem(STORAGE_KEY).toUpperCase();
+  document.querySelectorAll('[data-btn]').forEach(btn => {
+    resetActiveButtons('[data-btn]');
+    setActiveButton('data-btn', currentLangValue);
+  });
+
+  document.querySelectorAll('[data-btn-modal]').forEach(btn => {
+    resetActiveButtons('[data-btn-modal]');
+    setActiveButton('data-btn-modal', currentLangValue);
+  });
+
+  document.querySelector(
+    '.header-modal-wrapper-select-box-container-text'
+  ).textContent = currentLangValue;
+  document.querySelector(
+    '.header-modal-wrapper-select-box-container-text-modal'
+  ).textContent = currentLangValue;
+}
+
+document
+  .querySelector(selectors.selectLangBtnTablet)
+  .addEventListener('click', () => {
+    toggleClass(document.querySelector(selectors.langBoxEl), 'active-checkbox');
+  });
+
+document
+  .querySelector(selectors.selectLangBtnMobileMenu)
+  .addEventListener('click', () => {
+    toggleClass(
+      document.querySelector(selectors.langBoxElModal),
+      'active-modal'
+    );
+  });
+
+document.querySelectorAll(selectors.langButtons).forEach(btn => {
   btn.addEventListener('click', e => {
     localStorage.setItem(STORAGE_KEY, e.target.dataset.btn);
-    resetActiveClass(langButtons, 'active-header-checkbox');
-    btn.classList.add('active-header-checkbox');
-
     setCurrentLang();
   });
 });
 
-function resetActiveClass(arr, activeClass) {
-  arr.forEach(elem => {
-    elem.classList.remove(activeClass);
-  });
-}
-
-function checkActiveLangButton() {
-  switch (localStorage.getItem(STORAGE_KEY)) {
-    case 'ua':
-      document
-        .querySelector('[data-btn="ua"]')
-        .classList.add('active-header-checkbox');
-      break;
-    case 'en':
-      document
-        .querySelector('[data-btn="en"]')
-        .classList.add('active-header-checkbox');
-      break;
-
-    default:
-      document
-        .querySelector('[data-btn="ua"]')
-        .classList.add('active-header-checkbox');
-      break;
-  }
-}
-
-/* Header modal */
-
-resetActiveClass(langButtons, 'active-header-checkbox-modal');
-
-const langButtonsModal = document.querySelectorAll('[data-btn-modal]');
-
-langButtonsModal.forEach(btn => {
+document.querySelectorAll(selectors.langButtonsModal).forEach(btn => {
   btn.addEventListener('click', e => {
     localStorage.setItem(STORAGE_KEY, e.target.dataset.btnModal);
-    resetActiveClass(langButtonsModal, 'active-header-checkbox-modal');
-    btn.classList.add('active-header-checkbox-modal');
-
-    setCurrentLang()
+    setCurrentLang();
   });
 });
 
-function checkActiveLangButtonModal() {
-  switch (localStorage.getItem(STORAGE_KEY)) {
-    case 'ua':
-      document
-        .querySelector('[data-btn-modal="ua"]')
-        .classList.add('active-header-checkbox-modal');
-      break;
-    case 'en':
-      document
-        .querySelector('[data-btn-modal="en"]')
-        .classList.add('active-header-checkbox-modal');
-      break;
-
-    default:
-      document
-        .querySelector('[data-btn-modal="ua"]')
-        .classList.add('active-header-checkbox-modal');
-      break;
-  }
-}
-
-/* Select lang box */
-function toggleSelectLang() {
-  langBoxEl.classList.toggle('active-checkbox');
-}
-selectLangBtnTablet.addEventListener('click', toggleSelectLang);
-
-function toggleSelectLangModal() {
-  langBoxElModal.classList.toggle('active-modal');
-}
-selectLangBtnMobileMenu.addEventListener('click', toggleSelectLangModal);
-
-
-function setCurrentLang() {
-  const currentLang = localStorage.getItem(STORAGE_KEY).toUpperCase() || 'UA'
-
-  visualLangElHeaderTablet.textContent = currentLang;
-  visualLangElHeaderModal.textContent = currentLang;
-
-  checkActiveLangButton();
-  checkActiveLangButtonModal();
-}
-
-setCurrentLang()
+setCurrentLang();
