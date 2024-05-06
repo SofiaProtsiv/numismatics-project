@@ -87,6 +87,12 @@ function resetForm() {
   phoneWrapper.classList.remove(SHOW_PREFIX);
 }
 
+function resetError() {
+  nameInput.classList.remove(INVALID);
+  phoneInput.classList.remove(INVALID);
+  servicesInput.classList.remove(INVALID);
+}
+
 async function fetchConsultation(data) {
   openModalLoader();
   try {
@@ -191,10 +197,12 @@ function handleBackdropClose(e) {
 
 export function closeModal() {
   resetForm();
+  resetError();
   modal.classList.remove(VISIBLE);
   document.body.style.overflow = '';
   window.removeEventListener('keydown', handleEsc);
 }
+
 export function handleOpenModal() {
   setPlaceholders();
   modal.classList.add(VISIBLE);
