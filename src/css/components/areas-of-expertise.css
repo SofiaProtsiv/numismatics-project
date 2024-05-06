@@ -181,12 +181,18 @@
 
 @media (width >= 768px) {
   .numismatic img {
-    content: url('../images/areas-of-expertise/numismat-134.svg')
+    content: url('../images/areas-of-expertise/numismat-134.svg');
+    width: 134px;
+    height: 134px;
   }
   .bonistic img {
-    content: url('../images/areas-of-expertise/bonistic-176.svg')
+    content: url('../images/areas-of-expertise/bonistic-176.svg');
+    width: 176px;
+    height: 134px;
   }
   .faleristic img {
-    content: url('../images/areas-of-expertise/faleristic-113.svg')
+    content: url('../images/areas-of-expertise/faleristic-113.svg');
+    width: 113px;
+    height: 134px;
   }
 }
