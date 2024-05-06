@@ -82,10 +82,10 @@ const langButtons = document.querySelectorAll('[data-btn]');
 if (currentLang === 'ua') {
   document
     .querySelector('[data-btn="ua"]')
-    .classList.add('active-header-checkbox') ||
-    document
-      .querySelector('[data-btn-modal="ua"]')
-      .classList.add('active-header-checkbox-modal');
+    .classList.add('active-header-checkbox');
+  document
+    .querySelector('[data-btn-modal="ua"]')
+    .classList.add('active-header-checkbox-modal');
 }
 
 const someObj = {
@@ -172,13 +172,10 @@ function checkActiveLangButtonModal() {
 }
 function toggleSelectLang() {
   langBoxEl.classList.toggle('active-checkbox');
-}
-selectLangBtnTablet.addEventListener('click', toggleSelectLang);
-
-function toggleSelectLangModal() {
   langBoxElModal.classList.toggle('active-modal');
 }
-selectLangBtnMobileMenu.addEventListener('click', toggleSelectLangModal);
+selectLangBtnTablet.addEventListener('click', toggleSelectLang);
+selectLangBtnMobileMenu.addEventListener('click', toggleSelectLang);
 
 function setCurrentLang() {
   const currentLang = localStorage.getItem(STORAGE_KEY).toUpperCase() || 'UA';
