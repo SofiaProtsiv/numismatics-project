@@ -1,4 +1,5 @@
 import { onErrorModalContact, mdShow } from './modal';
+import { openModalLoader, closeModalLoader } from './loader';
 
 const form = document.querySelector('.js-modal-form');
 const selectButton = document.querySelector('.js-select-button');
@@ -76,15 +77,18 @@ function handleSubmit(e) {
     service: servicesValue,
     question: comment,
   });
+}
 
-  e.target.reset();
-  data.services.querySelector('span').textContent =
+function resetForm() {
+  form.reset();
+  form.services.querySelector('span').textContent =
     selectBtnText[localStorage.getItem(STORAGE_KEY) || 'ua'];
-  data.services.dataset.selected = 'false';
+  form.services.dataset.selected = 'false';
   phoneWrapper.classList.remove(SHOW_PREFIX);
 }
 
 async function fetchConsultation(data) {
+  openModalLoader();
   try {
     const config = {
       method: 'POST',
@@ -95,12 +99,14 @@ async function fetchConsultation(data) {
     };
     const response = await fetch(URL, config);
     if (!response.ok) throw new Error();
-    closeModal();
+    // need onSuccessModalContact() or not, if the modal changes from error to success when it is closing
     mdShow();
-  } catch {
     closeModal();
+  } catch {
     onErrorModalContact();
     mdShow();
+  } finally {
+    closeModalLoader();
   }
 }
 
@@ -184,6 +190,7 @@ function handleBackdropClose(e) {
 }
 
 export function closeModal() {
+  resetError();
   modal.classList.remove(VISIBLE);
   document.body.style.overflow = '';
   window.removeEventListener('keydown', handleEsc);
