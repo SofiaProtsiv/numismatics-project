@@ -75,6 +75,7 @@
     font-size: 90px;
     line-height: 90px;
     font-weight: 700;
+    margin-top: 0;
   }
   color: var(--primary-text-color-dark);
 }
@@ -117,7 +118,6 @@
 
 .desktop-column-first {
   @media (width >= 1440px) {
-    margin-top: 60px;
     margin-left: 120px;
     width: 540px;
   }
