@@ -190,7 +190,7 @@ function handleBackdropClose(e) {
 }
 
 export function closeModal() {
-  resetError();
+  resetForm();
   modal.classList.remove(VISIBLE);
   document.body.style.overflow = '';
   window.removeEventListener('keydown', handleEsc);
