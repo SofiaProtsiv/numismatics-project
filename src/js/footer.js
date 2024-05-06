@@ -1,12 +1,9 @@
-const scrollToHeader = function () {
-    const header = document.querySelector("#header");
+const logoLink = document.getElementById('header');
 
-    header.scrollIntoView({ behavior: 'smooth' });
-};
+const handleClick = function (event) {
+    window.location.reload();
+}
 
-const logoLink = document.querySelector('.logo-footer');
+logoLink.addEventListener('click', handleClick);
 
-logoLink.addEventListener('click', function (event) {
-    event.preventDefault();
-    scrollToHeader();
-});
+logoLink.removeEventListener('click', handleClick);

@@ -103,8 +103,6 @@
     letter-spacing: 0%;
     text-align: left;
     margin-bottom: 16px;
-
-        @media (1440px<=width) {}
 }
 
 /* ---- website ---- */
@@ -115,7 +113,7 @@
     @media (1440px<=width) {
          margin-bottom: 20px;
          margin-right: auto;
-         margin-left: 120px;
+         margin-left: 114px;
     }
 }
 
