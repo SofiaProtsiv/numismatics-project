@@ -1,4 +1,4 @@
-const logoLink = document.getElementById('header');
+const logoLink = document.querySelector('.logo-footer');
 
 const handleClick = function (event) {
     window.location.reload();
