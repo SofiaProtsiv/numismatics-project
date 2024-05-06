@@ -248,10 +248,12 @@
 .header-modal-wrapper-select-box-checkbox.active-checkbox > button {
   position: static;
   top: 0;
+  opacity: 1;
 }
 
 .header-modal-selectlang-checkbox-text-ua {
   position: absolute;
+  opacity: 0;
   top: 100%;
   font-weight: 700;
   color: var(--inactive-lang-text);
@@ -263,8 +265,6 @@
 .header-modal-selectlang-checkbox-text-ua:hover,
 .header-modal-selectlang-checkbox-text-ua:focus {
   color: var(--lang-switch-container-dark);
-  top: 0;
-  position: static;
 }
 
 .active-header-checkbox {
@@ -321,6 +321,7 @@
 .header-modal-wrapper-select-box-checkbox-text-ua {
   position: absolute;
   top: 100%;
+  opacity: 0;
   font-weight: 700;
   border: none;
   background-color: transparent;
@@ -330,6 +331,7 @@
 .header-modal-selectlang-checkbox.active-modal > button {
   position: static;
   top: 0;
+  opacity: 1;
 }
 .header-modal-wrapper-select-box-checkbox-text-ua:hover,
 .header-modal-wrapper-select-box-checkbox-text-ua:focus {
