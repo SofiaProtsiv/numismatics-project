@@ -7,6 +7,7 @@ const selectContainer = document.querySelector('.js-modal-select');
 
 const nameInput = document.querySelector('input[name="name"]');
 const phoneInput = document.querySelector('input[name="phone"]');
+const commentInput = document.querySelector('textarea[name="comment"]');
 const servicesInput = document.querySelector('button[name="services"]');
 
 const phoneWrapper = phoneInput.closest('.modal-input-wrapper');
@@ -18,6 +19,16 @@ const INVALID = 'invalid';
 const ACTIVE_SELECT = 'select-active';
 const SHOW_PREFIX = 'show-prefix';
 const VISIBLE = 'visible';
+
+const STORAGE_KEY = 'select-lang';
+
+const placeholderNames = {
+  name: { ua: 'Ваше ім’я', en: 'Your name' },
+  phone: { ua: 'Номер телефону', en: 'Phone number' },
+  comment: { ua: 'Коментар', en: 'Comment' },
+};
+
+const selectBtnText = { ua: 'Послуги', en: 'Services' };
 
 const URL = 'https://numismatics-project-backend.onrender.com/api/application';
 
@@ -67,7 +78,8 @@ function handleSubmit(e) {
   });
 
   e.target.reset();
-  data.services.querySelector('span').textContent = 'Послуги';
+  data.services.querySelector('span').textContent =
+    selectBtnText[localStorage.getItem(STORAGE_KEY) || 'ua'];
   data.services.dataset.selected = 'false';
   phoneWrapper.classList.remove(SHOW_PREFIX);
 }
@@ -177,9 +189,18 @@ export function closeModal() {
   window.removeEventListener('keydown', handleEsc);
 }
 export function handleOpenModal() {
+  setPlaceholders();
   modal.classList.add(VISIBLE);
   document.body.style.overflow = 'hidden';
   window.addEventListener('keydown', handleEsc);
+}
+
+//
+function setPlaceholders() {
+  const language = localStorage.getItem(STORAGE_KEY) || 'ua';
+  nameInput.setAttribute('placeholder', placeholderNames.name[language]);
+  phoneInput.setAttribute('placeholder', placeholderNames.phone[language]);
+  commentInput.setAttribute('placeholder', placeholderNames.comment[language]);
 }
 
 //  Тимчасовий код

@@ -151,4 +151,46 @@ document.querySelectorAll(selectors.langButtonsModal).forEach(btn => {
   });
 });
 
+function checkActiveLangButtonModal() {
+  switch (localStorage.getItem(STORAGE_KEY)) {
+    case 'ua':
+      document
+        .querySelector('[data-btn-modal="ua"]')
+        .classList.add('active-header-checkbox-modal');
+      break;
+    case 'en':
+      document
+        .querySelector('[data-btn-modal="en"]')
+        .classList.add('active-header-checkbox-modal');
+      break;
+
+    default:
+      document
+        .querySelector('[data-btn-modal="ua"]')
+        .classList.add('active-header-checkbox-modal');
+      break;
+  }
+}
+
+/* Select lang box */
+function toggleSelectLang() {
+  langBoxEl.classList.toggle('active-checkbox');
+}
+selectLangBtnTablet.addEventListener('click', toggleSelectLang);
+
+function toggleSelectLangModal() {
+  langBoxElModal.classList.toggle('active-modal');
+}
+selectLangBtnMobileMenu.addEventListener('click', toggleSelectLangModal);
+
+function setCurrentLang() {
+  const currentLang = localStorage.getItem(STORAGE_KEY) || 'ua';
+
+  visualLangElHeaderTablet.textContent = currentLang.toUpperCase();
+  visualLangElHeaderModal.textContent = currentLang.toUpperCase();
+
+  checkActiveLangButton();
+  checkActiveLangButtonModal();
+}
+
 setCurrentLang();
