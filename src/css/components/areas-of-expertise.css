@@ -164,10 +164,14 @@
   font-size: 14px;
   line-height: 18px;
   margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
   @media (width >= 768px) and (width < 1440px) {
     font-size: 16px;
     line-height: 24px;
     margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
   }
   @media (width >= 1440px) {
     font-size: 16px;
