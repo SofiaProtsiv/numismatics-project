@@ -10,18 +10,19 @@
 @import url('./utils/common.css');
 
 /* Components */
-@import url("./components/header.css");
-@import url("./components/hero.css");
-@import url("./components/about-me.css");
-@import url("./components/areas-of-expertise.css");
-@import url("./components/services.css");
-@import url("./components/faq.css");
-@import url("./components/reviews.css");
-@import url("./components/contact.css");
-@import url("./components/footer.css");
-@import url("./components/form.css");
-@import url("./components/modal.css");
-@import url("./components/team-modal.css");
+@import url('./components/header.css');
+@import url('./components/hero.css');
+@import url('./components/about-me.css');
+@import url('./components/areas-of-expertise.css');
+@import url('./components/services.css');
+@import url('./components/faq.css');
+@import url('./components/reviews.css');
+@import url('./components/contact.css');
+@import url('./components/footer.css');
+@import url('./components/form.css');
+@import url('./components/modal.css');
+@import url('./components/team-modal.css');
+@import url('./components/loader.css');
 
 .example-breakpoints {
   /* до 360px */

@@ -1,7 +1,6 @@
-
 .modal-container {
   position: fixed;
-  z-index: 90;
+  z-index: 1100;
   top: 0;
   left: 0;
   width: 100%;
@@ -19,16 +18,17 @@
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transition: opacity var(--transition-time), visibility 0s var(--transition-effect);
+  transition: opacity var(--transition-time),
+    visibility 0s var(--transition-effect);
 }
 
-.body-overflow{
-  overflow: hidden
+.body-overflow {
+  overflow: hidden;
 }
 
 .modal {
   top: 50%;
-  left: 50%; 
+  left: 50%;
   font-family: var(--primary-font-family);
   text-align: center;
   z-index: 100;
@@ -39,46 +39,44 @@
   border: none;
   border-radius: 15px;
   background-color: var(--white-color);
-  box-shadow: 5px 5px 12px rgba(0, 0, 0, .22), 0 19px 60px rgba(0, 0, 0, .3);
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.22), 0 19px 60px rgba(0, 0, 0, 0.3);
   transform: translate(-50%, -50%);
 
   @media (768px <=width) {
-      width: 615px;
-      padding: 80px;
-    }
-} 
-
-.modal-error{
-  
-  @media (768px <=width){
-  padding: 64px 53px;
+    width: 615px;
+    padding: 80px;
   }
 }
 
-.modal-title{
+.modal-error {
+  @media (768px <=width) {
+    padding: 64px 53px;
+  }
+}
+
+.modal-title {
   color: var(--primary-text-color-dark);
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
   margin-bottom: 14px;
   @media (768px <=width) {
-      margin-bottom: 16px;
-      font-size: 24px;
-      line-height: 32px;
-    }
+    margin-bottom: 16px;
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
-.modal-text{ 
+.modal-text {
   color: var(--secondary-text-color-dark);
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   @media (768px <=width) {
-      font-size: 16px;
-      line-height: 24px;
-    }
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
-
 
 .modal-close {
   position: absolute;
@@ -86,12 +84,12 @@
   top: 16px;
   right: 16px;
   width: 18px;
-  height: 18px;  
+  height: 18px;
   vertical-align: middle;
   text-align: center;
   font-size: 12px;
-  color: var(--primary-text-color-dark); 
-  @media (768px <=width){
+  color: var(--primary-text-color-dark);
+  @media (768px <=width) {
     top: 20px;
     right: 20px;
     width: 28px;
@@ -99,40 +97,39 @@
   }
 }
 
-.social-icons{
+.social-icons {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
   margin-top: 14px;
   @media (768px <=width) {
-      gap: 18px;
-    }
-  
+    gap: 18px;
+  }
 }
 
-.hidden-icons{
-display: none;
+.hidden-icons {
+  display: none;
 }
 
-.icon-circle{
+.icon-circle {
   background-color: var(--lang-switch-container-dark);
-border-radius: 50%;
-transform-box: fill-box;
+  border-radius: 50%;
+  transform-box: fill-box;
   transform-origin: center center;
   transform: scale(1);
 }
 
-.icon{
+.icon {
   display: block;
   width: 32px;
   height: 32px;
   @media (768px <=width) {
-      width: 40px;
-      height: 40px;
-    }
+    width: 40px;
+    height: 40px;
+  }
 }
-.icon-svg{
+.icon-svg {
   padding: 7px;
   width: 32px;
   height: 32px;
@@ -142,39 +139,35 @@ transform-box: fill-box;
   background-color: var(--lang-switch-container-dark);
   fill: var(--lang-switch-container-dark);
   @media (768px <=width) {
-      width: 40px;
-      height: 40px;
-      padding: 11px;
-      
-    }
+    width: 40px;
+    height: 40px;
+    padding: 11px;
+  }
 }
 
-.instagram-ref{
+.instagram-ref {
   padding: 9px;
   @media (768px <=width) {
-      padding: 13px;
-    }
+    padding: 13px;
+  }
 }
 
-.icon-svg-instagram{
-  width: 18px;
-    height: 18px;
-    transform-box: fill-box;
-      transform-origin: center center;
-      transform: scale(1.3);
-}
-
-
-.icon-close{
+.icon-svg-instagram {
   width: 18px;
   height: 18px;
   transform-box: fill-box;
-    transform-origin: center center;
-  transform: scale(1.12);
-  @media (768px <=width) {
-      width: 28px;
-      height: 28px;
-    }
-  
+  transform-origin: center center;
+  transform: scale(1.3);
 }
 
+.icon-close {
+  width: 18px;
+  height: 18px;
+  transform-box: fill-box;
+  transform-origin: center center;
+  transform: scale(1.12);
+  @media (768px <=width) {
+    width: 28px;
+    height: 28px;
+  }
+}
