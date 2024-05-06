@@ -167,6 +167,7 @@
   }
 }
 
+.header-modal-wrapper-select-box-container-text-modal,
 .header-modal-wrapper-select-box-container-text {
   color: var(--white-color);
   font-weight: 700;
@@ -181,6 +182,7 @@
   width: 22px;
   height: 20px;
   pointer-events: none;
+  text-transform: uppercase;
 }
 
 .header-modal-wrapper-select-box-container-tablet {
