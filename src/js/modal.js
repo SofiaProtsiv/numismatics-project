@@ -5,9 +5,6 @@ const modalTitleRef = document.querySelector('.modal-title');
 const modalTextRef = document.querySelector('.modal-text');
 const socialIconsRef = document.querySelector('.social-icons');
 
-const modalOpenRef = document.querySelector('.btn-open-modal');
-modalOpenRef.addEventListener('click', mdShow);
-
 function mdShow() {
   modalContainerRef.classList.add('visible');
   document.body.classList.add('body-overflow');
