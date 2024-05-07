@@ -1,3 +1,49 @@
+import localizeElements from './localization';
+
+const STORAGE_KEY = 'currentLang';
+const langButtons = document.querySelectorAll('[data-btn]');
+const btnUaHeaderTablet = document.querySelector('[data-btn="ua"]');
+const btnEnHeaderTablet = document.querySelector('[data-btn="en"]');
+const btnUaModal = document.querySelector('[data-btn-modal="ua"]');
+const btnEnModal = document.querySelector('[data-btn-modal="en"]');
+
+/* Зміна мови контенту */
+
+const savedLang = localStorage.getItem(STORAGE_KEY) || 'ua';
+
+if (savedLang) {
+  const btnUaHeader = document.querySelector('[data-btn="ua"]');
+  btnUaHeader.value = savedLang;
+  document.querySelector('[data-btn="en"]').value = savedLang;
+  console.log(savedLang);
+  const btnUaMod = document.querySelector('[data-btn-modal="ua"]');
+  btnUaMod.value = savedLang;
+  const btnEnMod = document.querySelector('[data-btn-modal="en"]');
+  btnEnMod.value = savedLang;
+
+  localizeElements(savedLang);
+}
+
+btnUaHeaderTablet.addEventListener('click', changeLanguage);
+btnEnHeaderTablet.addEventListener('click', changeLanguage);
+btnUaModal.addEventListener('click', changeLanguage);
+btnEnModal.addEventListener('click', changeLanguage);
+
+function changeLanguage(e) {
+  if (e.target.dataset.btn) {
+    const currentLang = e.target.dataset.btn;
+    localizeElements(currentLang);
+
+    localStorage.setItem(STORAGE_KEY, currentLang);
+  }
+  if (e.target.dataset.btnModal) {
+    const currentLang = e.target.dataset.btnModal;
+    localizeElements(currentLang);
+
+    localStorage.setItem(STORAGE_KEY, currentLang);
+  }
+}
+
 /* Перезавантаження сторінки при кліку на логотип */
 const logoBtn = document.querySelector('.logo-link');
 logoBtn.addEventListener('click', () => {
@@ -60,9 +106,6 @@ const selectLangBtnTablet = document.querySelector(
 const langBoxEl = document.querySelector(
   '.header-modal-wrapper-select-box-checkbox'
 );
-const langContainerTablet = document.querySelector(
-  '.header-modal-selectlang-container'
-);
 
 const langBoxElModal = document.querySelector(
   '.header-modal-selectlang-checkbox'
@@ -75,25 +118,6 @@ const visualLangElHeaderModal = document.querySelector(
 );
 
 /* Heder Tablet */
-const STORAGE_KEY = 'select-lang';
-let currentLang = localStorage.getItem(STORAGE_KEY) || 'ua';
-const langButtons = document.querySelectorAll('[data-btn]');
-
-if (currentLang === 'ua') {
-  document
-    .querySelector('[data-btn="ua"]')
-    .classList.add('active-header-checkbox');
-  document
-    .querySelector('[data-btn-modal="ua"]')
-    .classList.add('active-header-checkbox-modal');
-}
-
-const someObj = {
-  attr: {
-    ua: '',
-    en: '',
-  },
-};
 
 langButtons.forEach(btn => {
   btn.addEventListener('click', e => {
@@ -178,7 +202,7 @@ selectLangBtnTablet.addEventListener('click', toggleSelectLang);
 selectLangBtnMobileMenu.addEventListener('click', toggleSelectLang);
 
 function setCurrentLang() {
-  const currentLang = localStorage.getItem(STORAGE_KEY).toUpperCase() || 'UA';
+  const currentLang = localStorage.getItem(STORAGE_KEY) || 'UA';
 
   visualLangElHeaderTablet.textContent = currentLang;
   visualLangElHeaderModal.textContent = currentLang;

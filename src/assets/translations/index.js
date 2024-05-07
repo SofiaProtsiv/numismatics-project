@@ -31,6 +31,17 @@ const localizationData = {
       subtitle: 'Відгуки',
       title: 'Відгуки клієнтів',
     },
+
+    header: {
+      'el-1': 'Про мене',
+      'el-2': 'Експертиза',
+      'el-3': 'Послуги',
+      'el-4': 'Відгуки клієнтів',
+      'el-5': 'Про мене',
+      'el-6': 'Експертиза',
+      'el-7': 'Послуги',
+      'el-8': 'Відгуки клієнтів',
+    },
   },
   en: {
     hero: {
@@ -62,6 +73,17 @@ const localizationData = {
     reviews: {
       subtitle: 'Reviews',
       title: 'Customer feedback',
+    },
+
+    header: {
+      'el-1': 'About me',
+      'el-2': 'Areas of expertise',
+      'el-3': 'Services',
+      'el-4': 'Reviews',
+      'el-5': 'About me',
+      'el-6': 'Areas of expertise',
+      'el-7': 'Services',
+      'el-8': 'Reviews',
     },
   },
 };
