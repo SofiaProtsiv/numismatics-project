@@ -1,5 +1,22 @@
 const localizationData = {
   ua: {
+    about: {
+      expertise: 'ЕКСПЕРТНІСТЬ',
+      title: 'ПРО МЕНЕ',
+      firstParagraph: 'Завжди вважав, що моє хобі може стати професією. Усе почалося в дитинстві, коли у десять років я ' +
+        'зібрав свою першу колекцію та мріяв про кар’єру археолога. Ця мрія стала реальністю у 2009 році, коли я вступив ' +
+        'на історичний факультет Київського національного університету імені Тараса Шевченка та навчався на ' +
+        'кафедрі археології та музеєзнавства.',
+      secondParagraph: 'Під час навчання я також здобув практичні навички у міжнародній бізнес-спільності, що дозволило ' +
+        'мені розпочати свою підприємницьку діяльність.У 2013 році я став співвласником компанії «Монітекс», що ' +
+        'спеціалізується на нумізматиці, боністиці, фалеристиці та інших суміжних напрямках.',
+      thirdParagraph: 'Ми допомагаємо нашим клієнтам створювати та поповнювати їхні колекції, оцінюємо старовинні ' +
+        'предмети та визначаємо їхню ідентичність, пропонуємо найбільший асортимент колекційних товарів в Україні. ' +
+        'Ми прагнемо розвивати культуру колекціонування в нашій країні, вносячи свій вклад у збереження та поширення ' +
+        'цієї традиції.',
+      fourthParagraph: 'Крім того, я є резидентом клубу підприємців PRIZMA CLUB, де разом із колегами обговорюємо ' +
+        'новітні тенденції у бізнесі та культурі, ділимося досвідом та шукаємо нові можливості для розвитку в Україні.',
+    },
     hero: {
       helperText:
         'Співзасновник та експерт компанії «Монітекс» - інтернет-магазину №1 для колекціонерів в Україні.',
@@ -49,6 +66,24 @@ const localizationData = {
     },
   },
   en: {
+    about: {
+      expertise: 'EXPERTISE',
+      title: 'ABOUT ME',
+      firstParagraph: 'I always believed that my hobby could become my profession. It all started in childhood, when ' +
+        'at the age of ten I collected my first collection and dreamed of a career as an archaeologist. This dream ' +
+        'became a reality in 2009, when I entered the Faculty of History of Taras Shevchenko Kyiv National University ' +
+        'at the Department of Archeology and Museum Studies',
+      secondParagraph: 'During my studies, I also gained practical skills in the international business community, ' +
+        'which allowed me to start my own business. In 2013, I became a co-owner of the Monitex company, ' +
+        'which specializes in numismatics, bonistics, phaleristics and other related areas.',
+      thirdParagraph: 'We help our customers create and replenish collections, evaluate antique items and determine ' +
+        'their identity, and we also offer the largest assortment of collectible goods in Ukraine. We strive to ' +
+        'develop the culture of collecting in our country, contributing to the preservation and dissemination of ' +
+        'this tradition.',
+      fourthParagraph: 'In addition, I am a resident of the PRIZMA CLUB entrepreneurs\' club, where together with ' +
+        'colleagues we discuss the latest trends in business and culture, share experience and look for new ' +
+        'opportunities for development in Ukraine.',
+    },
     hero: {
       helperText:
         'Co-founder and expert of "Monitex" company - the number one online store for collectors in Ukraine.',
