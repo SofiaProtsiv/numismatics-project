@@ -15,7 +15,6 @@ if (savedLang) {
   const btnUaHeader = document.querySelector('[data-btn="ua"]');
   btnUaHeader.value = savedLang;
   document.querySelector('[data-btn="en"]').value = savedLang;
-  console.log(savedLang);
   const btnUaMod = document.querySelector('[data-btn-modal="ua"]');
   btnUaMod.value = savedLang;
   const btnEnMod = document.querySelector('[data-btn-modal="en"]');

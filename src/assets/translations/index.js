@@ -27,14 +27,10 @@ const localizationData = {
         'Натискаючи кнопку «Отримати консультацію», ви погоджуєтеся з нашою Політикою конфіденційності та дозволяєте використовувати цю інформацію в маркетингових цілях.',
     },
     header: {
-      'el-1': 'Про мене',
-      'el-2': 'Експертиза',
-      'el-3': 'Послуги',
-      'el-4': 'Відгуки клієнтів',
-      'el-5': 'Про мене',
-      'el-6': 'Експертиза',
-      'el-7': 'Послуги',
-      'el-8': 'Відгуки клієнтів',
+      'link-1': 'Про мене',
+      'link-2': 'Експертиза',
+      'link-3': 'Послуги',
+      'link-4': 'Відгуки клієнтів',
     },
 
     reviews: {
@@ -87,14 +83,10 @@ const localizationData = {
     },
 
     header: {
-      'el-1': 'About me',
-      'el-2': 'Areas of expertise',
-      'el-3': 'Services',
-      'el-4': 'Reviews',
-      'el-5': 'About me',
-      'el-6': 'Areas of expertise',
-      'el-7': 'Services',
-      'el-8': 'Reviews',
+      'link-1': 'About me',
+      'link-2': 'Areas of expertise',
+      'link-3': 'Services',
+      'link-4': 'Reviews',
     },
 
     reviews: {
