@@ -25,4 +25,4 @@ import{S as N}from"./vendor-4ea312d0.js";(function(){const t=document.createElem
       <p class="member-position">${a}</p>
       </div>
       </li>`);return et.innerHTML=t.join("")}function g(e){e.target===e.currentTarget&&w(),e.key==="Escape"&&w()}function w(){y.classList.remove("visible"),document.body.classList.remove("body-overflow"),ie.removeEventListener("click",w),y.removeEventListener("click",g),window.removeEventListener("keydown",g)}const re=document.querySelector(".logo-footer"),se=function(){re.removeEventListener("click",se),window.location.reload()};re.addEventListener("click",se);
-//# sourceMappingURL=main-4d5b230a.js.map
+//# sourceMappingURL=main-12f8e8db.js.map
