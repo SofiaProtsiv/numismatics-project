@@ -17,6 +17,22 @@ const localizationData = {
       fourthParagraph: 'Крім того, я є резидентом клубу підприємців PRIZMA CLUB, де разом із колегами обговорюємо ' +
         'новітні тенденції у бізнесі та культурі, ділимося досвідом та шукаємо нові можливості для розвитку в Україні.',
     },
+
+    areas: {
+      category: 'КАТЕГОРІЇ',
+      title: 'НАПРЯМКИ ЕКСПЕРТИЗИ',
+      content: 'Компанія «Монітекс» була заснована в 2013 році і з того часу здобула довіру багатьох постійних клієнтів. ' +
+        'У нас працюють експерти з унікальними знаннями та багаторічним досвідом.',
+      numismaticTitle: 'Нумізматика',
+      numismaticContent: 'Консультую клієнтів щодо купівлі та продажу монет, допомагаю визначити їх оригінальність.',
+      bonisticTitle: 'Боністика',
+      bonisticContent: 'Оцінюю старовинні та сучасні банкноти, розповідаю про можливості інвестування в паперові гроші. ' +
+        'Ділюся знаннями як розрізняти унікальні екземпляри.',
+      faleristicTitle: 'Фалеристика',
+      faleristicContent: 'Визначаю оригінальність медалей та нагород, які мають не тільки матеріальну, але й історичну ' +
+        'цінність. Консультую з питань купівлі та продажу таких предметів.',
+    },
+
     hero: {
       helperText:
         'Співзасновник та експерт компанії «Монітекс» - інтернет-магазину №1 для колекціонерів в Україні.',
@@ -84,6 +100,22 @@ const localizationData = {
         'colleagues we discuss the latest trends in business and culture, share experience and look for new ' +
         'opportunities for development in Ukraine.',
     },
+
+    areas: {
+      category: 'CATEGORIES',
+      title: 'AREAS OF EXPERTISE',
+      content: 'The company "Monitex" was founded in 2013 and since then has gained the trust of many regular customers. ' +
+        'We employ experts with unique knowledge and many years of experience.',
+      numismaticTitle: 'Numismatics',
+      numismaticContent: 'I advise clients on the purchase and sale of coins, help determine their originality.',
+      bonisticTitle: 'Bonistics',
+      bonisticContent: 'I evaluate old and modern banknotes, talk about the possibilities of investing in paper money. ' +
+        'I share knowledge on how to distinguish unique specimens.',
+      faleristicTitle: 'Faleristics',
+      faleristicContent: 'I determine the originality of medals and awards, which have not only material, ' +
+        'but also historical value. I advise on buying and selling such things.',
+    },
+
     hero: {
       helperText:
         'Co-founder and expert of "Monitex" company - the number one online store for collectors in Ukraine.',
@@ -116,9 +148,9 @@ const localizationData = {
     },
 
     contact: {
-     title: "Do you have any questions or would you like to avail of our services?"
+      title: "Do you have any questions or would you like to avail of our services?"
     },
-    
+
     footer: {
       location: 'Location:',
       address: '3 Bohdana Khmelnytskoho Street, Kyiv, 2nd floor (entrance from the street)',
