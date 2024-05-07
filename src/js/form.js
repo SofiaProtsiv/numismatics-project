@@ -220,6 +220,11 @@ function setPlaceholders() {
 
 //  Тимчасовий код
 const openButtonHero = document.querySelector('.hero-btn');
-openButtonHero.addEventListener('click', handleOpenModal);
+if (openButtonHero) {
+  openButtonHero.addEventListener('click', handleOpenModal);
+}
+
 const openButtonServices = document.querySelector('.services-button');
-openButtonServices.addEventListener('click', handleOpenModal);
+if (openButtonServices) {
+  openButtonServices.addEventListener('click', handleOpenModal);
+}
