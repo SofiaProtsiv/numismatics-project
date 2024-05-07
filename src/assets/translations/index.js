@@ -26,6 +26,11 @@ const localizationData = {
       footer:
         'Натискаючи кнопку «Отримати консультацію», ви погоджуєтеся з нашою Політикою конфіденційності та дозволяєте використовувати цю інформацію в маркетингових цілях.',
     },
+
+    reviews: {
+      subtitle: 'Відгуки',
+      title: 'Відгуки клієнтів',
+    },
   },
   en: {
     hero: {
@@ -53,6 +58,10 @@ const localizationData = {
       button: 'Get consultation',
       footer:
         'By clicking the "Get consultation" button, you agree to our Privacy Policy and allow us to use this information for marketing purposes.',
+    },
+    reviews: {
+      subtitle: 'Reviews',
+      title: 'Customer feedback',
     },
   },
 };
