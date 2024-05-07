@@ -99,9 +99,23 @@
   background-color: #e4e4e4;
   border-radius: 10px;
 }
-.team-list::-webkit-scrollbar-thumb {
+/* .team-list::-webkit-scrollbar-thumb {
   background-color: #e4e4e4;
   border-radius: 10px;
+}
+.team-list::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px !important;
+} */
+
+.team-list::-webkit-scrollbar:horizontal {
+  height: 13px;
+}
+
+.team-list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: 1px solid #e4e4e4;
+  background-color: var(--scrollbar-thumb-bg);
 }
 
 .member-card{
