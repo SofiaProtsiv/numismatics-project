@@ -43,6 +43,12 @@ const localizationData = {
       footer:
         'Натискаючи кнопку «Отримати консультацію», ви погоджуєтеся з нашою Політикою конфіденційності та дозволяєте використовувати цю інформацію в маркетингових цілях.',
     },
+    header: {
+      'link-1': 'Про мене',
+      'link-2': 'Експертиза',
+      'link-3': 'Послуги',
+      'link-4': 'Відгуки клієнтів',
+    },
 
     reviews: {
       subtitle: 'Відгуки',
@@ -110,6 +116,14 @@ const localizationData = {
       footer:
         'By clicking the "Get consultation" button, you agree to our Privacy Policy and allow us to use this information for marketing purposes.',
     },
+
+    header: {
+      'link-1': 'About me',
+      'link-2': 'Areas of expertise',
+      'link-3': 'Services',
+      'link-4': 'Reviews',
+    },
+
     reviews: {
       subtitle: 'Reviews',
       title: 'Customer feedback',
