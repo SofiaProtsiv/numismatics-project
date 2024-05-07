@@ -239,7 +239,7 @@
 .student-developed-list {
     display: flex;
     gap: 11px;
-
+    cursor: pointer;
 }
 
 .developed-title {
