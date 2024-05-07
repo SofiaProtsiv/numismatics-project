@@ -18,7 +18,7 @@ const closeModalBtn = document.querySelector('.js-consultation-modal-close');
 
 const INVALID = 'invalid';
 const ACTIVE_SELECT = 'select-active';
-const SHOW_PREFIX = 'show-prefix';
+// const SHOW_PREFIX = 'show-prefix';
 const VISIBLE = 'visible';
 
 const STORAGE_KEY = 'select-lang';
@@ -30,6 +30,11 @@ const placeholderNames = {
 };
 
 const selectBtnText = { ua: 'Послуги', en: 'Services' };
+const serviceValues = {
+  numismatics: 'Консультації з нумізматики',
+  collecting: 'Консультації з питань колекціонування',
+  formationCollections: 'Консультації з формування колекцій',
+};
 
 const URL = 'https://numismatics-project-backend.onrender.com/api/application';
 
@@ -48,8 +53,8 @@ phoneInput.addEventListener('focus', removeInvalid);
 servicesInput.addEventListener('focus', removeInvalid);
 
 phoneInput.addEventListener('input', validateNumber);
-phoneInput.addEventListener('focus', handlePhoneFocus);
-phoneInput.addEventListener('blur', handlePhoneBlur);
+// phoneInput.addEventListener('focus', handlePhoneFocus);
+// phoneInput.addEventListener('blur', handlePhoneBlur);
 
 // Modal
 closeModalBtn.addEventListener('click', closeModal);
@@ -68,15 +73,19 @@ function handleSubmit(e) {
 
   if (!isValid) return;
 
-  const servicesValue =
-    data.services.querySelector('#modal-services').textContent;
-
-  fetchConsultation({
+  const servicesValue = serviceValues[services];
+  console.log({
     name,
-    phone: '+38' + phone,
+    phone,
     service: servicesValue,
     question: comment,
   });
+  // fetchConsultation({
+  //   name,
+  //   phone,
+  //   service: servicesValue,
+  //   question: comment,
+  // });
 }
 
 function resetForm() {
@@ -84,7 +93,6 @@ function resetForm() {
   form.services.querySelector('span').textContent =
     selectBtnText[localStorage.getItem(STORAGE_KEY) || 'ua'];
   form.services.dataset.selected = 'false';
-  phoneWrapper.classList.remove(SHOW_PREFIX);
 }
 
 function resetError() {
@@ -135,14 +143,16 @@ function validateForm({ name, phone, services }) {
 
   return isValid;
 }
-function handlePhoneFocus(e) {
-  phoneWrapper.classList.add(SHOW_PREFIX);
-}
-function handlePhoneBlur(e) {
-  if (e.target.value.trim()) return;
-  e.target.value = '';
-  phoneWrapper.classList.remove(SHOW_PREFIX);
-}
+
+// function handlePhoneFocus(e) {
+//   phoneWrapper.classList.add(SHOW_PREFIX);
+// }
+
+// function handlePhoneBlur(e) {
+//   if (e.target.value.trim()) return;
+//   e.target.value = '';
+//   phoneWrapper.classList.remove(SHOW_PREFIX);
+// }
 
 function removeInvalid(e) {
   e.currentTarget.classList.remove(INVALID);
@@ -167,7 +177,7 @@ function closeDropdownOnClickOutside({ target }) {
 
 function handleListSelect(e) {
   if (e.target !== e.currentTarget) {
-    selectButton.setAttribute(buttonAttribute.key, buttonAttribute.selected);
+    selectButton.setAttribute(buttonAttribute.key, e.target.dataset.value);
     selectButton.querySelector('#modal-services').textContent =
       e.target.textContent.trim();
     selectContainer.classList.remove(ACTIVE_SELECT);
