@@ -70,18 +70,13 @@ function handleSubmit(e) {
   if (!isValid) return;
 
   const servicesValue = serviceValues[services];
-  console.log({
+
+  fetchConsultation({
     name,
     phone,
     service: servicesValue,
     question: comment,
   });
-  // fetchConsultation({
-  //   name,
-  //   phone,
-  //   service: servicesValue,
-  //   question: comment,
-  // });
 }
 
 function resetForm() {
