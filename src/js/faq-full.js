@@ -1,8 +1,8 @@
-const changeAdress = () => {
-  window.history.pushState(null, null, './faq');
-};
+// const changeAdress = () => {
+//   window.history.pushState(null, null, './faq');
+// };
 
-changeAdress();
+// changeAdress();
 
 const navHome = document.querySelector('.faq-nav-home');
 const navReload = document.querySelector('.faq-nav-reload');
