@@ -47,7 +47,8 @@
     text-align: left;
     text-transform: uppercase;
     margin-bottom: 22px;
-
+    cursor: pointer;
+  
     @media (768px<=width) {
         font-size: 28px;
         line-height: 1.1;

@@ -1,9 +1,8 @@
 const logoSpan = document.querySelector('.logo-footer');
 
-const handleClick = function (event) {
-    window.location.reload(); 
+const handleClick = function () {
+    logoSpan.removeEventListener('click', handleClick);
+    window.location.reload();
 }
 
 logoSpan.addEventListener('click', handleClick);
-
-logoSpan.removeEventListener('click', handleClick);
