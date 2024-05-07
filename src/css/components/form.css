@@ -245,11 +245,21 @@
   }
 }
 
-.modal-input.invalid {
+.modal-input.invalid,
+.modal-input.invalid-length {
   border-color: var(--error-color);
 }
 
 .modal-input.invalid + .modal-input-error {
+  display: block;
+  padding-left: 8px;
+  opacity: 1;
+}
+
+.modal-input.invalid-length + .modal-input-error.length,
+.modal-input.invalid-phone
+  + .modal-input-error.length
+  + .modal-input-error.invalid {
   display: block;
   padding-left: 8px;
   opacity: 1;

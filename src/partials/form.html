@@ -67,8 +67,14 @@
               id="form-name"
               placeholder="Номер телефону"
             />
-            <p class="modal-input-error" data-lang="form.errorPhone">
-              Обов'язкове поле повинно містити 10 цифр
+            <p class="modal-input-error length" data-lang="form.errorPhone">
+              Обов'язкове поле повинно містити не менше 11 цифр
+            </p>
+            <p
+              class="modal-input-error invalid"
+              data-lang="form.errorPhoneInvalid"
+            >
+              Такого номер не існує, перевірте ще раз!
             </p>
           </div>
           <div class="modal-input-wrapper">
