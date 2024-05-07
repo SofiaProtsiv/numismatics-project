@@ -80,7 +80,7 @@ const localizationData = {
         'became a reality in 2009, when I entered the Faculty of History of Taras Shevchenko Kyiv National University ' +
         'at the Department of Archeology and Museum Studies',
       secondParagraph: 'During my studies, I also gained practical skills in the international business community, ' +
-        'which allowed me to start my own business. In 2013, I became a co-owner of the Monitex company, ' +
+        'which allowed me to start my own business. In 2013, I became a co-owner of the "Monitex" company, ' +
         'which specializes in numismatics, bonistics, phaleristics and other related areas.',
       thirdParagraph: 'We help our customers create and replenish collections, evaluate antique items and determine ' +
         'their identity, and we also offer the largest assortment of collectible goods in Ukraine. We strive to ' +
@@ -132,7 +132,7 @@ const localizationData = {
     contact: {
      title: "Do you have any questions or would you like to avail of our services?"
     },
-    
+
     footer: {
       location: 'Location:',
       address: '3 Bohdana Khmelnytskoho Street, Kyiv, 2nd floor (entrance from the street)',
