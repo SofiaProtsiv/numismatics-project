@@ -8,6 +8,20 @@ const localizationData = {
       btn: 'Отримати консультацію',
     },
 
+    services: {
+      subTitle: 'Консультації',
+      title: 'Послуги',
+      text: 'Пропоную професійне консультування з інвестування в золоті та срібні монети: допоможу вам зрозуміти ринкові тенденції та вибрати найкращі варіанти для формування та збільшення вартості вашого портфелю. Також надаю послуги зі створення та розширення колекцій через підтримку - від вибору до купівлі.',
+      cardTitleFirst: 'Консультування з питань інвестування у золоті та срібні монети',
+      hashtagInvest: '#інвестування',
+      hashtagGold: '#золото',
+      hashtagSilver: '#срібло',
+      cardTitleSecond: 'Консультування з питань колекціонування',
+      hashtagColect: '#колекціонування',
+      cardTitleThird: 'Формування колекцій',
+      button: 'Отримати консультацію',
+    },
+
     form: {
       name: 'Іван Прудько',
       summery:
@@ -42,6 +56,20 @@ const localizationData = {
       mainText: 'Expert assessment ',
       submainText: 'and numismatic consultations',
       btn: 'Get a consultation',
+    },
+
+    services: {
+      subTitle: 'Consultations',
+      title: 'Services',
+      text: 'I offer professional advice on investing in gold and silver coins: I will help you understand market trends and choose the best options for forming and increasing the value of your portfolio. I also provide services for creating and expanding collections through support - from selection to purchase.',
+      cardTitleFirst: 'Consulting on investing in gold and silver coins',
+      hashtagInvest: '#investment',
+      hashtagGold: '#gold',
+      hashtagSilver: '#silver',
+      cardTitleSecond: 'Consulting how to make collection',
+      hashtagColect: '#collecting',
+      cardTitleThird: 'Formation of collections',
+      button: 'Get a consultation',
     },
 
     form: {
