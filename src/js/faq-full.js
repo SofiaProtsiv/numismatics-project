@@ -12,7 +12,7 @@ const goToHomePage = () => {
 };
 
 const reloadPage = () => {
-  window.location.href = '../faq-full.html';
+  window.location.href = '/faq-full.html';
 };
 
 navHome.addEventListener('click', goToHomePage);
