@@ -44,6 +44,9 @@ const localizationData = {
       socialExpert: 'Соціальні мережі експерта:',
       title: 'Розроблено студентами',
     },
+    teamModal: {
+      title: 'Команда, яка створила сайт',
+    },
   },
   en: {
     hero: {
@@ -88,7 +91,10 @@ const localizationData = {
       socialCompany: 'Companys Social Media:',
       socialExpert: 'Experts Social Media:',
       title: 'Developed by Students',
-    }
+    },
+    teamModal: {
+      title: 'The team that created the site',
+    },
   },
 };
 export default localizationData;
