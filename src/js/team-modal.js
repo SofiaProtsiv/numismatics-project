@@ -13,6 +13,10 @@ function teamMdShow() {
   teamModalClose.addEventListener('click', mdTeamClose);
   teamModalContainerRef.addEventListener('click', eventsOnTeamModal);
   window.addEventListener('keydown', eventsOnTeamModal);
+
+  const currentLang = localStorage.getItem('select-lang') || 'ua';
+  console.log('teamMdShow ~ currentLang:', currentLang);
+
   const teamCardsMarkup = TEAM_DB.map(
     ({
       id,
@@ -34,7 +38,7 @@ function teamMdShow() {
           <img
           class="member-photo"
             src=${pathToPhotoJPG}
-            alt=${nameEn}
+            alt=${currentLang === 'en' ? nameEn : nameUa}
             width="40"
             height="40"
           />
@@ -46,7 +50,7 @@ function teamMdShow() {
         </a>
       </div>
       <div class="member-discr">
-      <p class="member-name">${nameEn}</p>
+      <p class="member-name">${currentLang === 'en' ? nameEn : nameUa}</p>
       <p class="member-position">${position}</p>
       </div>
       </li>`;
