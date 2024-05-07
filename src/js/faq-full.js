@@ -18,5 +18,5 @@ const reloadPage = () => {
 
 navHome.addEventListener('click', goToHomePage);
 navReload.addEventListener('click', reloadPage);
-logoBtnHeader.addEventListener('click', reloadPage);
+logoBtnHeader.addEventListener('click', goToHomePage);
 logoBtnFooter.addEventListener('click', reloadPage)
