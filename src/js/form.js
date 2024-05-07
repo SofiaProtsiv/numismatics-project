@@ -1,3 +1,6 @@
+import { onErrorModalContact, mdShow } from './modal';
+import { openModalLoader, closeModalLoader } from './loader';
+
 const form = document.querySelector('.js-modal-form');
 const selectButton = document.querySelector('.js-select-button');
 const selectList = document.querySelector('.js-modal-select-list');
@@ -5,6 +8,7 @@ const selectContainer = document.querySelector('.js-modal-select');
 
 const nameInput = document.querySelector('input[name="name"]');
 const phoneInput = document.querySelector('input[name="phone"]');
+const commentInput = document.querySelector('textarea[name="comment"]');
 const servicesInput = document.querySelector('button[name="services"]');
 
 const phoneWrapper = phoneInput.closest('.modal-input-wrapper');
@@ -16,6 +20,16 @@ const INVALID = 'invalid';
 const ACTIVE_SELECT = 'select-active';
 const SHOW_PREFIX = 'show-prefix';
 const VISIBLE = 'visible';
+
+const STORAGE_KEY = 'select-lang';
+
+const placeholderNames = {
+  name: { ua: 'Ваше ім’я', en: 'Your name' },
+  phone: { ua: 'Номер телефону', en: 'Phone number' },
+  comment: { ua: 'Коментар', en: 'Comment' },
+};
+
+const selectBtnText = { ua: 'Послуги', en: 'Services' };
 
 const URL = 'https://numismatics-project-backend.onrender.com/api/application';
 
@@ -63,14 +77,24 @@ function handleSubmit(e) {
     service: servicesValue,
     question: comment,
   });
+}
 
-  e.target.reset();
-  data.services.querySelector('span').textContent = 'Послуги';
-  data.services.dataset.selected = 'false';
+function resetForm() {
+  form.reset();
+  form.services.querySelector('span').textContent =
+    selectBtnText[localStorage.getItem(STORAGE_KEY) || 'ua'];
+  form.services.dataset.selected = 'false';
   phoneWrapper.classList.remove(SHOW_PREFIX);
 }
 
+function resetError() {
+  nameInput.classList.remove(INVALID);
+  phoneInput.classList.remove(INVALID);
+  servicesInput.classList.remove(INVALID);
+}
+
 async function fetchConsultation(data) {
+  openModalLoader();
   try {
     const config = {
       method: 'POST',
@@ -79,10 +103,16 @@ async function fetchConsultation(data) {
       },
       body: JSON.stringify(data),
     };
-    const responseData = await (await fetch(URL, config)).json();
-    console.log('Ok', responseData);
-  } catch (error) {
-    console.error('Error submitting application:', error);
+    const response = await fetch(URL, config);
+    if (!response.ok) throw new Error();
+    // need onSuccessModalContact() or not, if the modal changes from error to success when it is closing
+    mdShow();
+    closeModal();
+  } catch {
+    onErrorModalContact();
+    mdShow();
+  } finally {
+    closeModalLoader();
   }
 }
 
@@ -166,14 +196,26 @@ function handleBackdropClose(e) {
 }
 
 export function closeModal() {
+  resetForm();
+  resetError();
   modal.classList.remove(VISIBLE);
   document.body.style.overflow = '';
   window.removeEventListener('keydown', handleEsc);
 }
+
 export function handleOpenModal() {
+  setPlaceholders();
   modal.classList.add(VISIBLE);
   document.body.style.overflow = 'hidden';
   window.addEventListener('keydown', handleEsc);
+}
+
+//
+function setPlaceholders() {
+  const language = localStorage.getItem(STORAGE_KEY) || 'ua';
+  nameInput.setAttribute('placeholder', placeholderNames.name[language]);
+  phoneInput.setAttribute('placeholder', placeholderNames.phone[language]);
+  commentInput.setAttribute('placeholder', placeholderNames.comment[language]);
 }
 
 //  Тимчасовий код

@@ -41,6 +41,7 @@
   );
 
   --header-bg: rgba(255, 255, 255, 0.18);
+  --header-bg-container-decs: rgba(178, 178, 178, 0.4);
 
   --inactive-lang-text: rgba(18, 20, 23, 0.4);
   --lang-switch-conatiner-lisght: rgba(255, 255, 255, 0.18);
@@ -52,6 +53,7 @@
   --decoration-arrow-fill: rgba(178, 178, 178, 1);
   --white-color: rgba(255, 255, 255, 1);
   --error-color: rgba(255, 0, 0, 1);
+  --black-color: rgba(0, 0, 0, 1);
 
   --border-color: rgba(18, 20, 23, 0.3);
   --input-border: rgba(18, 20, 23, 0.1);

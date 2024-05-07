@@ -3,11 +3,11 @@ import iconLinkedin from '../public/team/linkedin.svg';
 const teamModalContainerRef = document.querySelector('.team-modal-container');
 const teamModalClose = document.querySelector('.team-modal-close');
 const teamListRef = document.querySelector('.team-list');
+const teamModalOpenRef = document.querySelector('.student-developed-list');
 
-const modalOpenRef = document.querySelector('.btn-open-modal');
-modalOpenRef.addEventListener('click', mdTeamShow);
+teamModalOpenRef.addEventListener('click', teamMdShow);
 
-function mdTeamShow() {
+function teamMdShow() {
   teamModalContainerRef.classList.add('visible');
   document.body.classList.add('body-overflow');
   teamModalClose.addEventListener('click', mdTeamClose);
