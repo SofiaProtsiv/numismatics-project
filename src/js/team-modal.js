@@ -14,7 +14,7 @@ function teamMdShow() {
   teamModalContainerRef.addEventListener('click', eventsOnTeamModal);
   window.addEventListener('keydown', eventsOnTeamModal);
 
-  const currentLang = localStorage.getItem('select-lang') || 'ua';
+  const currentLang = localStorage.getItem('currentLang') || 'ua';
   console.log('teamMdShow ~ currentLang:', currentLang);
 
   const teamCardsMarkup = TEAM_DB.map(

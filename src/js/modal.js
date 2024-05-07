@@ -27,7 +27,7 @@ function mdClose() {
 }
 
 export function onSuccessModalContact() {
-  let currentLang = localStorage.getItem('select-lang') || 'ua';
+  let currentLang = localStorage.getItem('currentLang') || 'ua';
   console.log('onSuccessModalContact ~ currentLang:', currentLang);
   modalRef.classList.remove('modal-error');
   modalTitleRef.textContent = `${
@@ -44,7 +44,7 @@ export function onSuccessModalContact() {
 }
 
 export function onErrorModalContact() {
-  let currentLang = localStorage.getItem('select-lang') || 'ua';
+  let currentLang = localStorage.getItem('currentLang') || 'ua';
   modalRef.classList.add('modal-error');
   modalTitleRef.textContent = `${
     currentLang === 'ua'
