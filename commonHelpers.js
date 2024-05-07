@@ -1,2 +1,2 @@
-import"./assets/main-00a5d498.js";import"./assets/vendor-4ea312d0.js";const e=()=>{window.history.pushState(null,null,"./faq")};e();const o=document.querySelector(".faq-nav-home"),n=document.querySelector(".faq-nav-reload"),t=()=>{window.location.href="/"},a=()=>{window.location.href="../faq-full.html"};o.addEventListener("click",t);n.addEventListener("click",a);
+import"./assets/main-4d5b230a.js";import"./assets/vendor-4ea312d0.js";const e=document.querySelector(".faq-nav-home"),o=document.querySelector(".faq-nav-reload"),n=()=>{window.location.href="/"},t=()=>{window.location.href="../faq-full.html"};e.addEventListener("click",n);o.addEventListener("click",t);
 //# sourceMappingURL=commonHelpers.js.map

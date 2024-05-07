@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Ivana Prudko - an expert in numismatics</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    
-    <script type="module" crossorigin src="/numismatics-project/assets/vendor-4ea312d0.js"></script>
-    <script type="module" crossorigin src="/numismatics-project/assets/main-00a5d498.js"></script>
-    <link rel="stylesheet" href="/numismatics-project/assets/vendor-b51df72b.css">
-    <link rel="stylesheet" href="/numismatics-project/assets/index-5f578743.css">
-  </head>
+  <title>Ivan Prudko - an expert in numismatics</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  
+  <script type="module" crossorigin src="/numismatics-project/assets/vendor-4ea312d0.js"></script>
+  <script type="module" crossorigin src="/numismatics-project/assets/main-4d5b230a.js"></script>
+  <link rel="stylesheet" href="/numismatics-project/assets/main-47251a89.css">
+  <link rel="stylesheet" href="/numismatics-project/assets/vendor-b51df72b.css">
+</head>
 
   <body>
     <header id="header" class="header">
@@ -23,19 +24,26 @@
       <div class="header-about-me-container">
         <ul class="header-about-me-container-list">
           <li class="header-about-me-container-item">
-            <a class="header-about-me-container-item-link" href="#about-me"
+            <a
+              data-lang="header.link-1"
+              class="header-about-me-container-item-link"
+              href="#about-me"
               >Про мене</a
             >
           </li>
           <li class="header-about-me-container-item">
             <a
+              data-lang="header.link-2"
               class="header-about-me-container-item-link"
               href="#areas-of-expertise"
               >Експертиза</a
             >
           </li>
           <li class="header-about-me-container-item">
-            <a class="header-about-me-container-item-link" href="#services"
+            <a
+              data-lang="header.link-3"
+              class="header-about-me-container-item-link"
+              href="#services"
               >Послуги</a
             >
           </li>
@@ -43,7 +51,10 @@
             <a class="header-about-me-container-item-link" href="#faq">FAQ</a>
           </li>
           <li class="header-about-me-container-item">
-            <a class="header-about-me-container-item-link" href="#reviews"
+            <a
+              data-lang="header.link-4"
+              class="header-about-me-container-item-link"
+              href="#reviews"
               >Відгуки клієнтів</a
             >
           </li>
@@ -69,7 +80,7 @@
           </li>
           <li class="header-modal-wrapper-select-box-container-tablet">
             <div class="header-modal-selectlang-container">
-              <p class="header-modal-wrapper-select-box-container-text">UA</p>
+              <p class="header-modal-wrapper-select-box-container-text">ua</p>
               <svg
                 class="header-modal-wrapper-item-select-box-option-svg"
                 width="16"
@@ -77,18 +88,23 @@
               >
                 <use href="/numismatics-project/images/icons-sprite.svg#icon-Vector"></use>
               </svg>
-              <div class="header-modal-wrapper-select-box-checkbox">
+              <div
+                id="langSelect"
+                class="header-modal-wrapper-select-box-checkbox"
+              >
                 <button
                   class="header-modal-selectlang-checkbox-text-ua"
                   data-btn="ua"
+                  value="ua"
                 >
-                  UA
+                  ua
                 </button>
                 <button
                   class="header-modal-selectlang-checkbox-text-ua"
                   data-btn="en"
+                  value="en"
                 >
-                  EN
+                  en
                 </button>
               </div>
             </div>
@@ -122,7 +138,7 @@
 
             <div class="header-modal-wrapper-select-box-container">
               <p class="header-modal-wrapper-select-box-container-text-modal">
-                UA
+                ua
               </p>
               <svg
                 class="header-modal-wrapper-item-select-box-option-svg"
@@ -131,18 +147,20 @@
               >
                 <use href="/numismatics-project/images/icons-sprite.svg#icon-Vector"></use>
               </svg>
-              <div class="header-modal-selectlang-checkbox">
+              <div id="langSelect" class="header-modal-selectlang-checkbox">
                 <button
                   class="header-modal-wrapper-select-box-checkbox-text-ua"
                   data-btn-modal="ua"
+                  value="ua"
                 >
-                  UA
+                  ua
                 </button>
                 <button
                   class="header-modal-wrapper-select-box-checkbox-text-ua"
                   data-btn-modal="en"
+                  value="en"
                 >
-                  EN
+                  en
                 </button>
               </div>
             </div>
@@ -164,19 +182,26 @@
         <div class="header-modal-container">
           <ul class="header-modal-container-list">
             <li class="header-modal-container-item">
-              <a class="header-modal-container-item-link" href="#about-me"
+              <a
+                data-lang="header.link-1"
+                class="header-modal-container-item-link"
+                href="#about-me"
                 >Про мене</a
               >
             </li>
             <li class="header-modal-container-item">
               <a
+                data-lang="header.link-2"
                 class="header-modal-container-item-link"
                 href="#areas-of-expertise"
                 >Експертиза</a
               >
             </li>
             <li class="header-modal-container-item">
-              <a class="header-modal-container-item-link" href="#services"
+              <a
+                data-lang="header.link-3"
+                class="header-modal-container-item-link"
+                href="#services"
                 >Послуги</a
               >
             </li>
@@ -184,7 +209,10 @@
               <a class="header-modal-container-item-link" href="#faq">FAQ</a>
             </li>
             <li class="header-modal-container-item">
-              <a class="header-modal-container-item-link" href="#reviews"
+              <a
+                data-lang="header.link-4"
+                class="header-modal-container-item-link"
+                href="#reviews"
                 >Відгуки клієнтів</a
               >
             </li>
@@ -1215,6 +1243,7 @@
 </div>
 
 
-    
-  </body>
+  
+</body>
+
 </html>
