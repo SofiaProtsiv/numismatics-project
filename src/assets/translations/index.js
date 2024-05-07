@@ -31,6 +31,15 @@ const localizationData = {
       subtitle: 'Відгуки',
       title: 'Відгуки клієнтів',
     },
+
+    footer: {
+      location: 'Розташування',
+      address: 'м. Київ, вул. Богдана Хмельницького 3, поверх 2 (вхід з вулиці)',
+      website: 'Сайт',
+      socialCompany: 'Соціальні мережі компанії',
+      socialExpert: 'Соціальні мережі експерта',
+      title: 'Розроблено студентами',
+    },
   },
   en: {
     hero: {
@@ -63,6 +72,15 @@ const localizationData = {
       subtitle: 'Reviews',
       title: 'Customer feedback',
     },
+    
+    footer: {
+      location: 'Location',
+      address: '3 Bohdana Khmelnytskoho Street, Kyiv, 2nd floor (entrance from the street)',
+      website: 'Website',
+      socialCompany: 'Companys Social Media',
+      socialExpert: 'Experts Social Media',
+      title: 'Developed by Students',
+    }
   },
 };
 export default localizationData;
