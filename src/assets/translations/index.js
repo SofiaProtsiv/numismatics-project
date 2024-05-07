@@ -16,7 +16,8 @@ const localizationData = {
       description:
         'Компанія «Монітекс» була заснована в 2013 році і з того часу здобула довіру багатьох постійних клієнтів.',
       errorName: "Обов'язкове поле",
-      errorPhone: "Обов'язкове поле повинно містити 10 цифр",
+      errorPhone: "Обов'язкове поле повинно містити не менше 11 цифр",
+      errorPhoneInvalid: 'Такого номера не існує. Перевірте ще раз!',
       services: 'Послуги',
       errorServices: "Обов'язкове поле",
       numismatics: 'Консультації з нумізматики',
@@ -52,7 +53,8 @@ const localizationData = {
       description:
         'The company "Monitex" was founded in 2013 and has since gained the trust of many regular customers.',
       errorName: 'Required field',
-      errorPhone: 'Required field must contain 10 digits',
+      errorPhone: 'The required field must contain no less than 11 digits.',
+      errorPhoneInvalid: 'That number does not exist. Please check again!',
       services: 'Services',
       errorServices: 'Required field',
       numismatics: 'Consultations on numismatics',
