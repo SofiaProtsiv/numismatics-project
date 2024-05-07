@@ -43,7 +43,7 @@ function closeMobileMenuAfterClick() {
 
   buttonLinkModal.forEach(button => {
     button.removeEventListener('click', closeMobileMenuAfterClick);
-  })
+  });
 }
 
 buttonLinkModal.forEach(button => {
@@ -79,6 +79,15 @@ const STORAGE_KEY = 'select-lang';
 let currentLang = localStorage.getItem(STORAGE_KEY) || 'ua';
 const langButtons = document.querySelectorAll('[data-btn]');
 
+if (currentLang === 'ua') {
+  document
+    .querySelector('[data-btn="ua"]')
+    .classList.add('active-header-checkbox');
+  document
+    .querySelector('[data-btn-modal="ua"]')
+    .classList.add('active-header-checkbox-modal');
+}
+
 const someObj = {
   attr: {
     ua: '',
@@ -108,11 +117,13 @@ function checkActiveLangButton() {
       document
         .querySelector('[data-btn="ua"]')
         .classList.add('active-header-checkbox');
+
       break;
     case 'en':
       document
         .querySelector('[data-btn="en"]')
         .classList.add('active-header-checkbox');
+
       break;
 
     default:
@@ -135,7 +146,7 @@ langButtonsModal.forEach(btn => {
     resetActiveClass(langButtonsModal, 'active-header-checkbox-modal');
     btn.classList.add('active-header-checkbox-modal');
 
-    setCurrentLang()
+    setCurrentLang();
   });
 });
 
@@ -159,27 +170,21 @@ function checkActiveLangButtonModal() {
       break;
   }
 }
-
-/* Select lang box */
 function toggleSelectLang() {
   langBoxEl.classList.toggle('active-checkbox');
-}
-selectLangBtnTablet.addEventListener('click', toggleSelectLang);
-
-function toggleSelectLangModal() {
   langBoxElModal.classList.toggle('active-modal');
 }
-selectLangBtnMobileMenu.addEventListener('click', toggleSelectLangModal);
-
+selectLangBtnTablet.addEventListener('click', toggleSelectLang);
+selectLangBtnMobileMenu.addEventListener('click', toggleSelectLang);
 
 function setCurrentLang() {
-  const currentLang = localStorage.getItem(STORAGE_KEY) || 'ua'
+  const currentLang = localStorage.getItem(STORAGE_KEY).toUpperCase() || 'UA';
 
-  visualLangElHeaderTablet.textContent = currentLang.toUpperCase();
-  visualLangElHeaderModal.textContent = currentLang.toUpperCase();
+  visualLangElHeaderTablet.textContent = currentLang;
+  visualLangElHeaderModal.textContent = currentLang;
 
   checkActiveLangButton();
   checkActiveLangButtonModal();
 }
 
-setCurrentLang()
+setCurrentLang();
