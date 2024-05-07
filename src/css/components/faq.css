@@ -398,14 +398,14 @@
 }
 
 .faq-header-main-container {
-  padding-bottom: 20px;
+  padding: 40px 0 20px;
 
-  /* @media (768px <=width) {
-    height: 140px;
-    padding: 67px 32px 57px 32px;
+  @media (768px <=width) {
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
-  @media (width >=1440px) {
+  /* @media (width >=1440px) {
     padding: 32px;
     padding-top: 64px;
   } */
@@ -413,14 +413,6 @@
 
 .faq-header-about-me-container {
   @media (width >=1440px) {
-    /* width: auto;
-    height: 48px;
-    border-radius: 30px;
-    border: 1px solid var(--lang-switch-border-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white-color); */
     background-color: var(--container-bg-dark);
   }
 }
@@ -437,4 +429,20 @@
 
 .faq-full-info-intro {
   cursor: pointer;
+}
+
+.faq-full-lang-container {
+  background-color: var(--container-bg-dark);
+}
+
+.header-modal-selectlang-checkbox-text-ua.faq-full-lang {
+  color: var(--input-placeholder-color);
+}
+
+.header-modal-selectlang-checkbox-text-ua.faq-full-lang.active-header-checkbox {
+  color: var(--white-color);
+}
+
+.header-modal-selectlang-checkbox-text-ua.faq-full-lang:hover {
+  color: var(--white-color);
 }
