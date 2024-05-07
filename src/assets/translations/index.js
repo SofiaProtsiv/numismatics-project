@@ -31,6 +31,9 @@ const localizationData = {
       subtitle: 'Відгуки',
       title: 'Відгуки клієнтів',
     },
+    teamModal: {
+      title: 'Команда, яка створила сайт',
+    },
   },
   en: {
     hero: {
@@ -62,6 +65,9 @@ const localizationData = {
     reviews: {
       subtitle: 'Reviews',
       title: 'Customer feedback',
+    },
+    teamModal: {
+      title: 'The team that created the site',
     },
   },
 };
