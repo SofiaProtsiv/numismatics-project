@@ -116,6 +116,7 @@ const localizationData = {
       title: 'відповіді',
       subTitle:
         'Компанія «Монітекс» була заснована в 2013 році і з того часу здобула довіру багатьох постійних клієнтів. У нас працюють експерти з унікальними знаннями та багаторічним досвідом.',
+      btn: 'Показати більше',
       'full-nav-1': 'головна',
       'full-nav-2': 'Про мене',
       'full-nav-3': 'Експертиза',
@@ -269,10 +270,11 @@ const localizationData = {
     },
 
     faq: {
-      title: 'answers',
+      title: 'faq',
       subTitle:
         'The company "Monitex" was founded in 2013 and since then has gained the trust of many regular customers. We employ experts with unique knowledge and many years of experience.',
-      'full-nav-1': 'main',
+      btn: 'Show more',
+      'full-nav-1': 'home',
       'full-nav-2': 'About me',
       'full-nav-3': 'Areas of expertise',
       'full-nav-4': 'Services',
