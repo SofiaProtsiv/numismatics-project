@@ -1,6 +1,6 @@
-import { onErrorModalContact, mdShow } from './modal';
+import { onErrorModalContact, mdShow, onSuccessModalContact } from './modal';
 import { openModalLoader, closeModalLoader } from './loader';
-
+import { isValidPhoneNumber } from 'libphonenumber-js';
 const form = document.querySelector('.js-modal-form');
 const selectButton = document.querySelector('.js-select-button');
 const selectList = document.querySelector('.js-modal-select-list');
@@ -11,17 +11,15 @@ const phoneInput = document.querySelector('input[name="phone"]');
 const commentInput = document.querySelector('textarea[name="comment"]');
 const servicesInput = document.querySelector('button[name="services"]');
 
-const phoneWrapper = phoneInput.closest('.modal-input-wrapper');
-
 const modal = document.querySelector('.js-consultation-modal');
 const closeModalBtn = document.querySelector('.js-consultation-modal-close');
 
 const INVALID = 'invalid';
 const ACTIVE_SELECT = 'select-active';
-const SHOW_PREFIX = 'show-prefix';
 const VISIBLE = 'visible';
-
-const STORAGE_KEY = 'select-lang';
+const INVALID_LENGTH = 'invalid-length';
+const INVALID_PHONE = 'invalid-phone';
+const STORAGE_KEY = 'currentLang';
 
 const placeholderNames = {
   name: { ua: 'Ваше ім’я', en: 'Your name' },
@@ -30,6 +28,11 @@ const placeholderNames = {
 };
 
 const selectBtnText = { ua: 'Послуги', en: 'Services' };
+const serviceValues = {
+  numismatics: 'Консультації з нумізматики',
+  collecting: 'Консультації з питань колекціонування',
+  formationCollections: 'Консультації з формування колекцій',
+};
 
 const URL = 'https://numismatics-project-backend.onrender.com/api/application';
 
@@ -44,12 +47,10 @@ selectButton.addEventListener('click', toggleSelect);
 selectList.addEventListener('click', handleListSelect);
 
 nameInput.addEventListener('focus', removeInvalid);
-phoneInput.addEventListener('focus', removeInvalid);
+phoneInput.addEventListener('focus', removeInvalidPhone);
 servicesInput.addEventListener('focus', removeInvalid);
 
 phoneInput.addEventListener('input', validateNumber);
-phoneInput.addEventListener('focus', handlePhoneFocus);
-phoneInput.addEventListener('blur', handlePhoneBlur);
 
 // Modal
 closeModalBtn.addEventListener('click', closeModal);
@@ -68,12 +69,11 @@ function handleSubmit(e) {
 
   if (!isValid) return;
 
-  const servicesValue =
-    data.services.querySelector('#modal-services').textContent;
+  const servicesValue = serviceValues[services];
 
   fetchConsultation({
     name,
-    phone: '+38' + phone,
+    phone,
     service: servicesValue,
     question: comment,
   });
@@ -84,12 +84,12 @@ function resetForm() {
   form.services.querySelector('span').textContent =
     selectBtnText[localStorage.getItem(STORAGE_KEY) || 'ua'];
   form.services.dataset.selected = 'false';
-  phoneWrapper.classList.remove(SHOW_PREFIX);
 }
 
 function resetError() {
   nameInput.classList.remove(INVALID);
-  phoneInput.classList.remove(INVALID);
+  phoneInput.classList.remove(INVALID_LENGTH);
+  phoneInput.classList.remove(INVALID_PHONE);
   servicesInput.classList.remove(INVALID);
 }
 
@@ -105,7 +105,7 @@ async function fetchConsultation(data) {
     };
     const response = await fetch(URL, config);
     if (!response.ok) throw new Error();
-    // need onSuccessModalContact() or not, if the modal changes from error to success when it is closing
+    onSuccessModalContact();
     mdShow();
     closeModal();
   } catch {
@@ -123,8 +123,11 @@ function validateForm({ name, phone, services }) {
     nameInput.classList.add(INVALID);
     isValid = false;
   }
-  if (phone.length < 10) {
-    phoneInput.classList.add(INVALID);
+  if (phone.length < 12) {
+    phoneInput.classList.add(INVALID_LENGTH);
+    isValid = false;
+  } else if (!isValidPhoneNumber(phone)) {
+    phoneInput.classList.add(INVALID_PHONE);
     isValid = false;
   }
 
@@ -135,17 +138,13 @@ function validateForm({ name, phone, services }) {
 
   return isValid;
 }
-function handlePhoneFocus(e) {
-  phoneWrapper.classList.add(SHOW_PREFIX);
-}
-function handlePhoneBlur(e) {
-  if (e.target.value.trim()) return;
-  e.target.value = '';
-  phoneWrapper.classList.remove(SHOW_PREFIX);
-}
 
 function removeInvalid(e) {
   e.currentTarget.classList.remove(INVALID);
+}
+function removeInvalidPhone(e) {
+  e.currentTarget.classList.remove(INVALID_LENGTH);
+  e.currentTarget.classList.remove(INVALID_PHONE);
 }
 
 function toggleSelect() {
@@ -167,7 +166,7 @@ function closeDropdownOnClickOutside({ target }) {
 
 function handleListSelect(e) {
   if (e.target !== e.currentTarget) {
-    selectButton.setAttribute(buttonAttribute.key, buttonAttribute.selected);
+    selectButton.setAttribute(buttonAttribute.key, e.target.dataset.value);
     selectButton.querySelector('#modal-services').textContent =
       e.target.textContent.trim();
     selectContainer.classList.remove(ACTIVE_SELECT);
@@ -176,13 +175,15 @@ function handleListSelect(e) {
 }
 
 function validateNumber(event) {
-  const phoneInput = event.target.value.replace(/\D/g, '');
-  if (phoneInput.length > 10) {
-    event.target.value = phoneInput.slice(0, 10);
-    return;
+  const reg = /^\+$/;
+  let inputValue = event.target.value;
+  if (!inputValue.length) return;
+  if (!reg.test(inputValue.charAt(0))) {
+    event.target.value = '+' + inputValue.replace(/\D/g, '').slice(0, 12);
+  } else {
+    event.target.value =
+      '+' + inputValue.slice(1, 20).replace(/\D/g, '').slice(0, 12);
   }
-
-  event.target.value = phoneInput;
 }
 
 function handleEsc(e) {

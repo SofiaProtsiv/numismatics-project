@@ -1,7 +1,8 @@
 import TEAM_DB from '../assets/team-db/index';
 import iconLinkedin from '../public/team/linkedin.svg';
 const teamModalContainerRef = document.querySelector('.team-modal-container');
-const teamModalClose = document.querySelector('.team-modal-close');
+const teamModalClose = document.querySelector('#team-modal-close');
+console.log('teamModalClose:', teamModalClose);
 const teamListRef = document.querySelector('.team-list');
 const teamModalOpenRef = document.querySelector('.student-developed-list');
 
@@ -36,7 +37,7 @@ function teamMdShow() {
             srcset=${pathToPhotoWebP}
             type="image/webp"
           /> 
-          <img
+          <img loading="lazy"
           class="member-photo"
             src=${pathToPhotoJPG}
             alt=${currentLang === 'en' ? nameEn : nameUa}
@@ -45,7 +46,7 @@ function teamMdShow() {
           />
         </picture>
         <div class="linkedin-href">
-            <img class="linkedin-pic" src=${iconLinkedin} alt="linkedin"       width="16"
+            <img loading="lazy" class="linkedin-pic" src=${iconLinkedin} alt="linkedin"       width="16"
             height="16"/>
         </div>
        </div>
