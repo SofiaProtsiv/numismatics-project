@@ -26,4 +26,4 @@ import{S as K}from"./vendor-4ea312d0.js";(function(){const t=document.createElem
       </div>
       </a>
       </li>`);return et.innerHTML=t.join("")}function y(e){e.target===e.currentTarget&&w(),e.key==="Escape"&&w()}function w(){k.classList.remove("visible"),document.body.classList.remove("body-overflow"),ie.removeEventListener("click",w),k.removeEventListener("click",y),window.removeEventListener("keydown",y)}const se=document.querySelector(".logo-footer"),re=function(){se.removeEventListener("click",re),window.location.reload()};se.addEventListener("click",re);
-//# sourceMappingURL=main-da73ebf3.js.map
+//# sourceMappingURL=main-57a0996b.js.map
