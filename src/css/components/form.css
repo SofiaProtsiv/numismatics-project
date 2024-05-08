@@ -54,7 +54,7 @@
     padding: 60px;
   }
   @media (width >=1440px) {
-    max-width: 1245px;
+    max-width: 1085px;
     display: flex;
     justify-content: space-between;
     gap: 20px;
