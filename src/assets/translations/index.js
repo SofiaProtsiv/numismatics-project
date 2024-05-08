@@ -111,6 +111,47 @@ const localizationData = {
     teamModal: {
       title: 'Команда, яка створила сайт',
     },
+
+    faq: {
+      title: 'відповіді',
+      subTitle:
+        'Компанія «Монітекс» була заснована в 2013 році і з того часу здобула довіру багатьох постійних клієнтів. У нас працюють експерти з унікальними знаннями та багаторічним досвідом.',
+      'full-nav-1': 'головна',
+      'full-nav-2': 'Про мене',
+      'full-nav-3': 'Експертиза',
+      'full-nav-4': 'Послуги',
+      'full-nav-5': 'Відгуки клієнтів',
+      'autor-name': 'Іван Прудько',
+      'autor-info':
+        'Співзасновник та експерт компанії «Монітекс» - інтернет-магазину №1 для колекціонерів в Україні.',
+      'question-1': 'Що таке нумізматика?',
+      'question-2': 'Як почати колекціонувати монети?',
+      'question-3': 'Де купувати колекційні предмети?',
+      'question-4': 'Чому консультуватися та купувати саме у нас?',
+      'question-5': 'Як визначити вартість старовинної монети або банкноти?',
+      'question-6':
+        'Які послуги ви надаєте для колекціонерів банкнот, нагород та орденів?',
+      'question-7':
+        'Чому інвестування в золоті та срібні монети може бути вигідним?',
+      'question-8': 'Як забезпечити належне зберігання колекційних предметів?',
+
+      'answer-1':
+        'Нумізматика – це спеціальна історична дисципліна, що вивчає монети як джерело історичних, економічних, політичних і культурних знань, а також історію грошового обігу та монетного виробництва, процеси фальшування монет та банкнот. Також слово нумізматика використовується на позначення різновиду колекціонування.',
+      'answer-2':
+        'Для початку збирання монетних колекцій рекомендую визначити інтереси у певних типах монет або історичних періодах, встановити бюджет та консультуватися з експертами для кращого розуміння ринку.',
+      'answer-3':
+        'На сайті monitex.com.ua запропонована виключно оригінальна продукція, яка перевірена експертами з більш, ніж 10-річним практичним досвідом та унікальними знаннями.',
+      'answer-4':
+        'Тому що я маю унікальні знання, які отримав разом з вищою освітою на історичному факультеті та щоденним практичним досвідом з 2013 року.',
+      'answer-5':
+        'Вартість старовинної монети чи банкноти залежить від її рідкості, стану збереження, попиту серед колекціонерів та історичної значимості. Я можу оцінити ваші предмети та дати професійну рекомендацію.',
+      'answer-6':
+        'Послуги з визначення автентичності та оригінальності предмета. Також оцінюю та консультую щодо купівлі та продажу банкнот, нагород та орденів.',
+      'answer-7':
+        'Інвестування в золоті та срібні монети вважається стабільним та безпечним способом збереження капіталу, особливо в часи економічної невизначеності, оскільки цінні метали традиційно зберігають свою вартість.',
+      'answer-8':
+        'Для зберігання колекційних предметів важливо використовувати спеціальні матеріали, які запобігають окисленню, а також забезпечувати оптимальні умови температури та вологості.',
+    },
   },
   en: {
     about: {
@@ -225,6 +266,46 @@ const localizationData = {
     },
     teamModal: {
       title: 'The team that created the site',
+    },
+
+    faq: {
+      title: 'answers',
+      subTitle:
+        'The company "Monitex" was founded in 2013 and since then has gained the trust of many regular customers. We employ experts with unique knowledge and many years of experience.',
+      'full-nav-1': 'main',
+      'full-nav-2': 'About me',
+      'full-nav-3': 'Areas of expertise',
+      'full-nav-4': 'Services',
+      'full-nav-5': 'Reviews',
+      'autor-name': 'Ivan Prudko',
+      'autor-info':
+        'Co-founder and expert of "Monitex" company - the number one online store for collectors in Ukraine.',
+      'question-1': 'What is numismatics?',
+      'question-2': 'How do I start collecting coins?',
+      'question-3': 'Where can I buy collectible items?',
+      'question-4': 'Why should I consult with and buy from you?',
+      'question-5':
+        'How can I determine the value of an antique coin or banknote?',
+      'question-6':
+        'What services do you provide for collectors of banknotes, awards, and orders?',
+      'question-7': 'Why can investing in gold and silver coins be beneficial?',
+      'question-8': 'How can I ensure proper storage of collectible items?',
+      'answer-1':
+        'Numismatics is a specialized historical discipline that studies coins as a source of historical, economic, political, and cultural knowledge. It also encompasses the history of monetary circulation and coin production, as well as processes of coin counterfeiting and the study of banknotes. The term "numismatics" is also used to refer to a type of collecting.',
+      'answer-2':
+        'To start collecting coins, I recommend identifying specific types or historical periods of interest, setting a budget, and consulting with experts for a better understanding of the market.',
+      'answer-3':
+        'The website monitex.com.ua offers exclusively original products verified by experts with over 10 years of practical experience and unique knowledge.',
+      'answer-4':
+        'Because I possess unique knowledge acquired through higher education in the History Faculty and daily practical experience since 2013.',
+      'answer-5':
+        'The value of an antique coin or banknote depends on its rarity, condition, demand among collectors, and historical significance. I can evaluate your items and provide professional recommendations.',
+      'answer-6':
+        'Services include determining the authenticity and originality of the item. I also assess and advise on the buying and selling of banknotes, awards, and orders.',
+      'answer-7':
+        'Investing in gold and silver coins is considered a stable and secure way to preserve capital, especially in times of economic uncertainty, as precious metals traditionally retain their value.',
+      'answer-8':
+        'It is important to use special materials to store collectible items to prevent oxidation and ensure optimal temperature and humidity conditions.',
     },
   },
 };
