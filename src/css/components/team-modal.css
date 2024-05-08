@@ -3,8 +3,8 @@
     z-index: 90;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     backdrop-filter: blur(8px);
     background-color: var(--background-color);
     opacity: 0;
@@ -17,8 +17,24 @@
 .team-modal-container.visible {
   opacity: 1;
   visibility: visible;
-  pointer-events: auto;
+  pointer-events: all;
   transition: opacity var(--transition-time), visibility 0s var(--transition-effect);
+}
+
+.team-modal-wrapper {
+  max-height: 100%;
+  width: 100%;
+
+  overflow: scroll;
+  padding: 0 10px;
+}
+
+.visible .team-modal-wrapper {
+  pointer-events: none;
+}
+
+.visible .team-modal {
+  pointer-events: all;
 }
 
 .team-modal{
@@ -28,7 +44,7 @@
     text-align: center;
     z-index: 100;
     width: 343px;
-    max-height: 800px;
+    max-height: 700px;
     position: fixed;
     padding: 24px;
     gap: 60px;
@@ -87,7 +103,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  height: 650px;
+  height: 550px;
   overflow-y: auto;
   scrollbar-width: thin;
     @media (768px <=width) {
@@ -111,9 +127,15 @@
 
 .member-card{
   display: flex;
+  /* height: 50px; */
 }
+.member-card-ref{
+  display: flex;
+}
+
 .member-pictures{
   position: relative;
+  width: 40px;
   height: 40px;
   margin-top: 4px;
   @media (768px <=width) {
