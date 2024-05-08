@@ -55,6 +55,7 @@
         letter-spacing: -3%;
         margin-bottom: 32px;
         margin-right: 180px;
+        margin-right: 140px;
     }
     @media (1440px<=width) {
         margin-right: 170px;
@@ -64,12 +65,11 @@
 /* ---- location ---- */
 
 .container-location {
-    @media (768px<=width) {
-        margin-right: 120px;    
-    }
+    max-width: 274px;
+    width: 100%;
 
     @media (1440px<=width) {
-        margin-right: 0;
+    
     }
 }
 
@@ -96,8 +96,6 @@
 .address {
     color: var(--white-color);
     font-family: var(--primary-font-family);
-    max-width: 274px;
-    width: 100%;
     font-size: 14px;
     font-weight: 700;
     line-height: 1.2;
@@ -106,17 +104,25 @@
     margin-bottom: 16px;
 }
 
+
 /* ---- website ---- */
 
 .container-website {
     margin-bottom: 24px;
+
+    @media (768px<=width) {       
+       margin-left: 120px;
+
+      }
     
     @media (1440px<=width) {
          margin-bottom: 20px;
          margin-right: auto;
-         margin-left: 114px;
+         margin-left: 120px;      
     }
 }
+
+
 
 .website-description {
     color: var(--footer-title-color);
@@ -164,22 +170,23 @@
         width: 100%;
         flex-direction: row-reverse;
         justify-content: space-between;
+
     }
         
     @media (1440px<=width) {
-        justify-content: end;
+        margin-left: 760px;
         flex-direction: row; 
         margin-bottom: 0;
-        gap: 120px;
     }
 }
 
 .container-social-expert {
     @media (1440px<=width) { 
         position: relative;
-        top: -80px;
+        top: -79px;
 }
 } 
+
 
 .text-social-media {
     color: var(--footer-title-color);
@@ -231,8 +238,6 @@
         width: 18px;
         height: 18px;
     }
-    
-    @media (1440px<=width) {}
 }
 
 /* ----- GO IT ---  */
