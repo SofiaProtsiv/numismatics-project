@@ -19,7 +19,7 @@ const ACTIVE_SELECT = 'select-active';
 const VISIBLE = 'visible';
 const INVALID_LENGTH = 'invalid-length';
 const INVALID_PHONE = 'invalid-phone';
-const STORAGE_KEY = 'select-lang';
+const STORAGE_KEY = 'currentLang';
 
 const placeholderNames = {
   name: { ua: 'Ваше ім’я', en: 'Your name' },
