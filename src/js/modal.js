@@ -1,6 +1,6 @@
 const modalContainerRef = document.querySelector('.modal-container');
 const modalRef = document.querySelector('.modal');
-const modalCloseRef = document.querySelector('.modal-close');
+const modalCloseRef = document.querySelector('#modal-close');
 const modalTitleRef = document.querySelector('.modal-title');
 const modalTextRef = document.querySelector('.modal-text');
 const socialIconsRef = document.querySelector('.social-icons');
