@@ -130,7 +130,7 @@ const TEAM_DB = [
     nameUa: 'Віктор Кухарський',
     nameEn: 'Viktor Kukharskyi',
     position: 'QA',
-    linkedin: 'www.linkedin.com/in/viktor-kukharskyi-39aa3529b',
+    linkedin: 'https://www.linkedin.com/in/viktor-kukharskyi-39aa3529b',
     pathToPhotoJPG: 'team/Viktor-Kukharskyi.jpg',
     pathToPhotoWebP: 'team/Viktor-Kukharskyi.webp',
   },

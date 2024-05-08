@@ -1,7 +1,8 @@
 import TEAM_DB from '../assets/team-db/index';
 import iconLinkedin from '../public/team/linkedin.svg';
 const teamModalContainerRef = document.querySelector('.team-modal-container');
-const teamModalClose = document.querySelector('.team-modal-close');
+const teamModalClose = document.querySelector('#team-modal-close');
+console.log('teamModalClose:', teamModalClose);
 const teamListRef = document.querySelector('.team-list');
 const teamModalOpenRef = document.querySelector('.student-developed-list');
 
