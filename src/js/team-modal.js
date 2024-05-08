@@ -14,7 +14,7 @@ function teamMdShow() {
   teamModalContainerRef.addEventListener('click', eventsOnTeamModal);
   window.addEventListener('keydown', eventsOnTeamModal);
 
-  const currentLang = localStorage.getItem('select-lang') || 'ua';
+  const currentLang = localStorage.getItem('currentLang') || 'ua';
   console.log('teamMdShow ~ currentLang:', currentLang);
 
   const teamCardsMarkup = TEAM_DB.map(
@@ -28,7 +28,8 @@ function teamMdShow() {
       pathToPhotoWebP,
     }) => {
       return `<li class="member-card" id="${id}">
-      <div class="member-pictures">
+      <a class="member-card-ref" href=${linkedin} target="_blank">
+       <div class="member-pictures">
         <picture class="member-picture" >
           <source
           class="member-photo"
@@ -43,16 +44,16 @@ function teamMdShow() {
             height="40"
           />
         </picture>
-        <a class="linkedin-href" title="linkedin" href=${linkedin} target="_blank" 
-         >
+        <div class="linkedin-href">
             <img class="linkedin-pic" src=${iconLinkedin} alt="linkedin"       width="16"
             height="16"/>
-        </a>
-      </div>
+        </div>
+       </div>
       <div class="member-discr">
       <p class="member-name">${currentLang === 'en' ? nameEn : nameUa}</p>
       <p class="member-position">${position}</p>
       </div>
+      </a>
       </li>`;
     }
   );
