@@ -1,4 +1,4 @@
-import { onErrorModalContact, mdShow } from './modal';
+import { onErrorModalContact, mdShow, onSuccessModalContact } from './modal';
 import { openModalLoader, closeModalLoader } from './loader';
 import { isValidPhoneNumber } from 'libphonenumber-js';
 const form = document.querySelector('.js-modal-form');
@@ -105,7 +105,7 @@ async function fetchConsultation(data) {
     };
     const response = await fetch(URL, config);
     if (!response.ok) throw new Error();
-    // need onSuccessModalContact() or not, if the modal changes from error to success when it is closing
+    onSuccessModalContact();
     mdShow();
     closeModal();
   } catch {
