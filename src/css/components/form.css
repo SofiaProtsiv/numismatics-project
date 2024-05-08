@@ -27,7 +27,7 @@
   max-height: 100%;
   width: 100%;
 
-  overflow: scroll;
+  overflow-y: auto;
   padding: 0 10px;
 }
 .visible .consultation-modal-wrapper {
@@ -54,7 +54,7 @@
     padding: 60px;
   }
   @media (width >=1440px) {
-    max-width: 1245px;
+    max-width: 1085px;
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -245,11 +245,21 @@
   }
 }
 
-.modal-input.invalid {
+.modal-input.invalid,
+.modal-input.invalid-length {
   border-color: var(--error-color);
 }
 
 .modal-input.invalid + .modal-input-error {
+  display: block;
+  padding-left: 8px;
+  opacity: 1;
+}
+
+.modal-input.invalid-length + .modal-input-error.length,
+.modal-input.invalid-phone
+  + .modal-input-error.length
+  + .modal-input-error.invalid {
   display: block;
   padding-left: 8px;
   opacity: 1;

@@ -33,7 +33,7 @@
         </h3>
         <p
           class="consultation-modal-text consultation-profile-text"
-          data-lang="form.summery"
+          data-lang="form.summary"
         >
           Співзасновник та експерт компанії «Монітекс» - інтернет-магазину №1
           для колекціонерів в Україні.
@@ -60,9 +60,6 @@
             </p>
           </div>
           <div class="modal-input-wrapper">
-            <label class="modal-label-name js-modal-label-name" for="form-name"
-              >+38</label
-            >
             <input
               class="modal-input modal-input-name"
               type="text"
@@ -70,8 +67,14 @@
               id="form-name"
               placeholder="Номер телефону"
             />
-            <p class="modal-input-error" data-lang="form.errorPhone">
-              Обов'язкове поле повинно містити 10 цифр
+            <p class="modal-input-error length" data-lang="form.errorPhone">
+              Обов'язкове поле повинно містити не менше 11 цифр
+            </p>
+            <p
+              class="modal-input-error invalid"
+              data-lang="form.errorPhoneInvalid"
+            >
+              Такого номера не існує. Перевірте ще раз!
             </p>
           </div>
           <div class="modal-input-wrapper">
@@ -93,15 +96,24 @@
                 Обов'язкове поле
               </p>
               <ul class="modal-select-list js-modal-select-list">
-                <li class="modal-select-item" data-lang="form.numismatics">
+                <li
+                  class="modal-select-item"
+                  data-lang="form.numismatics"
+                  data-value="numismatics"
+                >
                   Консультації з нумізматики
                 </li>
-                <li class="modal-select-item" data-lang="form.collecting">
+                <li
+                  class="modal-select-item"
+                  data-lang="form.collecting"
+                  data-value="collecting"
+                >
                   Консультації з питань колекціонування
                 </li>
                 <li
                   class="modal-select-item"
-                  data-lang="form.formationСollections"
+                  data-lang="form.formationCollections"
+                  data-value="formationCollections"
                 >
                   Консультації з формування колекцій
                 </li>
