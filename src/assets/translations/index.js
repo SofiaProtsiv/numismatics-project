@@ -8,7 +8,8 @@ const localizationData = {
         'зібрав свою першу колекцію та мріяв про кар’єру археолога. Ця мрія стала реальністю у 2009 році, коли я вступив ' +
         'на історичний факультет Київського національного університету імені Тараса Шевченка та навчався на ' +
         'кафедрі археології та музеєзнавства.',
-      secondParagraph: 'Під час навчання я також здобув практичні навички у міжнародній бізнес-спільності, що дозволило ' +
+      secondParagraph:
+        'Під час навчання я також здобув практичні навички у міжнародній бізнес-спільності, що дозволило ' +
         'мені розпочати свою підприємницьку діяльність.У 2013 році я став співвласником компанії <strong>«Монітекс»</strong>, що ' +
         'спеціалізується на нумізматиці, боністиці, фалеристиці та інших суміжних напрямках.',
       thirdParagraph:
@@ -70,7 +71,7 @@ const localizationData = {
       title: 'Отримати консультацію з питань нумізматики',
       description:
         'Компанія «Монітекс» була заснована в 2013 році і з того часу здобула довіру багатьох постійних клієнтів.',
-      errorName: "Обов'язкове поле",
+      errorName: 'Повинно бути більше 2 символів',
       errorPhone: "Обов'язкове поле повинно містити не менше 11 цифр",
       errorPhoneInvalid: 'Такого номера не існує. Перевірте ще раз!',
       services: 'Послуги',
@@ -162,7 +163,8 @@ const localizationData = {
         'at the age of ten I collected my first collection and dreamed of a career as an archaeologist. This dream ' +
         'became a reality in 2009, when I entered the Faculty of History of Taras Shevchenko Kyiv National University ' +
         'at the Department of Archeology and Museum Studies',
-      secondParagraph: 'During my studies, I also gained practical skills in the international business community, ' +
+      secondParagraph:
+        'During my studies, I also gained practical skills in the international business community, ' +
         'which allowed me to start my own business. In 2013, I became a co-owner of the <strong>«Monitex»</strong> company, ' +
         'which specializes in numismatics, bonistics, phaleristics and other related areas.',
       thirdParagraph:
@@ -224,8 +226,8 @@ const localizationData = {
       title: 'Get consultation on numismatics',
       description:
         'The company "Monitex" was founded in 2013 and has since gained the trust of many regular customers.',
-      errorName: 'Required field',
-      errorPhone: 'The required field must contain no less than 11 digits.',
+      errorName: 'The length should be more than 2 characters',
+      errorPhone: 'The required field must contain no less than 11 digits',
       errorPhoneInvalid: 'That number does not exist. Please check again!',
       services: 'Services',
       errorServices: 'Required field',
