@@ -51,6 +51,7 @@ phoneInput.addEventListener('focus', removeInvalidPhone);
 servicesInput.addEventListener('focus', removeInvalid);
 
 phoneInput.addEventListener('input', validateNumber);
+nameInput.addEventListener('input', validateName);
 
 // Modal
 closeModalBtn.addEventListener('click', closeModal);
@@ -119,7 +120,7 @@ async function fetchConsultation(data) {
 function validateForm({ name, phone, services }) {
   let isValid = true;
 
-  if (!name) {
+  if (name.length < 2) {
     nameInput.classList.add(INVALID);
     isValid = false;
   }
@@ -176,7 +177,7 @@ function handleListSelect(e) {
 
 function validateNumber(event) {
   const reg = /^\+$/;
-  let inputValue = event.target.value;
+  const inputValue = event.target.value;
   if (!inputValue.length) return;
   if (!reg.test(inputValue.charAt(0))) {
     event.target.value = '+' + inputValue.replace(/\D/g, '').slice(0, 12);
@@ -184,6 +185,10 @@ function validateNumber(event) {
     event.target.value =
       '+' + inputValue.slice(1, 20).replace(/\D/g, '').slice(0, 12);
   }
+}
+function validateName(event) {
+  const inputValue = event.target.value;
+  if (inputValue.length > 32) event.target.value = inputValue.slice(0, 32);
 }
 
 function handleEsc(e) {

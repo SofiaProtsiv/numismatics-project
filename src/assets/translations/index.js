@@ -71,7 +71,7 @@ const localizationData = {
       title: 'Отримати консультацію з питань нумізматики',
       description:
         'Компанія «Монітекс» була заснована в 2013 році і з того часу здобула довіру багатьох постійних клієнтів.',
-      errorName: "Обов'язкове поле",
+      errorName: 'Повинно бути більше 2 символів',
       errorPhone: "Обов'язкове поле повинно містити не менше 11 цифр",
       errorPhoneInvalid: 'Такого номера не існує. Перевірте ще раз!',
       services: 'Послуги',
@@ -227,8 +227,8 @@ const localizationData = {
       title: 'Get consultation on numismatics',
       description:
         'The company "Monitex" was founded in 2013 and has since gained the trust of many regular customers.',
-      errorName: 'Required field',
-      errorPhone: 'The required field must contain no less than 11 digits.',
+      errorName: 'The length should be more than 2 characters',
+      errorPhone: 'The required field must contain no less than 11 digits',
       errorPhoneInvalid: 'That number does not exist. Please check again!',
       services: 'Services',
       errorServices: 'Required field',
