@@ -204,7 +204,9 @@
 }
 
 .faq-list-item-container:hover .faq-list-item-svg {
-  transform: rotate(0);
+  @media (min-width: 1440px) {
+    transform: rotate(0);
+  }
 }
 
 .faq-list-item-container.active {

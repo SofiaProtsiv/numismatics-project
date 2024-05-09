@@ -8,7 +8,8 @@ const localizationData = {
         'зібрав свою першу колекцію та мріяв про кар’єру археолога. Ця мрія стала реальністю у 2009 році, коли я вступив ' +
         'на історичний факультет Київського національного університету імені Тараса Шевченка та навчався на ' +
         'кафедрі археології та музеєзнавства.',
-      secondParagraph: 'Під час навчання я також здобув практичні навички у міжнародній бізнес-спільності, що дозволило ' +
+      secondParagraph:
+        'Під час навчання я також здобув практичні навички у міжнародній бізнес-спільності, що дозволило ' +
         'мені розпочати свою підприємницьку діяльність.У 2013 році я став співвласником компанії <strong>«Монітекс»</strong>, що ' +
         'спеціалізується на нумізматиці, боністиці, фалеристиці та інших суміжних напрямках.',
       thirdParagraph:
@@ -116,6 +117,7 @@ const localizationData = {
       subTitle:
         'Компанія «Монітекс» була заснована в 2013 році і з того часу здобула довіру багатьох постійних клієнтів. У нас працюють експерти з унікальними знаннями та багаторічним досвідом.',
       btn: 'Показати більше',
+      'full-title': 'відповіді',
       'full-nav-1': 'головна',
       'full-nav-2': 'Про мене',
       'full-nav-3': 'Експертиза',
@@ -127,7 +129,7 @@ const localizationData = {
       'question-1': 'Що таке нумізматика?',
       'question-2': 'Як почати колекціонувати монети?',
       'question-3': 'Де купувати колекційні предмети?',
-      'question-4': 'Чому консультуватися та купувати саме у нас?',
+      'question-4': 'Чому консультуватися та купувати саме у вас?',
       'question-5': 'Як визначити вартість старовинної монети або банкноти?',
       'question-6':
         'Які послуги ви надаєте для колекціонерів банкнот, нагород та орденів?',
@@ -162,7 +164,8 @@ const localizationData = {
         'at the age of ten I collected my first collection and dreamed of a career as an archaeologist. This dream ' +
         'became a reality in 2009, when I entered the Faculty of History of Taras Shevchenko Kyiv National University ' +
         'at the Department of Archeology and Museum Studies',
-      secondParagraph: 'During my studies, I also gained practical skills in the international business community, ' +
+      secondParagraph:
+        'During my studies, I also gained practical skills in the international business community, ' +
         'which allowed me to start my own business. In 2013, I became a co-owner of the <strong>«Monitex»</strong> company, ' +
         'which specializes in numismatics, bonistics, phaleristics and other related areas.',
       thirdParagraph:
@@ -268,10 +271,11 @@ const localizationData = {
     },
 
     faq: {
-      title: 'faq',
+      title: 'answers',
       subTitle:
         'The company "Monitex" was founded in 2013 and since then has gained the trust of many regular customers. We employ experts with unique knowledge and many years of experience.',
       btn: 'Show more',
+      'full-title': 'faq',
       'full-nav-1': 'home',
       'full-nav-2': 'About me',
       'full-nav-3': 'Areas of expertise',
