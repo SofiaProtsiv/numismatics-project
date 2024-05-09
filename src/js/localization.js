@@ -1,4 +1,5 @@
 import localizationData from '../assets/translations';
+import { applyFooterMargin } from './footer';
 
 function getValueByPath(obj, path) {
   const keys = path.split('.');
@@ -18,6 +19,8 @@ function localizeElements(LANG) {
       element.innerHTML = langValue;
     }
   });
+
+  applyFooterMargin(LANG)
 }
 
 export default localizeElements;

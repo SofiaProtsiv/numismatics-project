@@ -3,71 +3,29 @@
   color: var(--primary-text-color-light);
   border-radius: 15px;
   padding: 32px 16px 98px 16px;
-  background-image: -webkit-image-set(
-      url('../../public/images/services/polygons/polygon-top-left.webp') 1x
-        type('image/webp'),
-      url('../../public/images/services/polygons/polygon-top-left.png') 1x
-        type('image/png'),
-      url('../../public/images/services/polygons/polygon-top-left@2x.webp') 2x
-        type('image/webp'),
-      url('../../public/images/services/polygons/polygon-top-left@2x.png') 2x
-        type('image/png')
-    ),
-    -webkit-image-set(url('../../public/images/services/polygons/polygon-top-right.webp')
-          1x type('image/webp'), url('../../public/images/services/polygons/polygon-top-right.png')
-          1x type('image/png'), url('../../public/images/services/polygons/polygon-top-right@2x.webp')
-          2x type('image/webp'), url('../../public/images/services/polygons/polygon-top-right@2x.png')
-          2x type('image/png')),
-    -webkit-image-set(url('../../public/images/services/polygons/polygon-bottom-left.webp')
-          1x type('image/webp'), url('../../public/images/services/polygons/polygon-bottom-left.png')
-          1x type('image/png'), url('../../public/images/services/polygons/polygon-bottom-left@2x.webp')
-          2x type('image/webp'), url('../../public/images/services/polygons/polygon-bottom-left@2x.png')
-          2x type('image/png')),
-    -webkit-image-set(url('../../public/images/services/polygons/polygon-bottom-right.webp')
-          1x type('image/webp'), url('../../public/images/services/polygons/polygon-bottom-right.png')
-          1x type('image/png'), url('../../public/images/services/polygons/polygon-bottom-right@2x.webp')
-          2x type('image/webp'), url('../../public/images/services/polygons/polygon-bottom-right@2x.png')
-          2x type('image/png'));
-  background-image: image-set(
-      url('../../public/images/services/polygons/polygon-top-left.webp') 1x
-        type('image/webp'),
-      url('../../public/images/services/polygons/polygon-top-left.png') 1x
-        type('image/png'),
-      url('../../public/images/services/polygons/polygon-top-left@2x.webp') 2x
-        type('image/webp'),
-      url('../../public/images/services/polygons/polygon-top-left@2x.png') 2x
-        type('image/png')
-    ),
-    image-set(
-      url('../../public/images/services/polygons/polygon-top-right.webp') 1x
-        type('image/webp'),
-      url('../../public/images/services/polygons/polygon-top-right.png') 1x
-        type('image/png'),
-      url('../../public/images/services/polygons/polygon-top-right@2x.webp') 2x
-        type('image/webp'),
-      url('../../public/images/services/polygons/polygon-top-right@2x.png') 2x
-        type('image/png')
-    ),
-    image-set(
-      url('../../public/images/services/polygons/polygon-bottom-left.webp') 1x
-        type('image/webp'),
-      url('../../public/images/services/polygons/polygon-bottom-left.png') 1x
-        type('image/png'),
-      url('../../public/images/services/polygons/polygon-bottom-left@2x.webp')
-        2x type('image/webp'),
-      url('../../public/images/services/polygons/polygon-bottom-left@2x.png') 2x
-        type('image/png')
-    ),
-    image-set(
-      url('../../public/images/services/polygons/polygon-bottom-right.webp') 1x
-        type('image/webp'),
-      url('../../public/images/services/polygons/polygon-bottom-right.png') 1x
-        type('image/png'),
-      url('../../public/images/services/polygons/polygon-bottom-right@2x.webp')
-        2x type('image/webp'),
-      url('../../public/images/services/polygons/polygon-bottom-right@2x.png')
-        2x type('image/png')
-    );
+  background-image: -webkit-image-set(url('../images/services/polygons/polygon-top-left.webp') 1x type('image/webp'),
+      url('../images/services/polygons/polygon-top-left.png') 1x type('image/png'),
+      url('../images/services/polygons/polygon-top-left@2x.webp') 2x type('image/webp'),
+      url('../images/services/polygons/polygon-top-left@2x.png') 2x type('image/png')),
+    -webkit-image-set(url('../images/services/polygons/polygon-top-right.webp') 1x type('image/webp'), url('../images/services/polygons/polygon-top-right.png') 1x type('image/png'), url('../images/services/polygons/polygon-top-right@2x.webp') 2x type('image/webp'), url('../images/services/polygons/polygon-top-right@2x.png') 2x type('image/png')),
+    -webkit-image-set(url('../images/services/polygons/polygon-bottom-left.webp') 1x type('image/webp'), url('../images/services/polygons/polygon-bottom-left.png') 1x type('image/png'), url('../images/services/polygons/polygon-bottom-left@2x.webp') 2x type('image/webp'), url('../images/services/polygons/polygon-bottom-left@2x.png') 2x type('image/png')),
+    -webkit-image-set(url('../images/services/polygons/polygon-bottom-right.webp') 1x type('image/webp'), url('../images/services/polygons/polygon-bottom-right.png') 1x type('image/png'), url('../images/services/polygons/polygon-bottom-right@2x.webp') 2x type('image/webp'), url('../images/services/polygons/polygon-bottom-right@2x.png') 2x type('image/png'));
+  background-image: image-set(url('../images/services/polygons/polygon-top-left.webp') 1x type('image/webp'),
+      url('../images/services/polygons/polygon-top-left.png') 1x type('image/png'),
+      url('../images/services/polygons/polygon-top-left@2x.webp') 2x type('image/webp'),
+      url('../images/services/polygons/polygon-top-left@2x.png') 2x type('image/png')),
+    image-set(url('../images/services/polygons/polygon-top-right.webp') 1x type('image/webp'),
+      url('../images/services/polygons/polygon-top-right.png') 1x type('image/png'),
+      url('../images/services/polygons/polygon-top-right@2x.webp') 2x type('image/webp'),
+      url('../images/services/polygons/polygon-top-right@2x.png') 2x type('image/png')),
+    image-set(url('../images/services/polygons/polygon-bottom-left.webp') 1x type('image/webp'),
+      url('../images/services/polygons/polygon-bottom-left.png') 1x type('image/png'),
+      url('../images/services/polygons/polygon-bottom-left@2x.webp') 2x type('image/webp'),
+      url('../images/services/polygons/polygon-bottom-left@2x.png') 2x type('image/png')),
+    image-set(url('../images/services/polygons/polygon-bottom-right.webp') 1x type('image/webp'),
+      url('../images/services/polygons/polygon-bottom-right.png') 1x type('image/png'),
+      url('../images/services/polygons/polygon-bottom-right@2x.webp') 2x type('image/webp'),
+      url('../images/services/polygons/polygon-bottom-right@2x.png') 2x type('image/png'));
   background-repeat: no-repeat;
   background-position: right 62px top 0, right 0 top 0, left 0 bottom 0,
     left 61px bottom 0;
@@ -182,190 +140,94 @@
 }
 
 .services-first-card {
-  background-image: -webkit-image-set(
-    url('../../public/images/services/all-services/first-service-mobile.webp')
-      1x type('image/webp'),
-    url('../../public/images/services/all-services/first-service-mobile.jpg') 1x
-      type('image/jpeg'),
-    url('../../public/images/services/all-services/first-service-mobile@2x.webp')
-      2x type('image/webp'),
-    url('../../public/images/services/all-services/first-service-mobile@2x.jpg')
-      2x type('image/jpeg')
-  );
-  background-image: image-set(
-    url('../../public/images/services/all-services/first-service-mobile.webp')
-      1x type('image/webp'),
-    url('../../public/images/services/all-services/first-service-mobile.jpg') 1x
-      type('image/jpeg'),
-    url('../../public/images/services/all-services/first-service-mobile@2x.webp')
-      2x type('image/webp'),
-    url('../../public/images/services/all-services/first-service-mobile@2x.jpg')
-      2x type('image/jpeg')
-  );
+  background-image: -webkit-image-set(url('../images/services/all-services/first-service-mobile.webp') 1x type('image/webp'),
+      url('../images/services/all-services/first-service-mobile.jpg') 1x type('image/jpeg'),
+      url('../images/services/all-services/first-service-mobile@2x.webp') 2x type('image/webp'),
+      url('../images/services/all-services/first-service-mobile@2x.jpg') 2x type('image/jpeg'));
+  background-image: image-set(url('../images/services/all-services/first-service-mobile.webp') 1x type('image/webp'),
+      url('../images/services/all-services/first-service-mobile.jpg') 1x type('image/jpeg'),
+      url('../images/services/all-services/first-service-mobile@2x.webp') 2x type('image/webp'),
+      url('../images/services/all-services/first-service-mobile@2x.jpg') 2x type('image/jpeg'));
 
   @media (768px <=width) {
-    background-image: -webkit-image-set(
-      url('../../public/images/services/all-services/first-service-tablet-desktop.webp')
-        1x type('image/webp'),
-      url('../../public/images/services/all-services/first-service-tablet-desktop.jpg')
-        1x type('image/jpeg'),
-      url('../../public/images/services/all-services/first-service-tablet-desktop@2x.webp')
-        2x type('image/webp'),
-      url('../../public/images/services/all-services/first-service-tablet-desktop@2x.jpg')
-        2x type('image/jpeg')
-    );
-    background-image: image-set(
-      url('../../public/images/services/all-services/first-service-tablet-desktop.webp')
-        1x type('image/webp'),
-      url('../../public/images/services/all-services/first-service-tablet-desktop.jpg')
-        1x type('image/jpeg'),
-      url('../../public/images/services/all-services/first-service-tablet-desktop@2x.webp')
-        2x type('image/webp'),
-      url('../../public/images/services/all-services/first-service-tablet-desktop@2x.jpg')
-        2x type('image/jpeg')
-    );
+    background-image: -webkit-image-set(url('../images/services/all-services/first-service-tablet-desktop.webp') 1x type('image/webp'),
+        url('../images/services/all-services/first-service-tablet-desktop.jpg') 1x type('image/jpeg'),
+        url('../images/services/all-services/first-service-tablet-desktop@2x.webp') 2x type('image/webp'),
+        url('../images/services/all-services/first-service-tablet-desktop@2x.jpg') 2x type('image/jpeg'));
+    background-image: image-set(url('../images/services/all-services/first-service-tablet-desktop.webp') 1x type('image/webp'),
+        url('../images/services/all-services/first-service-tablet-desktop.jpg') 1x type('image/jpeg'),
+        url('../images/services/all-services/first-service-tablet-desktop@2x.webp') 2x type('image/webp'),
+        url('../images/services/all-services/first-service-tablet-desktop@2x.jpg') 2x type('image/jpeg'));
     width: 500px !important;
   }
 }
 
 .services-second-card {
-  background-image: -webkit-image-set(
-    url('../../public/images/services/all-services/second-service-mobile.webp')
-      1x type('image/webp'),
-    url('../../public/images/services/all-services/second-service-mobile.jpg')
-      1x type('image/jpeg'),
-    url('../../public/images/services/all-services/second-service-mobile@2x.webp')
-      2x type('image/webp'),
-    url('../../public/images/services/all-services/second-service-mobile@2x.jpg')
-      2x type('image/jpeg')
-  );
-  background-image: image-set(
-    url('../../public/images/services/all-services/second-service-mobile.webp')
-      1x type('image/webp'),
-    url('../../public/images/services/all-services/second-service-mobile.jpg')
-      1x type('image/jpeg'),
-    url('../../public/images/services/all-services/second-service-mobile@2x.webp')
-      2x type('image/webp'),
-    url('../../public/images/services/all-services/second-service-mobile@2x.jpg')
-      2x type('image/jpeg')
-  );
+  background-image: -webkit-image-set(url('../images/services/all-services/second-service-mobile.webp') 1x type('image/webp'),
+      url('../images/services/all-services/second-service-mobile.jpg') 1x type('image/jpeg'),
+      url('../images/services/all-services/second-service-mobile@2x.webp') 2x type('image/webp'),
+      url('../images/services/all-services/second-service-mobile@2x.jpg') 2x type('image/jpeg'));
+  background-image: image-set(url('../images/services/all-services/second-service-mobile.webp') 1x type('image/webp'),
+      url('../images/services/all-services/second-service-mobile.jpg') 1x type('image/jpeg'),
+      url('../images/services/all-services/second-service-mobile@2x.webp') 2x type('image/webp'),
+      url('../images/services/all-services/second-service-mobile@2x.jpg') 2x type('image/jpeg'));
 
   @media (768px <=width) {
-    background-image: -webkit-image-set(
-      url('../../public/images/services/all-services/second-service-tablet.webp')
-        1x type('image/webp'),
-      url('../../public/images/services/all-services/second-service-tablet.jpg')
-        1x type('image/jpeg'),
-      url('../../public/images/services/all-services/second-service-tablet@2x.webp')
-        2x type('image/webp'),
-      url('../../public/images/services/all-services/second-service-tablet@2x.jpg')
-        2x type('image/jpeg')
-    );
-    background-image: image-set(
-      url('../../public/images/services/all-services/second-service-tablet.webp')
-        1x type('image/webp'),
-      url('../../public/images/services/all-services/second-service-tablet.jpg')
-        1x type('image/jpeg'),
-      url('../../public/images/services/all-services/second-service-tablet@2x.webp')
-        2x type('image/webp'),
-      url('../../public/images/services/all-services/second-service-tablet@2x.jpg')
-        2x type('image/jpeg')
-    );
+    background-image: -webkit-image-set(url('../images/services/all-services/second-service-tablet.webp') 1x type('image/webp'),
+        url('../images/services/all-services/second-service-tablet.jpg') 1x type('image/jpeg'),
+        url('../images/services/all-services/second-service-tablet@2x.webp') 2x type('image/webp'),
+        url('../images/services/all-services/second-service-tablet@2x.jpg') 2x type('image/jpeg'));
+    background-image: image-set(url('../images/services/all-services/second-service-tablet.webp') 1x type('image/webp'),
+        url('../images/services/all-services/second-service-tablet.jpg') 1x type('image/jpeg'),
+        url('../images/services/all-services/second-service-tablet@2x.webp') 2x type('image/webp'),
+        url('../images/services/all-services/second-service-tablet@2x.jpg') 2x type('image/jpeg'));
     width: 500px !important;
   }
 
   @media (width >=1440px) {
-    background-image: -webkit-image-set(
-      url('../../public/images/services/all-services/second-service-desktop.webp')
-        1x type('image/webp'),
-      url('../../public/images/services/all-services/second-service-desktop.jpg')
-        1x type('image/jpeg'),
-      url('../../public/images/services/all-services/second-service-desktop@2x.webp')
-        2x type('image/webp'),
-      url('../../public/images/services/all-services/second-service-desktop@2x.jpg')
-        2x type('image/jpeg')
-    );
-    background-image: image-set(
-      url('../../public/images/services/all-services/second-service-desktop.webp')
-        1x type('image/webp'),
-      url('../../public/images/services/all-services/second-service-desktop.jpg')
-        1x type('image/jpeg'),
-      url('../../public/images/services/all-services/second-service-desktop@2x.webp')
-        2x type('image/webp'),
-      url('../../public/images/services/all-services/second-service-desktop@2x.jpg')
-        2x type('image/jpeg')
-    );
+    background-image: -webkit-image-set(url('../images/services/all-services/second-service-desktop.webp') 1x type('image/webp'),
+        url('../images/services/all-services/second-service-desktop.jpg') 1x type('image/jpeg'),
+        url('../images/services/all-services/second-service-desktop@2x.webp') 2x type('image/webp'),
+        url('../images/services/all-services/second-service-desktop@2x.jpg') 2x type('image/jpeg'));
+    background-image: image-set(url('../images/services/all-services/second-service-desktop.webp') 1x type('image/webp'),
+        url('../images/services/all-services/second-service-desktop.jpg') 1x type('image/jpeg'),
+        url('../images/services/all-services/second-service-desktop@2x.webp') 2x type('image/webp'),
+        url('../images/services/all-services/second-service-desktop@2x.jpg') 2x type('image/jpeg'));
     width: 350px !important;
   }
 }
 
 .services-third-card {
-  background-image: -webkit-image-set(
-    url('../../public/images/services/all-services/third-service-mobile.webp')
-      1x type('image/webp'),
-    url('../../public/images/services/all-services/third-service-mobile.jpg') 1x
-      type('image/jpeg'),
-    url('../../public/images/services/all-services/third-service-mobile@2x.webp')
-      2x type('image/webp'),
-    url('../../public/images/services/all-services/third-service-mobile@2x.jpg')
-      2x type('image/jpeg')
-  );
-  background-image: image-set(
-    url('../../public/images/services/all-services/third-service-mobile.webp')
-      1x type('image/webp'),
-    url('../../public/images/services/all-services/third-service-mobile.jpg') 1x
-      type('image/jpeg'),
-    url('../../public/images/services/all-services/third-service-mobile@2x.webp')
-      2x type('image/webp'),
-    url('../../public/images/services/all-services/third-service-mobile@2x.jpg')
-      2x type('image/jpeg')
-  );
+  background-image: -webkit-image-set(url('../images/services/all-services/third-service-mobile.webp') 1x type('image/webp'),
+      url('../images/services/all-services/third-service-mobile.jpg') 1x type('image/jpeg'),
+      url('../images/services/all-services/third-service-mobile@2x.webp') 2x type('image/webp'),
+      url('../images/services/all-services/third-service-mobile@2x.jpg') 2x type('image/jpeg'));
+  background-image: image-set(url('../images/services/all-services/third-service-mobile.webp') 1x type('image/webp'),
+      url('../images/services/all-services/third-service-mobile.jpg') 1x type('image/jpeg'),
+      url('../images/services/all-services/third-service-mobile@2x.webp') 2x type('image/webp'),
+      url('../images/services/all-services/third-service-mobile@2x.jpg') 2x type('image/jpeg'));
 
   @media (768px <=width) {
-    background-image: -webkit-image-set(
-      url('../../public/images/services/all-services/third-service-tablet.webp')
-        1x type('image/webp'),
-      url('../../public/images/services/all-services/third-service-tablet.jpg')
-        1x type('image/jpeg'),
-      url('../../public/images/services/all-services/third-service-tablet@2x.webp')
-        2x type('image/webp'),
-      url('../../public/images/services/all-services/third-service-tablet@2x.jpg')
-        2x type('image/jpeg')
-    );
-    background-image: image-set(
-      url('../../public/images/services/all-services/third-service-tablet.webp')
-        1x type('image/webp'),
-      url('../../public/images/services/all-services/third-service-tablet.jpg')
-        1x type('image/jpeg'),
-      url('../../public/images/services/all-services/third-service-tablet@2x.webp')
-        2x type('image/webp'),
-      url('../../public/images/services/all-services/third-service-tablet@2x.jpg')
-        2x type('image/jpeg')
-    );
+    background-image: -webkit-image-set(url('../images/services/all-services/third-service-tablet.webp') 1x type('image/webp'),
+        url('../images/services/all-services/third-service-tablet.jpg') 1x type('image/jpeg'),
+        url('../images/services/all-services/third-service-tablet@2x.webp') 2x type('image/webp'),
+        url('../images/services/all-services/third-service-tablet@2x.jpg') 2x type('image/jpeg'));
+    background-image: image-set(url('../images/services/all-services/third-service-tablet.webp') 1x type('image/webp'),
+        url('../images/services/all-services/third-service-tablet.jpg') 1x type('image/jpeg'),
+        url('../images/services/all-services/third-service-tablet@2x.webp') 2x type('image/webp'),
+        url('../images/services/all-services/third-service-tablet@2x.jpg') 2x type('image/jpeg'));
     width: 500px !important;
   }
 
   @media (width >=1440px) {
-    background-image: -webkit-image-set(
-      url('../../public/images/services/all-services/third-service-desktop.webp')
-        1x type('image/webp'),
-      url('../../public/images/services/all-services/third-service-desktop.jpg')
-        1x type('image/jpeg'),
-      url('../../public/images/services/all-services/third-service-desktop@2x.webp')
-        2x type('image/webp'),
-      url('../../public/images/services/all-services/third-service-desktop@2x.jpg')
-        2x type('image/jpeg')
-    );
-    background-image: image-set(
-      url('../../public/images/services/all-services/third-service-desktop.webp')
-        1x type('image/webp'),
-      url('../../public/images/services/all-services/third-service-desktop.jpg')
-        1x type('image/jpeg'),
-      url('../../public/images/services/all-services/third-service-desktop@2x.webp')
-        2x type('image/webp'),
-      url('../../public/images/services/all-services/third-service-desktop@2x.jpg')
-        2x type('image/jpeg')
-    );
+    background-image: -webkit-image-set(url('../images/services/all-services/third-service-desktop.webp') 1x type('image/webp'),
+        url('../images/services/all-services/third-service-desktop.jpg') 1x type('image/jpeg'),
+        url('../images/services/all-services/third-service-desktop@2x.webp') 2x type('image/webp'),
+        url('../images/services/all-services/third-service-desktop@2x.jpg') 2x type('image/jpeg'));
+    background-image: image-set(url('../images/services/all-services/third-service-desktop.webp') 1x type('image/webp'),
+        url('../images/services/all-services/third-service-desktop.jpg') 1x type('image/jpeg'),
+        url('../images/services/all-services/third-service-desktop@2x.webp') 2x type('image/webp'),
+        url('../images/services/all-services/third-service-desktop@2x.jpg') 2x type('image/jpeg'));
     width: 350px !important;
   }
 }

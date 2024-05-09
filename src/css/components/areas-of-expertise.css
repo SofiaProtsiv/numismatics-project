@@ -4,7 +4,7 @@
   justify-content: space-between;
 }
 
-.areas-box > div {
+.areas-box>div {
   flex: 1;
   max-width: 50%;
   box-sizing: border-box;
@@ -13,7 +13,7 @@
 }
 
 @media (width < 1440px) {
-  .areas-box > div:nth-child(3) {
+  .areas-box>div:nth-child(3) {
     flex: none;
     width: 100%;
     max-width: 100%;
@@ -25,7 +25,7 @@
     flex-direction: column;
   }
 
-  .areas-box > div {
+  .areas-box>div {
     flex: none;
     width: 100%;
     max-width: 100%;
@@ -41,7 +41,8 @@
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.02em;
-  @media (width >= 768px) {
+
+  @media (width >=768px) {
     font-size: 14px;
     line-height: 18px;
   }
@@ -55,11 +56,13 @@
   color: var(--primary-text-color-dark);
   font-size: 28px;
   line-height: 32px;
-  @media (width >= 768px) and (width < 1440px) {
+
+  @media (width >=768px) and (width < 1440px) {
     font-size: 50px;
     line-height: 55px;
   }
-  @media (width >= 1440px) {
+
+  @media (width >=1440px) {
     font-size: 75px;
     line-height: 75px;
     margin-top: 20px;
@@ -71,13 +74,15 @@
   color: var(--secondary-text-color-dark);
   font-size: 14px;
   line-height: 18px;
-  @media (width >= 768px) and (width < 1440px) {
+
+  @media (width >=768px) and (width < 1440px) {
     margin-top: 32px;
     font-size: 18px;
     line-height: 26px;
     padding: 0 16px;
   }
-  @media (width >= 1440px) {
+
+  @media (width >=1440px) {
     margin-top: 40px;
     font-size: 18px;
     line-height: 26px;
@@ -90,11 +95,13 @@
 .numismatic {
   text-align: center;
   margin-top: 62px;
-  @media (width >= 768px) and (width < 1440px) {
+
+  @media (width >=768px) and (width < 1440px) {
     margin-top: 94px;
     margin-left: 46px;
   }
-  @media (width >= 1440px) {
+
+  @media (width >=1440px) {
     margin-top: 110px;
   }
 }
@@ -102,12 +109,14 @@
 .bonistic {
   text-align: center;
   margin-top: 76px;
-  @media (width >= 768px) and (width < 1440px) {
+
+  @media (width >=768px) and (width < 1440px) {
     margin-top: 94px;
     margin-right: 46px;
     margin-left: 80px;
   }
-  @media (width >= 1440px) {
+
+  @media (width >=1440px) {
     margin-top: 110px;
   }
 }
@@ -115,8 +124,10 @@
 .faleristic {
   text-align: center;
   margin-top: 76px;
-  @media (width >= 768px) and (width < 1440px) {
+
+  @media (width >=768px) and (width < 1440px) {
     margin-top: 80px;
+
     .faleristic-content {
       width: 282px;
       margin-top: 15px;
@@ -124,7 +135,8 @@
       margin-right: auto;
     }
   }
-  @media (width >= 1440px) {
+
+  @media (width >=1440px) {
     margin-top: 110px;
   }
 }
@@ -142,15 +154,18 @@
   color: var(--primary-text-color-dark);
   font-size: 18px;
   line-height: 20px;
-  @media (width >= 768px) and (width < 1440px) {
+
+  @media (width >=768px) and (width < 1440px) {
     font-size: 24px;
     line-height: 32px;
     margin-top: 30px;
+
     .bonistic-title {
       margin-top: 60px;
     }
   }
-  @media (width >= 1440px) {
+
+  @media (width >=1440px) {
     font-size: 24px;
     line-height: 32px;
     margin-top: 30px;
@@ -166,14 +181,16 @@
   margin-top: 15px;
   margin-left: 15px;
   margin-right: 15px;
-  @media (width >= 768px) and (width < 1440px) {
+
+  @media (width >=768px) and (width < 1440px) {
     font-size: 16px;
     line-height: 24px;
     margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
   }
-  @media (width >= 1440px) {
+
+  @media (width >=1440px) {
     font-size: 16px;
     line-height: 24px;
     margin-top: 15px;
@@ -183,17 +200,19 @@
   }
 }
 
-@media (width >= 768px) {
+@media (width >=768px) {
   .numismatic img {
     content: url('../images/areas-of-expertise/numismat-134.svg');
     width: 134px;
     height: 134px;
   }
+
   .bonistic img {
     content: url('../images/areas-of-expertise/bonistic-176.svg');
     width: 176px;
     height: 134px;
   }
+
   .faleristic img {
     content: url('../images/areas-of-expertise/faleristic-113.svg');
     width: 113px;

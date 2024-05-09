@@ -44,14 +44,14 @@ function changeLanguage(e) {
 }
 
 /* Перезавантаження сторінки при кліку на логотип */
-const logoBtn = document.querySelector('.logo-link');
-logoBtn.addEventListener('click', () => {
-  window.location.reload();
-});
+// const logoBtn = document.querySelector('.logo-link');
+// logoBtn.addEventListener('click', () => {
+//   window.location.reload();
+// });
 
-logoBtn.removeEventListener('click', () => {
-  window.location.reload();
-});
+// logoBtn.removeEventListener('click', () => {
+//   window.location.reload();
+// });
 
 /* Відкриття і закриття мобільного меню */
 const burgerBtn = document.querySelector('.header-navigation-item-burger');
