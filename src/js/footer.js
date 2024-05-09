@@ -6,3 +6,4 @@ const handleClick = function () {
 }
 
 logoSpan.addEventListener('click', handleClick);
+ 
