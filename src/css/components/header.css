@@ -238,6 +238,9 @@
   height: 0;
   opacity: 0;
 
+  overflow: hidden;
+  z-index: -1;
+
   transition: height var(--transition-time) var(--transition-effect),
     opacity var(--transition-time) var(--transition-effect);
 }
@@ -245,6 +248,7 @@
 .header-modal-selectlang-checkbox.active-modal {
   opacity: 1;
   height: 78px;
+  z-index: 2;
 }
 .header-modal-wrapper-select-box-checkbox.active-checkbox > button {
   position: static;
