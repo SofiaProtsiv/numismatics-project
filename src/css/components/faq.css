@@ -269,7 +269,7 @@
   height: 40px;
 
   flex-shrink: 0;
-  background-image: url('../../public/images/hero/arrow-down-right.svg');
+  background-image: url('../images/hero/arrow-down-right.svg');
   background-size: 20px;
   background-position: center;
   background-repeat: no-repeat;

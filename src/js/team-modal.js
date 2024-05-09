@@ -1,8 +1,8 @@
 import TEAM_DB from '../assets/team-db/index';
 import iconLinkedin from '../public/team/linkedin.svg';
+
 const teamModalContainerRef = document.querySelector('.team-modal-container');
 const teamModalClose = document.querySelector('#team-modal-close');
-console.log('teamModalClose:', teamModalClose);
 const teamListRef = document.querySelector('.team-list');
 const teamModalOpenRef = document.querySelector('.student-developed-list');
 
@@ -16,7 +16,6 @@ function teamMdShow() {
   window.addEventListener('keydown', eventsOnTeamModal);
 
   const currentLang = localStorage.getItem('currentLang') || 'ua';
-  console.log('teamMdShow ~ currentLang:', currentLang);
 
   const teamCardsMarkup = TEAM_DB.map(
     ({
