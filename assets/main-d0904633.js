@@ -26,4 +26,4 @@ import{S as H,i as me}from"./vendor-36566a37.js";(function(){const t=document.cr
       </div>
       </a>
       </li>`);return ot.innerHTML=t.join("")}function k(e){e.target===e.currentTarget&&w(),e.key==="Escape"&&w()}function w(){y.classList.remove("visible"),document.body.classList.remove("body-overflow"),de.removeEventListener("click",w),y.removeEventListener("click",k),window.removeEventListener("keydown",k)}
-//# sourceMappingURL=main-71427f74.js.map
+//# sourceMappingURL=main-d0904633.js.map
