@@ -79,6 +79,7 @@ mobileMenuCloseBtn.addEventListener('click', toggleOpenModal);
 const buttonLinkModal = document.querySelectorAll(
   '.header-modal-container-item'
 );
+const heroEl = document.querySelector('.hero-content');
 
 function closeMobileMenuAfterClick() {
   mobileMenuEl.classList.remove('active');
@@ -199,6 +200,7 @@ function toggleSelectLang() {
 }
 selectLangBtnTablet.addEventListener('click', toggleSelectLang);
 selectLangBtnMobileMenu.addEventListener('click', toggleSelectLang);
+heroEl.addEventListener('click', toggleSelectLang);
 
 function setCurrentLang() {
   const currentLang = localStorage.getItem(STORAGE_KEY) || 'UA';
