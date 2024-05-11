@@ -6,6 +6,7 @@ const handleClick = function () {
 }
 
 logoSpan.addEventListener('click', handleClick);
+ 
 
 
 export function applyFooterMargin(lang) {
