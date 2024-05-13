@@ -191,8 +191,15 @@ function toggleSelectLang() {
 selectLangBtnTablet.addEventListener('click', toggleSelectLang);
 selectLangBtnMobileMenu.addEventListener('click', toggleSelectLang);
 
-if(heroEl){
-  heroEl?.addEventListener('click', toggleSelectLang);
+function closeSelectLangBoxByClickHero() {
+  if (!langBoxEl.classList.contains('active-checkbox')) {
+    return;
+  }
+  langBoxEl.classList.remove('active-checkbox');
+}
+
+if (heroEl) {
+  heroEl?.addEventListener('click', closeSelectLangBoxByClickHero);
 }
 
 function setCurrentLang() {
