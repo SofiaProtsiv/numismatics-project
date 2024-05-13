@@ -23,9 +23,19 @@
 .logo-link {
   color: var(--primary-text-color-light);
   font: var(--primary-font-family);
-  font-size: 28px;
+  font-size: 20px;
   line-height: 1.28;
   font-weight: 700;
+  width: 135px;
+  height: 24px;
+  white-space: nowrap;
+  text-transform: uppercase;
+
+  @media (768px <=width) {
+    font-size: 28px;
+    width: 189px;
+    height: 32px;
+  }
 }
 
 .header-navigation {
@@ -41,17 +51,27 @@
 
 .header-navigation-item-link {
   background-color: var(--container-bg-dark);
-  width: 54px;
-  height: 54px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (768px <=width) {
+    width: 54px;
+    height: 54px;
+  }
 }
 
 .header-navigation-item-link-svg-telegram {
   fill: var(--white-color);
   display: block;
+
+  @media (768px <=width) {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .header-navigation-item-burger {
@@ -146,6 +166,11 @@
 .header-modal-wrapper-item-svg {
   fill: var(--white-color);
   display: block;
+
+  @media (768px <=width) {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .header-modal-wrapper-select-box-container {
