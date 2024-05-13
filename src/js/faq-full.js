@@ -1,8 +1,11 @@
-// const changeAdress = () => {
-//   window.history.pushState(null, null, './faq');
-// };
+import "../js/header";
+import "../js/localization";
+import "../js/faq";
+import "../js/form";
+import "../js/modal";
+import "../js/team-modal";
+import "../js/footer";
 
-// changeAdress();
 const logoBtnHeader = document.querySelector('.logo-link');
 const logoBtnFooter = document.querySelector('.logo-footer')
 const navHome = document.querySelector('.faq-nav-home');

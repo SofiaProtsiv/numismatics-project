@@ -34,7 +34,7 @@ const serviceValues = {
   formationCollections: 'Консультації з формування колекцій',
 };
 
-const URL = 'https://numismatics-project-backend.onrender.com/api/application';
+const URL = 'https://api.prudko.com.ua/api/application';
 
 const buttonAttribute = {
   key: 'data-selected',
