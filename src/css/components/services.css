@@ -322,6 +322,7 @@
   background-image: var(--button-accent);
   position: relative;
   z-index: 1;
+  color: var(--primary-text-color-dark);
 
   @media (width >=1440px) {
     margin-top: 0;
