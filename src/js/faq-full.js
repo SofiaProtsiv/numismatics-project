@@ -4,12 +4,12 @@
 
 // changeAdress();
 const logoBtnHeader = document.querySelector('.logo-link');
-const logoBtnFooter = document.querySelector('.logo-footer')
+const logoBtnFooter = document.querySelector('.logo-footer');
 const navHome = document.querySelector('.faq-nav-home');
 const navReload = document.querySelector('.faq-nav-reload');
 
 const goToHomePage = () => {
-  window.location.href = '/numismatics-project';
+  window.location.href = 'https://prudko.com.ua';
 };
 
 const reloadPage = () => {
@@ -19,4 +19,4 @@ const reloadPage = () => {
 navHome.addEventListener('click', goToHomePage);
 navReload.addEventListener('click', reloadPage);
 logoBtnHeader.addEventListener('click', goToHomePage);
-logoBtnFooter.addEventListener('click', reloadPage)
+logoBtnFooter.addEventListener('click', reloadPage);
