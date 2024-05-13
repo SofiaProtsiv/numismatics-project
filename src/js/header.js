@@ -190,7 +190,7 @@ function toggleSelectLang() {
 }
 selectLangBtnTablet.addEventListener('click', toggleSelectLang);
 selectLangBtnMobileMenu.addEventListener('click', toggleSelectLang);
-heroEl.addEventListener('click', toggleSelectLang);
+heroEl?.addEventListener('click', toggleSelectLang);
 
 function setCurrentLang() {
   const currentLang = localStorage.getItem(STORAGE_KEY) || 'UA';
