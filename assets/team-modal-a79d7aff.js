@@ -26,4 +26,4 @@ import{i as de}from"./vendor-9e932b5d.js";(function(){const t=document.createEle
       </div>
       </a>
       </li>`);return ze.innerHTML=t.join("")}function w(e){e.target===e.currentTarget&&L(),e.key==="Escape"&&L()}function L(){k.classList.remove("visible"),document.body.classList.remove("body-overflow"),ce.removeEventListener("click",L),k.removeEventListener("click",w),window.removeEventListener("keydown",w)}
-//# sourceMappingURL=team-modal-7f42d011.js.map
+//# sourceMappingURL=team-modal-a79d7aff.js.map
