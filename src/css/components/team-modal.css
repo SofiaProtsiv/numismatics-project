@@ -1,6 +1,6 @@
 .team-modal-container {
   position: fixed;
-  z-index: -1;
+  z-index: 100;
   top: 0;
   left: 0;
   width: 100vw;
@@ -20,7 +20,6 @@
 
 .team-modal-container.visible {
   opacity: 1;
-  z-index: 1001;
   pointer-events: all;
   transition: opacity var(--transition-time),
     visibility 0s var(--transition-effect);

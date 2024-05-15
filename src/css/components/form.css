@@ -5,7 +5,7 @@
   width: 100vw;
   height: 100vh;
 
-  z-index: -1;
+  z-index: 100;
   backdrop-filter: blur(8px);
   background-color: var(--background-color);
 
@@ -19,7 +19,7 @@
 }
 
 .consultation-modal.visible {
-  z-index: 1001;
+  z-index: 100;
   opacity: 1;
   pointer-events: all;
 }
