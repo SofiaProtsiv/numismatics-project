@@ -160,17 +160,17 @@ const localizationData = {
       expertise: 'EXPERTISE',
       title: 'ABOUT ME',
       firstParagraph:
-        'I always believed that my hobby could become my profession. It all started in childhood, when ' +
-        'at the age of ten I collected my first collection and dreamed of a career as an archaeologist. This dream ' +
-        'became a reality in 2009, when I entered the Faculty of History of Taras Shevchenko Kyiv National University ' +
-        'at the Department of Archeology and Museum Studies',
+        'I\'ve always believed that my hobby could become my profession. It all started in childhood when ' +
+        'at the age of ten, I assembled my first collection and dreamed of a career as an archaeologist. This dream ' +
+        'became a reality in 2009 when I entered  the History Faculty Kyiv Taras Shevchenko National University, ' +
+        'Department of Archeology and Museum Studies.',
       secondParagraph:
-        'During my studies, I also gained practical skills in the international business community, ' +
-        'which allowed me to start my own business. In 2013, I became a co-owner of the <strong>«Monitex»</strong> company, ' +
+        'During my studies, I also acquired practical skills in the international business community, ' +
+        'which allowed me to start my entrepreneurial activities. In 2013, I became a co-owner of the <strong>«Monitex»</strong> company, ' +
         'which specializes in numismatics, bonistics, phaleristics and other related areas.',
       thirdParagraph:
-        'We help our customers create and replenish collections, evaluate antique items and determine ' +
-        'their identity, and we also offer the largest assortment of collectible goods in Ukraine. We strive to ' +
+        'We help our clients create and replenish their collections, evaluate antique items and determine ' +
+        'their identity, and offer the largest assortment of collectible goods in Ukraine. We strive to ' +
         'develop the culture of collecting in our country, contributing to the preservation and dissemination of ' +
         'this tradition.',
       fourthParagraph:
