@@ -2,7 +2,7 @@
   width: 100%;
   height: 116px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   border-radius: 15px;
   background-color: transparent;
@@ -41,17 +41,6 @@
 .header-navigation {
   display: flex;
   align-items: center;
-
-  @media (375px <=width) {
-    margin-left: 98px;
-  }
-
-  @media (768px <=width) {
-    margin-left: 298px;
-  }
-  @media (width >=1440px) {
-    margin-left: 215px;
-  }
 }
 
 .header-navigation-list {
