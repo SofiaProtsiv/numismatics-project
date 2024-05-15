@@ -224,7 +224,6 @@ function setPlaceholders() {
   commentInput.setAttribute('placeholder', placeholderNames.comment[language]);
 }
 
-//  Тимчасовий код
 const openButtonHero = document.querySelector('.hero-btn');
 if (openButtonHero) {
   openButtonHero.addEventListener('click', handleOpenModal);

@@ -154,8 +154,30 @@ const localizationData = {
       'answer-8':
         'Для зберігання колекційних предметів важливо використовувати спеціальні матеріали, які запобігають окисленню, а також забезпечувати оптимальні умови температури та вологості.',
     },
+    successModal: {
+      title: "Дякуємо! Дані успішно відправлені!",
+      text: "Протягом доби з Вами зв’яжеться наш менеджер для обговорення усіх деталей!"
+    },
+    errorModal: {
+      title: "На жаль, наразі наш сервер не відповідає!",
+      text: "Будь ласка, скористайтеся соціальними мережами експерта  для отримання зворотнього зв’язку:"
+    },
+    loaderModal: {
+      title: "Зачекайте, дані відправляються"
+    }
   },
   en: {
+    successModal: {
+      title: "Thank you! The data has been successfully sent!",
+      text: "Within a day, our manager will contact you to discuss all the details!"
+    },
+    errorModal: {
+      title: "Unfortunately, our server is currently unresponsive!",
+      text: "Please use the expert's social media channels to receive feedback:"
+    },
+    loaderModal: {
+      title: "Please wait, data is being sent"
+    },
     about: {
       expertise: 'EXPERTISE',
       title: 'ABOUT ME',

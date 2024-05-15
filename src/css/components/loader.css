@@ -1,5 +1,5 @@
 .loader-container {
-  z-index: 1010;
+  /* z-index: 1010; */
 }
 
 .loader-title {
@@ -29,10 +29,12 @@
     background-color: var(--header-bg);
     box-shadow: 32px 0 var(--header-bg), -32px 0 var(--button-dark);
   }
+
   50% {
     background-color: var(--button-dark);
     box-shadow: 32px 0 var(--header-bg), -32px 0 var(--header-bg);
   }
+
   100% {
     background-color: var(--header-bg);
     box-shadow: 32px 0 var(--button-dark), -32px 0 var(--header-bg);

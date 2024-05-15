@@ -1,3 +1,5 @@
+import translation from '../assets/translations'
+
 const modalContainerRef = document.querySelector('.modal-container');
 const modalRef = document.querySelector('.modal');
 const modalCloseRef = document.querySelector('#modal-close');
@@ -31,12 +33,12 @@ export function onSuccessModalContact() {
 
   modalRef.classList.remove('modal-error');
   modalTitleRef.textContent = `${currentLang === 'ua'
-      ? 'Дякуємо! Дані успішно відправлені!'
-      : 'Thank you! The data has been successfully sent!'
+    ? translation[currentLang].successModal.title
+    : translation[currentLang].successModal.title
     }`;
   modalTextRef.textContent = `${currentLang === 'ua'
-      ? 'Протягом доби з Вами зв’яжеться наш менеджер для обговорення усіх деталей!'
-      : 'Within a day, our manager will contact you to discuss all the details!'
+    ? translation[currentLang].successModal.text
+    : translation[currentLang].successModal.text
     }`;
   socialIconsRef.classList.add('hidden-icons');
 }
@@ -45,12 +47,12 @@ export function onErrorModalContact() {
   let currentLang = localStorage.getItem('currentLang') || 'ua';
   modalRef.classList.add('modal-error');
   modalTitleRef.textContent = `${currentLang === 'ua'
-      ? 'На жаль, наразі наш сервер не відповідає!'
-      : 'Unfortunately, our server is currently unresponsive!'
+    ? translation[currentLang].errorModal.title
+    : translation[currentLang].errorModal.title
     }`;
   modalTextRef.textContent = `${currentLang === 'ua'
-      ? 'Будь ласка, скористайтеся соціальними мережами експерта  для отримання зворотнього зв’язку:'
-      : "Please use the expert's social media channels to receive feedback:"
+    ? translation[currentLang].errorModal.text
+    : translation[currentLang].errorModal.text
     }`;
   socialIconsRef.classList.remove('hidden-icons');
 }
